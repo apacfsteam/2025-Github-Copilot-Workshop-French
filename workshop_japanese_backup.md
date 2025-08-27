@@ -1,192 +1,192 @@
 author: Your Name
-summary: GitHub Copilot Workshop
+summary: GitHub Copilot ワークショップ
 id: github-copilot-workshop
 categories: AI, Development
 environments: Web
 status: Published
 feedback link: https://example.com/feedback
 
-# GitHub Copilot Workshop
+# GitHub Copilot ワークショップ
 
-## About the Workshop
+## ワークショップについて
 Duration: 5
 
-Welcome to the GitHub Copilot Workshop! In this workshop, you will learn how to use GitHub Copilot to explain and improve code.
-GitHub Copilot Chat enables interactive dialogue with AI through a chat experience. Let's learn how to use GitHub Copilot through this workshop!
+GitHub Copilotワークショップへようこそ！このワークショップでは、GitHub Copilot を使ってコードの解説や改善を行う方法を学びます。
+GitHub Copilot Chat は Chat 体験を通じて AI との対話を行うことができます。 ぜひ、このワークショップを通じて GitHub Copilot の使い方を学んでみましょう。
 
 ![GitHub Copilot Logo](github-copilot-workshop/img/octocat_copilot.png)
 
-### Today's Goals
-- Understand the various features of GitHub Copilot
-- Develop a new application using agent mode
+### 本日のゴール
+- GitHub Copilotの各種機能を理解する
+- エージェントモードを使って、新規にアプリケーションを開発する
 
-### Prerequisites
-- Visual Studio Code is installed
-- GitHub Copilot license is available
-- GitHub account is available
+### 前提条件
+- Visual Studio Code がインストールされていること
+- GitHub Copilotのライセンスがあること
+- GitHubアカウントを持っていること
 
-## Project Setup
+## プロジェクトのセットアップ
 Duration: 15
 
-This workshop uses the following GitHub repository:
+このワークショップでは、以下のGitHubリポジトリを使用します：
 
-**Project URL**: https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python
+**プロジェクトURL**: https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python
 
-### Step 1: Fork the Repository
+### ステップ1: リポジトリをフォークする
 
-First, open the project URL above in your browser and fork the repository:
+まず、上記のプロジェクトURLをブラウザで開き、リポジトリをフォークします：
 
-1. Open the project URL (https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python) in your browser
-2. Click the **Fork** button in the top right
+1. プロジェクトURL（https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python）をブラウザで開く
+2. 右上の **Fork** ボタンをクリック
 
-![Click Fork button](github-copilot-workshop/img/fork-step1.png)
+![Fork ボタンをクリック](github-copilot-workshop/img/fork-step1.png)
 
-3. Click the **Create fork** button on the fork creation screen
+3. フォーク作成画面で **Create fork** ボタンをクリック
 
-![Click Create fork button](github-copilot-workshop/img/fork-step2.png)
+![Create fork ボタンをクリック](github-copilot-workshop/img/fork-step2.png)
 
-Once the fork is complete, a copy of the repository will be created in your GitHub account.
+フォークが完成すると、あなたのGitHubアカウントにリポジトリのコピーが作成されます。
 
-### Step 2: Development Environment Setup
+### ステップ2: 開発環境のセットアップ
 
-Using your forked repository, you can start the project using one of the following methods:
+フォークしたリポジトリを使って、以下のいずれかの方法でプロジェクトを開始できます：
 
-#### Method A: Use GitHub Codespaces (Recommended)
+#### 方法A: GitHub Codespacesを使用する（推奨）
 
-1. On your forked repository page (`https://github.com/[your-username]/2025-Github-Copilot-Workshop-Python`)
-2. Click the green **Code** button
-3. Select the **Codespaces** tab
-4. Click **Create codespace on main**
+1. フォークしたリポジトリのページで（`https://github.com/[あなたのユーザー名]/2025-Github-Copilot-Workshop-Python`）
+2. 緑色の **Code** ボタンをクリック
+3. **Codespaces** タブを選択
+4. **Create codespace on main** をクリック
 
 ![Codespaces Setup](github-copilot-workshop/img/github-codespaces.png)
 
 > aside positive
 >
-> **Tip**: Using Codespaces launches a VS Code-like environment in your browser, allowing you to start development immediately.
+> **ヒント**: Codespacesを使用すると、ブラウザ上でVS Codeと同じ環境が立ち上がり、すぐに開発を始められます。
 
 
-#### Method B: Clone to Local Environment
+#### 方法B: ローカル環境でクローンする
 
-If you have VS Code installed locally:
+ローカルにVS Codeがインストールされている場合：
 
-1. Open Terminal or Command Prompt
-2. Clone your forked repository with the following command:
+1. ターミナルまたはコマンドプロンプトを開く
+2. 以下のコマンドでフォークしたリポジトリをクローン：
 
 ```bash
-git clone https://github.com/[your-username]/2025-Github-Copilot-Workshop-Python.git
+git clone https://github.com/[あなたのユーザー名]/2025-Github-Copilot-Workshop-Python.git
 ```
 
-3. Navigate to the cloned directory:
+3. クローンしたディレクトリに移動：
 
 ```bash
 cd 2025-Github-Copilot-Workshop-Python
 ```
 
-4. Open the project in VS Code:
+4. VS Codeでプロジェクトを開く：
 
 ```bash
 code .
 ```
 
-### Step 3: Install Required Extensions
+### ステップ3: 必要な拡張機能のインストール
 
-After opening the project, please install the following extensions:
+プロジェクトを開いたら、以下の拡張機能をインストールしてください：
 
-1. Install **GitHub Copilot** extension
-2. Install **GitHub Copilot Chat** extension
-3. Install **Python** extension
+1. **GitHub Copilot** 拡張機能をインストール
+2. **GitHub Copilot Chat** 拡張機能をインストール
+3. **Python** 拡張機能をインストール
 
-### Step 4: Configuration Check
+### ステップ4: 設定確認
 
-1. Confirm that you are signed in to your GitHub account in VS Code
-2. Confirm that Copilot functionality is enabled
-3. Confirm that the Python interpreter is set up correctly
+1. VS CodeでGitHubアカウントにサインインが完了していることを確認
+2. Copilot機能が有効になっていることを確認
+3. Pythonインタープリターが正しく設定されていることを確認
 
-## Try Code Completion
+## コード補完を使ってみる
 Duration: 10
 
-Let's experience GitHub Copilot's basic code completion functionality.
+GitHub Copilotの基本的なコード補完機能を体験してみましょう。
 
-### Install Copilot Extensions
+### Copilot拡張機能のインストール
 
-1. Install **GitHub Copilot** extension
-2. Install **GitHub Copilot Chat** extension
+1. **GitHub Copilot** 拡張機能をインストール
+2. **GitHub Copilot Chat** 拡張機能をインストール
 
-### Configuration Check
-Make sure you are signed in to VS Code.
+### 設定確認
+VS Codeでサインインが完了していることを確認してください。
 
-### Try Code Completion
+### コード補完を試してみる
 
-Create a new Python file and enter the following comment:
+新しいPythonファイルを作成して、以下のコメントを入力してみましょう：
 
 ```python
-# Function to calculate Fibonacci sequence
+# Fibonacci数列を計算する関数
 def fibonacci(n):
 ```
 
-Verify that Copilot automatically suggests code.
+Copilotが自動的にコードを提案してくれることを確認してください。
 
 > aside positive
 >
-> **Tip**: Use the `Tab` key to accept suggestions and `Alt+]` to see the next suggestion.
+> **ヒント**: `Tab`キーで提案を受け入れ、`Alt+]`で次の提案を見ることができます。
 
-## GitHub Copilot Next Edit Suggestions Setup Instructions
+## GitHub Copilot Next Edit Suggestions 有効化手順
 Duration: 10
 
-### Overview
-⚙️ [`github.copilot.nextEditSuggestions.enabled`](vscode://settings/github.copilot.nextEditSuggestions.enabled) is a setting that enables GitHub Copilot's next-generation edit suggestion feature. This feature allows you to receive more advanced code editing suggestions.
+### 概要
+⚙️ [`github.copilot.nextEditSuggestions.enabled`](vscode://settings/github.copilot.nextEditSuggestions.enabled) は、GitHub Copilotの次世代編集提案機能を有効にする設定です。この機能により、より高度なコード編集の提案を受け取ることができます。
 
-### 1. Open VS Code
+### 1. VS Codeを開く
 
-### 2. Access Settings
-Open the settings screen using one of the following methods:
+### 2. 設定画面にアクセス
+以下のいずれかの方法で設定画面を開きます：
 
-#### Method A: From Menu
+#### 方法A: メニューから
 - **Windows/Linux**: `File` → `Preferences` → `Settings`
 - **macOS**: `Code` → `Settings...` → `Settings`
 
-#### Method B: Keyboard Shortcut
+#### 方法B: キーボードショートカット
 - **Windows/Linux**: `Ctrl + ,`
 - **macOS**: `Cmd + ,`
 
-#### Method C: Command Palette
-- `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (macOS)
-- Select `Preferences: Open Settings (UI)`
+#### 方法C: コマンドパレット
+- `Ctrl + Shift + P` (Windows/Linux) または `Cmd + Shift + P` (macOS)
+- `Preferences: Open Settings (UI)` を選択
 
-### 3. Search Settings
-Enter the following in the settings search box:
+### 3. 設定を検索
+設定画面の検索ボックスに以下を入力：
 ```
 github.copilot.nextEditSuggestions.enabled
 ```
 
-### 4. Enable Setting
-- Check the checkbox for the setting item shown in search results
-- Or change `false` to `true`
+### 4. 設定を有効化
+- 検索結果に表示される設定項目のチェックボックスをオンにする
+- または、`false` を `true` に変更する
 
-### 5. Confirm Setting
-Verify the setting is correctly applied:
-- Restart VS Code (recommended)
-- Edit code in the editor and confirm the new suggestion feature works
+### 5. 設定の確認
+設定が正しく適用されているか確認：
+- VS Codeを再起動（推奨）
+- エディタでコードを編集して、新しい提案機能が動作するか確認
 
-### Alternative Method: Direct Edit in settings.json
+### 代替方法: settings.jsonで直接編集
 
-#### 1. Open settings.json file
-- `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (macOS)
-- Select `Preferences: Open User Settings (JSON)`
+#### 1. settings.jsonファイルを開く
+- `Ctrl + Shift + P` (Windows/Linux) または `Cmd + Shift + P` (macOS)
+- `Preferences: Open User Settings (JSON)` を選択
 
-#### 2. Add Setting
+#### 2. 設定を追加
 ```json
 {
     "github.copilot.nextEditSuggestions.enabled": true
 }
 ```
 
-#### 3. Save File
-- `Ctrl + S` (Windows/Linux) or `Cmd + S` (macOS)
+#### 3. ファイルを保存
+- `Ctrl + S` (Windows/Linux) または `Cmd + S` (macOS)
 
-### Let's Try It Out
+### 実際に試してみよう
 
-Open the `point.py` file included in the project. This file contains a class representing points in two-dimensional space:
+プロジェクトに含まれている `point.py` ファイルを開いてください。このファイルには、二次元空間の点を表すクラスが含まれています：
 
 ```python
 import math
@@ -205,27 +205,27 @@ class Point2D:
         return f"Point2D({self.x}, {self.y})"
 ```
 
-Now, we want to extend this class to represent points in three-dimensional space. First, let's manually change the class name to `Point3D`. GitHub Copilot will then suggest the next edit candidates.
+今、このクラスを三次元空間の点を表すクラスに拡張したいと考えています。まずは、クラス名を手動で `Point3D` に変更してみましょう。すると、GitHub Copilotが次の編集候補を提案してくれます。
 
 > aside positive
 >
-> **Important**: It may take some time for Next Edit Suggestion proposals to appear. Please wait patiently.
+> **重要**: Next Edit Suggestionの提案が表示されるまでに、少し時間がかかることがあります。焦らず待ってみてください。
 
-The suggestions should show changes like:
-- Adding `z` parameter to the `__init__` method
-- Adding `self.z = z`
-- Extending the `distance_to` method for three-dimensional distance calculation
-- Displaying z coordinate in the `__str__` method
+提案では以下のような変更が示されるはずです：
+- `__init__`メソッドに `z` パラメータの追加
+- `self.z = z` の追加
+- `distance_to`メソッドでの三次元距離計算への拡張
+- `__str__`メソッドでのz座標の表示
 
-In this state, pressing the `Tab` key will move the cursor to the location where GitHub Copilot is making suggestions. To accept the suggestion, press the `Tab` key again.
+この状態で `Tab` キーを押すと、GitHub Copilotが提案をしている箇所にカーソルが移動します。そこで、提案を受け入れるには、再度 `Tab` キーを押します。
 
-GitHub Copilot should then suggest the next edit candidate. This suggestion can also be accepted by pressing the `Tab` key. Using Next Edit Suggestion allows you to edit code efficiently.
+すると、GitHub Copilotは次の編集候補を提案してくれるはずです。この提案も、`Tab` キーを押すことで受け入れることができます。このように、Next Edit Suggestionを使うことで、コードの編集を効率的に行うことができます。
 
-### Let's See the Results
+### 結果を見てみよう
 
-Let's continue extending the Point2D class to Point3D. You should be able to adapt all methods for three-dimensional space.
+Point2DクラスをPoint3Dに拡張する作業を続けてみましょう。すべてのメソッドを三次元空間に対応させることができるはずです。
 
-Expected final code example:
+期待される最終的なコードの例：
 
 ```python
 import math
@@ -246,51 +246,51 @@ class Point3D:
         return f"Point3D({self.x}, {self.y}, {self.z})"
 ```
 
-### Let's Also Try with TODO Comments
+### TODOコメント付きのコードでも試してみましょう
 
-Replace `二次元` (two-dimensional) with `三次元` (three-dimensional) in the commented first line.
+１行目でコメントアウトされている`二次元`を `三次元`に置き換えてください。
 
 ```python
-# Class representing points in three-dimensional space
+# 二次元空間の点を表すクラス
 class Point2D:
     def __init__(self, x, y):
         self.x = x
         self.y = y
     
     def distance_to(self, other):
-        # TODO: Add distance calculation code here
+        # TODO: ここに距離計算のコードを追加
         pass
     
     def __str__(self):
-        # TODO: Return string representation
+        # TODO: 文字列表現を返す
         pass
 ```
 
-Place the cursor after the TODO comments and check Copilot's suggestions.
+TODOコメントの後にカーソルを置いて、Copilotの提案を確認してみてください。
 
-### Important Notes
+### 注意事項
 
-- Make sure VS Code's GitHub Copilot extension is updated to the latest version
-- Restarting VS Code is recommended after setting changes
+- VS Code の GitHub Copilot 拡張機能が最新版にアップデートされていることを確認してください
+- 設定変更後は VS Code の再起動を推奨します
 
-### Troubleshooting
+### トラブルシューティング
 
-#### If Settings Are Not Found
-1. Confirm GitHub Copilot extension is installed
-2. Confirm extension is updated to the latest version
-3. Restart VS Code and try again
+#### 設定が見つからない場合
+1. GitHub Copilot 拡張機能がインストールされているか確認
+2. 拡張機能が最新版にアップデートされているか確認
+3. VS Code を再起動してから再度試行
 
-#### If Functionality Doesn't Work
-1. Confirm you are logged in to GitHub Copilot
-2. Check internet connection
-3. Check VS Code console for error messages
+#### 機能が動作しない場合
+1. GitHub Copilot にログインしているか確認
+2. インターネット接続を確認
+3. VS Code のコンソールでエラーメッセージを確認
 
-## Copilot Chat Hands-on Preparation
+## Copilot Chat ハンズオンの準備
 Duration: 5
 
-### Create File
+### ファイルを作成
 
-Please save the following file as `delivery_manager.py`.
+下記のファイルを `delivery_manager.py` として保存してください。
 
 ```python
 import time
@@ -301,69 +301,69 @@ from enum import Enum
 
 
 class EventArgs:
-    """Base class for event arguments"""
+    """イベント引数の基底クラス"""
     pass
 
 
 class Event:
-    """Class equivalent to C#'s event"""
+    """C#のeventに相当するクラス"""
     
     def __init__(self):
         self._handlers: List[Callable] = []
     
     def add_handler(self, handler: Callable):
-        """Add event handler"""
+        """イベントハンドラーを追加"""
         if handler not in self._handlers:
             self._handlers.append(handler)
     
     def remove_handler(self, handler: Callable):
-        """Remove event handler"""
+        """イベントハンドラーを削除"""
         if handler in self._handlers:
             self._handlers.remove(handler)
     
     def invoke(self, sender, args: EventArgs = None):
-        """Fire event"""
+        """イベントを発火"""
         for handler in self._handlers:
             handler(sender, args or EventArgs())
 
 
 @dataclass
 class KitchenObjectSO:
-    """Kitchen object data class"""
+    """キッチンオブジェクトのデータクラス"""
     name: str
     object_id: int
 
 
 @dataclass
 class RecipeSO:
-    """Recipe data class"""
+    """レシピのデータクラス"""
     name: str
     kitchen_object_so_list: List[KitchenObjectSO] = field(default_factory=list)
 
 
 @dataclass
 class RecipeListSO:
-    """Recipe list data class"""
+    """レシピリストのデータクラス"""
     recipe_so_list: List[RecipeSO] = field(default_factory=list)
 
 
 class PlateKitchenObject:
-    """Plate kitchen object"""
+    """皿のキッチンオブジェクト"""
     
     def __init__(self):
         self._kitchen_object_so_list: List[KitchenObjectSO] = []
     
     def add_kitchen_object(self, kitchen_object: KitchenObjectSO):
-        """Add kitchen object"""
+        """キッチンオブジェクトを追加"""
         self._kitchen_object_so_list.append(kitchen_object)
     
     def get_kitchen_object_so_list(self) -> List[KitchenObjectSO]:
-        """Get kitchen object list"""
+        """キッチンオブジェクトリストを取得"""
         return self._kitchen_object_so_list.copy()
 
 
 class KitchenGameManager:
-    """Kitchen game manager (Singleton)"""
+    """キッチンゲームマネージャー（Singleton）"""
     
     _instance: Optional['KitchenGameManager'] = None
     
@@ -372,37 +372,37 @@ class KitchenGameManager:
     
     @classmethod
     def get_instance(cls) -> 'KitchenGameManager':
-        """Get Singleton instance"""
+        """Singletonインスタンスを取得"""
         if cls._instance is None:
             cls._instance = cls()
         return cls._instance
     
     def is_game_playing(self) -> bool:
-        """Check if game is in progress"""
+        """ゲームが進行中かどうか"""
         return self._is_game_playing
     
     def start_game(self):
-        """Start game"""
+        """ゲーム開始"""
         self._is_game_playing = True
     
     def stop_game(self):
-        """Stop game"""
+        """ゲーム停止"""
         self._is_game_playing = False
 
 
 class DeliveryManager:
-    """Delivery management class (Python version)"""
+    """配達管理クラス（Python版）"""
     
     _instance: Optional['DeliveryManager'] = None
     
     def __init__(self, recipe_list_so: RecipeListSO):
-        # Event definitions
+        # イベント定義
         self.on_recipe_spawned = Event()
         self.on_recipe_completed = Event()
         self.on_recipe_success = Event()
         self.on_recipe_failed = Event()
         
-        # Private variables
+        # プライベート変数
         self._recipe_list_so = recipe_list_so
         self._waiting_recipe_so_list: List[RecipeSO] = []
         self._spawn_recipe_timer = 0.0
@@ -413,15 +413,15 @@ class DeliveryManager:
     
     @classmethod
     def get_instance(cls, recipe_list_so: RecipeListSO = None) -> 'DeliveryManager':
-        """Get Singleton instance"""
+        """Singletonインスタンスを取得"""
         if cls._instance is None:
             if recipe_list_so is None:
-                raise ValueError("recipe_list_so is required for initial creation")
+                raise ValueError("初回作成時にはrecipe_list_soが必要です")
             cls._instance = cls(recipe_list_so)
         return cls._instance
     
     def update(self):
-        """Frame update processing (equivalent to Unity's Update)"""
+        """フレーム更新処理（UnityのUpdate相当）"""
         current_time = time.time()
         delta_time = current_time - self._last_update_time
         self._last_update_time = current_time
@@ -435,28 +435,28 @@ class DeliveryManager:
             if (kitchen_game_manager.is_game_playing() and 
                 len(self._waiting_recipe_so_list) < self._waiting_recipes_max):
                 
-                # Randomly select recipe
+                # ランダムにレシピを選択
                 waiting_recipe_so = random.choice(self._recipe_list_so.recipe_so_list)
                 self._waiting_recipe_so_list.append(waiting_recipe_so)
                 
-                # Fire event
+                # イベント発火
                 self.on_recipe_spawned.invoke(self)
     
     def deliver_recipe(self, plate_kitchen_object: PlateKitchenObject):
-        """Check if recipe ingredients match plate ingredients"""
+        """レシピの材料と皿の材料が一致しているかどうかを確認する"""
         
         for i, waiting_recipe_so in enumerate(self._waiting_recipe_so_list):
             plate_ingredients = plate_kitchen_object.get_kitchen_object_so_list()
             
-            # Check if ingredient counts match
+            # 材料数が一致するかチェック
             if len(waiting_recipe_so.kitchen_object_so_list) == len(plate_ingredients):
                 plate_contents_matches_recipe = True
                 
-                # Check each recipe ingredient
+                # レシピの各材料をチェック
                 for recipe_kitchen_object_so in waiting_recipe_so.kitchen_object_so_list:
                     ingredient_found = False
                     
-                    # Match with plate ingredients
+                    # 皿の材料と照合
                     for plate_kitchen_object_so in plate_ingredients:
                         if plate_kitchen_object_so == recipe_kitchen_object_so:
                             ingredient_found = True
@@ -466,238 +466,238 @@ class DeliveryManager:
                         plate_contents_matches_recipe = False
                         break
                 
-                # If ingredients match completely
+                # 材料が完全に一致した場合
                 if plate_contents_matches_recipe:
                     self._successful_recipes_amount += 1
                     self._waiting_recipe_so_list.pop(i)
                     
-                    # Fire success events
+                    # 成功イベント発火
                     self.on_recipe_completed.invoke(self)
                     self.on_recipe_success.invoke(self)
                     return
         
-        # If no matching recipe found
+        # 一致するレシピが見つからなかった場合
         self.on_recipe_failed.invoke(self)
     
     def get_waiting_recipe_so_list(self) -> List[RecipeSO]:
-        """Get waiting recipe list"""
+        """待機中のレシピリストを取得"""
         return self._waiting_recipe_so_list.copy()
     
     def get_successful_recipes_amount(self) -> int:
-        """Get number of successful recipes"""
+        """成功したレシピ数を取得"""
         return self._successful_recipes_amount
 
 
-# Usage example
+# 使用例
 if __name__ == "__main__":
-    # Create sample data
+    # サンプルデータ作成
     tomato = KitchenObjectSO("Tomato", 1)
     lettuce = KitchenObjectSO("Lettuce", 2)
     bread = KitchenObjectSO("Bread", 3)
     
-    # Sample recipes
+    # サンプルレシピ
     sandwich_recipe = RecipeSO("Sandwich", [bread, lettuce, tomato])
     salad_recipe = RecipeSO("Salad", [lettuce, tomato])
     
     recipe_list = RecipeListSO([sandwich_recipe, salad_recipe])
     
-    # Initialize game manager and delivery manager
+    # ゲームマネージャーとデリバリーマネージャーを初期化
     game_manager = KitchenGameManager.get_instance()
     game_manager.start_game()
     
     delivery_manager = DeliveryManager.get_instance(recipe_list)
     
-    # Set up event handlers
+    # イベントハンドラーの設定
     def on_recipe_spawned(sender, args):
-        print("New recipe has been generated!")
+        print("新しいレシピが生成されました！")
     
     def on_recipe_success(sender, args):
-        print("Recipe delivery successful!")
+        print("レシピ配達成功！")
     
     def on_recipe_failed(sender, args):
-        print("Recipe delivery failed...")
+        print("レシピ配達失敗...")
     
     delivery_manager.on_recipe_spawned.add_handler(on_recipe_spawned)
     delivery_manager.on_recipe_success.add_handler(on_recipe_success)
     delivery_manager.on_recipe_failed.add_handler(on_recipe_failed)
     
-    # Sample execution
-    print("Game starting...")
+    # サンプル実行
+    print("ゲーム開始...")
     
-    # Run update process for 5 seconds
+    # 5秒間更新処理を実行
     start_time = time.time()
     while time.time() - start_time < 5:
         delivery_manager.update()
-        time.sleep(0.1)  # Update every 100ms
+        time.sleep(0.1)  # 100ms間隔で更新
     
-    print(f"Number of waiting recipes: {len(delivery_manager.get_waiting_recipe_so_list())}")
+    print(f"待機中のレシピ数: {len(delivery_manager.get_waiting_recipe_so_list())}")
     
-    # Sample delivery test
+    # サンプル配達テスト
     plate = PlateKitchenObject()
     plate.add_kitchen_object(bread)
     plate.add_kitchen_object(lettuce)
     plate.add_kitchen_object(tomato)
     
-    print("Delivering sandwich...")
+    print("サンドイッチを配達...")
     delivery_manager.deliver_recipe(plate)
     
-    print(f"Number of successful recipes: {delivery_manager.get_successful_recipes_amount()}")
+    print(f"成功したレシピ数: {delivery_manager.get_successful_recipes_amount()}")
 ```
 
-## Explain Code
+## コードを解説してもらう
 Duration: 15
 
-Let's have Copilot Chat explain this code.
+Copilot Chat にこのコードを解説させてみましょう。
 
-### Open Copilot Chat
+### Copilot Chat を開く
 
-1. Click the **Chat** icon (chat bubble icon) in the VS Code sidebar to open Copilot Chat
-2. Or open the Chat panel with `Ctrl+Alt+I` (on macOS `Ctrl+Cmd+I`)
+1. VS Codeのサイドバーで **Chat** アイコン（チャットバブルのアイコン）をクリックして、Copilot Chat を開きます
+2. または `Ctrl+Alt+I` (macOSでは `Ctrl+Cmd+I`) でChatパネルを開く
 
-### Check Chat Mode
+### チャットモードの確認
 
-Confirm the chat mode is set to "Question" (we'll introduce "Agent" mode later).
+チャットのモードが「質問」になっていることを確認します（「エージェント」モードは後ほど紹介します）。
 
-### Request File Explanation
+### ファイルの解説を依頼
 
-1. Enter `#delivery_manager.py` in the chat field
-2. Enter the prompt "Please explain this entire file."
-3. Press Enter and Copilot Chat will explain the entire `delivery_manager.py` file
+1. チャット欄に `#delivery_manager.py` と入力します
+2. 「このファイル全体について説明してください」とプロンプトを入力します。
+3. Enterを押すと、Copilot Chat が `delivery_manager.py` ファイル全体を解説してくれます
 
 > aside positive
 >
-> **Tip**: By adding `#` before a filename, you can include that entire file as context.
+> **ヒント**: ファイル名の前に `#` を付けることで、そのファイル全体をコンテキストとして含めることができます。
 
-## Ask About Code Improvement Areas
+## コードの改善箇所を尋ねる
 Duration: 15
 
-### Exercise
+### エクササイズ
 
-Let's ask Copilot Chat about the problematic parts of this code.
+Copilot Chat にこのコードの悪い部分を尋ねてみましょう。
 
-### 1. Ask About Overall Class Issues
+### 1. クラス全体の問題を聞く
 
-First, let's ask what problems this code has as a whole class.
+まずは、クラス全体としてこのコードはどのような問題を抱えているか聞いてみましょう。
 
-Ask Copilot Chat:
-
-```
-Looking at this entire DeliveryManager class, what problems and improvement points are there? Please tell me from the perspectives of design patterns, code quality, and maintainability.
-```
-
-### 2. Focus on Specific Methods for Improvement Points
-
-Next, let's focus on the `deliver_recipe()` method and ask what methods exist to improve this method.
-
-#### Steps:
-1. Enter `#deliver_recipe` in the chat field
-2. Candidates for code elements (functions, classes, variables, etc.) will be displayed
-3. Select the `deliver_recipe` method
-4. Enter the following question:
+Copilot Chatに以下のように質問してみてください：
 
 ```
-What methods are there to improve this deliver_recipe method? Please make suggestions from the perspectives of readability, performance, and error handling.
+このDeliveryManagerクラス全体を見て、どのような問題や改善点がありますか？設計パターン、コードの品質、保守性の観点から教えてください。
+```
+
+### 2. 具体的なメソッドに絞って改善点を聞く
+
+その後、`deliver_recipe()` メソッドに絞って、このメソッドを改善するためにはどのような方法があるか聞いてみましょう。
+
+#### 手順：
+1. チャット欄に `#deliver_recipe` と入力します
+2. コードの要素（関数、クラス、変数など）の候補が表示されます
+3. `deliver_recipe` メソッドを選択します
+4. 以下の質問を入力してください：
+
+```
+このdeliver_recipeメソッドを改善するためにはどのような方法がありますか？可読性、パフォーマンス、エラーハンドリングの観点から提案してください。
 ```
 
 > aside positive
 >
-> **Tip**: Using `#` allows you to ask pinpointed questions about specific code elements. This allows you to get more specific and useful improvement suggestions.
+> **ヒント**: `#` を使うことで、特定のコードの要素に対してピンポイントで質問することができます。これにより、より具体的で有用な改善提案を得ることができます。
 
-### Code Review Function
+### コードレビュー機能
 
-To improve the current code, ask Copilot Chat:
-
-```
-Please improve this Python code. I'd like suggestions from the perspectives of performance, readability, and error handling.
-```
-
-### Check from Security Perspective
+現在のコードを改善するために、Copilot Chatに以下のように質問してみましょう：
 
 ```
-Are there any security issues with this code?
+このPythonコードを改善してください。パフォーマンス、可読性、エラーハンドリングの観点から提案をお願いします。
 ```
 
-### Check Best Practices
+### セキュリティの観点から確認
 
 ```
-Please check if this follows Python best practices.
+このコードにセキュリティ上の問題はありますか？
 ```
 
-## Let's Try Agent Mode
+### ベストプラクティスの確認
+
+```
+Pythonのベストプラクティスに従っているか確認してください。
+```
+
+## エージェントモードを使ってみよう
 Duration: 10
 
-So far we've been using Copilot Chat in "Question" mode, but now let's try "Agent" mode. Agents can understand user intent and execute tasks more autonomously. Through practical examples, we'll learn how agents function.
+ここまでは「質問」モードでCopilot Chatを使ってきましたが、次は「エージェント」モードを使ってみましょう。エージェントは、ユーザーの意図を理解し、より自律的にタスクを実行することができます。実例を通して、エージェントがどのように機能するかを学びます。
 
-### Switch to Agent Mode
+### エージェントモードへの切り替え
 
-First, with the `delivery_manager.py` file open, select "Agent" from the mode selection in Copilot Chat.
+まず `delivery_manager.py` ファイルを開いている状態で、Copilot Chatのモード選択から「エージェント」を選択します。
 
 <div align="center">
-  <img src="github-copilot-workshop/img/agent_mode2.png" alt="Agent Mode Selection 2" width="600" />
+  <img src="github-copilot-workshop/img/agent_mode2.png" alt="エージェントモード選択2" width="600" />
   
   <div style="height: 24;"></div>
   
-  <img src="github-copilot-workshop/img/agent_mode.png" alt="Agent Mode Selection" width="600" />
+  <img src="github-copilot-workshop/img/agent_mode.png" alt="エージェントモード選択" width="600" />
 </div>
 
-### Identify Issues
+### 問題点の洗い出し
 
-Then, enter the following prompt:
-
-```
-Please list the issues that exist in the DeliveryManager class. Then, present improvement plans to solve each issue.
-```
-
-![Issue Analysis by GPT-4.1](github-copilot-workshop/img/agent_GPT4.1.png)
-
-It should suggest multiple improvement points.
-
-### Try with Different Models
-
-By trying the same question with different models, you can compare the characteristics of each model.
-
-![Issue Analysis by Claude 4.0](github-copilot-workshop/img/agent_Calude4.0.png)
-
-### Implement Improvements
-
-Now let's have them implement the improvement suggestions they provided:
+その後、以下のプロンプトを入力してみましょう。
 
 ```
-Please implement all the improvement suggestions you presented.
+DeliveryManagerクラスに存在する問題点を列挙してください。そして、それぞれの問題点を解決するための改善案を提示してください。
 ```
 
-Copilot will then make direct code changes to the code open in the editor. However, this is still at the suggestion stage, and the user decides whether to accept these changes. You can accept or reject by clicking the "Keep" or "Undo" button above the chat field.
+![GPT-4.1による問題点分析](github-copilot-workshop/img/agent_GPT4.1.png)
 
-### Agent Autonomy
+すると、複数の改善点を提案してくれるはずです。
 
-Here, let's check the comments returned by the agent. The agent didn't just follow instructions and change code, but may also confirm that errors occurred after code changes and try to fix those errors too. In an appropriate environment, the agent automatically detects errors that occur after code changes and attempts to fix them. In this way, agents can understand user intent and execute tasks more autonomously.
+### モデルを変えて試してみてください
 
-### Confirm Command Execution
+同じ質問を異なるモデルで試すことで、各モデルの特徴を比較できます。
 
-When using agent mode, Copilot may ask whether it's okay to execute commands. This is because Copilot always asks for user confirmation before executing any command. Check the command content, and if there's no problem executing it, click "Allow this time". This allows Copilot to execute that command and make necessary changes.
+![Claude 4.0による問題点分析](github-copilot-workshop/img/agent_Calude4.0.png)
+
+### 改善案の実装
+
+では、実際に提案してもらった改善案を実装してもらいましょう。
+
+```
+提示してくれたすべての改善案を実装してください。
+```
+
+すると、Copilotはエディタで開かれているコードに対して直接コードの変更を行います。しかし、これはまだ提案の段階であり、この変更を受け入れるかどうかはユーザーが決定します。受け入れるかどうかは、チャット欄の上にある「保持」もしくは「元に戻す」ボタンをクリックすることで行います。
+
+### エージェントの自律性
+
+ここで、エージェントが返してくれたコメントを確認してみましょう。エージェントは単に指示に従ってコードを変更しただけでなく、コードを変更後にエラーが発生していることを確認し、そのエラーも修正しようとする場合があります。適切な環境下では、エージェントはコードの変更後に発生したエラーを自動的に検出し、修正を試みます。このように、エージェントはユーザーの意図を理解し、より自律的にタスクを実行することができます。
+
+### コマンド実行の確認
+
+エージェントモードを使っていると、Copilotがコマンドを実行して良いかどうかを尋ねてくることがあります。これは、Copilotが何かのコマンドを実行する前に、必ずユーザーに確認を求めるためです。コマンドの内容を確認し、実行しても問題ない場合は「Allow this time」をクリックします。これにより、Copilotはそのコマンドを実行し、必要な変更を行います。
 
 > aside positive
 >
-> **Important**: In agent mode, Copilot operates more autonomously, so make sure to carefully review the suggested changes before accepting them.
+> **重要**: エージェントモードでは、Copilotがより自律的に動作するため、提案される変更内容をよく確認してから受け入れるようにしましょう。
 
-## Settings for Next Task (Optional)
+## 次のタスクに向けた設定（オプション）
 Duration: 20
 
-This section is **optional**. If you want to try more advanced features after learning the basic functions of GitHub Copilot, please proceed.
+このセクションは **オプション** です。GitHub Copilotの基本機能を学んだ後で、より高度な機能を試したい場合に実施してください。
 
-### 1. Prepare Branch
+### 1. ブランチの準備
 
-#### Step 1: Reset Staged Changes
+#### ステップ1: ステージングされた変更をリセット
 
-Return all changes currently in the staging area to the working directory:
+現在ステージングエリアにある変更を全てワーキングディレクトリに戻します：
 
 ```bash
 git restore .
 ```
 
-#### Step 2: Create New Branch
+#### ステップ2: 新しいブランチを作成
 
-Create and switch to the feature/pomodoro branch:
+feature/pomodoroブランチを作成して切り替えます：
 
 ```bash
 git checkout -b feature/pomodoro
