@@ -186,7 +186,7 @@ Verify the setting is correctly applied:
 
 ### Let's Try It Out
 
-Open the `point.py` file included in the project. This file contains a class representing points in two-dimensional space:
+Open the `point.py` file included in the project. This file contains a class representing points in two-dimensional space. Copy the below code snippet into the `point.py` file.
 
 ```python
 import math
