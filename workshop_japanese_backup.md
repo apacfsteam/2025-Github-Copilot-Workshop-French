@@ -703,492 +703,492 @@ Create and switch to the feature/pomodoro branch:
 git checkout -b feature/pomodoro
 ```
 
-### 2. GitHub Advanced Security (GHAS) の設定
+### 2. GitHub Advanced Security (GHAS) Setup
 
-GitHub Advanced Security の Code Scanning 機能を有効にすることで、コードの脆弱性を自動的に検出できます。
+By enabling GitHub Advanced Security's Code Scanning feature, you can automatically detect code vulnerabilities.
 
-1. フォークしたリポジトリの **Settings** タブをクリック
-2. 左サイドバーから **Security** → **Code security** を選択
-3. **Code scanning** セクションで **Set up** をクリック
+1. Click the **Settings** tab of your forked repository
+2. Select **Security** → **Code security** from the left sidebar
+3. Click **Set up** in the **Code scanning** section
 
 ![GHAS Code Scanning Setup](github-copilot-workshop/img/code-scanning-setup.png)
 
-4. **Default** を選択（推奨）
+4. Select **Default** (recommended)
 
 ![GHAS Default Configuration](github-copilot-workshop/img/code-scanning-default.png)
 
-5. **Enable CodeQL** をクリック
+5. Click **Enable CodeQL**
 
-これにより、プッシュ時やプルリクエスト作成時にコードの自動スキャンが実行されます。
+This will execute automatic code scanning when pushing or creating pull requests.
 
-### 3. Copilot 機能の確認
+### 3. Verify Copilot Features
 
-GitHubで利用可能なCopilot機能を確認しましょう。
+Let's check the Copilot features available on GitHub.
 
-1. GitHubの右上のプロフィールアイコンをクリック
-2. **Your Copilot** を選択
+1. Click the profile icon in the top right of GitHub
+2. Select **Your Copilot**
 
 ![Your Copilot Menu](github-copilot-workshop/img/your-copilot-menu.png)
 
-以下の機能が有効になっていることを確認してください：
+Confirm that the following features are enabled:
 
-- **Copilot in GitHub.com** - GitHubのWebサイト上でCopilotを使用
-- **Copilot coding agent** - より高度なコーディング支援
-- **MCP servers in Copilot** - Model Context Protocol サーバーの利用
+- **Copilot in GitHub.com** - Use Copilot on GitHub's website
+- **Copilot coding agent** - More advanced coding assistance
+- **MCP servers in Copilot** - Use Model Context Protocol servers
 
 > aside negative
 >
-> **プラン制限**: Copilot Code ReviewやCoding Agentなどの高度な機能は、GitHub Copilot Business/Enterprise プランでのみ利用可能です。Freeプランをご利用の場合、これらの機能は利用できません。
+> **Plan Limitations**: Advanced features like Copilot Code Review and Coding Agent are only available with GitHub Copilot Business/Enterprise plans. If you're using the Free plan, these features are not available.
 
-### 4. GitHub MCP Server のセットアップ
+### 4. GitHub MCP Server Setup
 
-Model Context Protocol (MCP) サーバーを使用することで、Copilotの機能を拡張できます。
+By using Model Context Protocol (MCP) servers, you can extend Copilot's functionality.
 
-#### ステップ1: MCP サーバーの追加
+#### Step 1: Add MCP Server
 
-1. VS Code でコマンドパレットを開く: `Ctrl+Shift+P` (Windows/Linux) / `Cmd+Shift+P` (Mac)
-2. `mcp: add server` と入力して選択
+1. Open Command Palette in VS Code: `Ctrl+Shift+P` (Windows/Linux) / `Cmd+Shift+P` (Mac)
+2. Type and select `mcp: add server`
 
 ![MCP Add Server](github-copilot-workshop/img/mcp-add-server.png)
 
-3. **HTTP** を選択
-4. サーバーURL: `https://api.githubcopilot.com/mcp/` を入力
-5. Server ID の入力欄で `github-mcp-server` と入力（または Enter でスキップ）
-6. 保存先は **このワークスペースに保存** を選択
-7. GitHub アカウントで認証を行う
+3. Select **HTTP**
+4. Enter server URL: `https://api.githubcopilot.com/mcp/`
+5. Enter `github-mcp-server` in the Server ID field (or press Enter to skip)
+6. Select **Save to this workspace**
+7. Authenticate with your GitHub account
 
-#### ステップ2: MCP サーバーの起動確認
+#### Step 2: Verify MCP Server Startup
 
-`.vscode/mcp.json` にMCPサーバーの設定が保存されます。
+MCP server settings are saved in `.vscode/mcp.json`.
 
 ![MCP JSON Config](github-copilot-workshop/img/mcp-json-config.png)
 
-#### ステップ3: ツールの有効化
+#### Step 3: Enable Tools
 
-1. Copilot Chat でツールボタンをクリック
+1. Click the tools button in Copilot Chat
 
 ![MCP Tools Button](github-copilot-workshop/img/mcp-tools-button.png)
 
-2. GitHub MCP サーバーがリストに表示されることを確認
-3. チェックボックスにチェックを入れて有効化
+2. Confirm that GitHub MCP server appears in the list
+3. Check the checkbox to enable it
 
 ![MCP Enable Tools](github-copilot-workshop/img/mcp-enable-tools.png)
 
-これで、GitHub の情報を直接 Copilot Chat で参照できるようになります。
+Now you can directly reference GitHub information in Copilot Chat.
 
 > aside positive
 >
-> **ヒント**: MCP サーバーを使用すると、Copilot がリポジトリの情報、Issues、Pull Requests などに直接アクセスして、より詳細な回答や提案を行うことができます。
+> **Tip**: Using MCP servers allows Copilot to directly access repository information, Issues, Pull Requests, etc., enabling more detailed responses and suggestions.
 
-## ポモドーロタイマーを作ってみよう
+## Let's Create a Pomodoro Timer
 Duration: 30
 
-ここまでで、VS Code上で利用できるGitHub Copilotの基本的な使い方を学びました。次は、実際にアプリケーションを開発してみましょう。
+So far, we've learned the basic usage of GitHub Copilot available in VS Code. Next, let's actually develop an application.
 
-今回のハンズオンでは、ポモドーロタイマーアプリケーションを開発します。このアプリケーションは、作業時間と休憩時間を設定し、タイマーを管理する機能を持っています。
+In this hands-on session, we'll develop a Pomodoro timer application. This application has functionality to set work time and break time, and manage timers.
 
-以下のようなUIを持つアプリケーションを作成することを目指します。
+We aim to create an application with a UI like the following:
 
-![ポモドーロタイマーUI](github-copilot-workshop/img/pomodoro.png)
+![Pomodoro Timer UI](github-copilot-workshop/img/pomodoro.png)
 
-では、まずVS Code上で、新しいPythonファイルを作成しましょう。今回はWebアプリケーションとして作成したいので、Flaskを使用します。メインファイル名は「app.py」としましょう。
+First, let's create a new Python file in VS Code. Since we want to create it as a web application, we'll use Flask. Let's name the main file "app.py".
 
-### プロジェクトの概要
+### Project Overview
 
-ポモドーロテクニック用のWebタイマーアプリケーションを作成します。
+We'll create a web timer application for the Pomodoro Technique.
 
-### 必要な機能
-- 25分の作業タイマー
-- 5分の休憩タイマー
-- タイマーの開始・停止・リセット
-- 進捗表示と統計機能
-- ブラウザ通知とサウンド通知
-- レスポンシブなWebUI
+### Required Features
+- 25-minute work timer
+- 5-minute break timer
+- Timer start/stop/reset
+- Progress display and statistics functionality
+- Browser notifications and sound notifications
+- Responsive web UI
 
-## ポモドーロタイマーの設計を考える
+## Think About Pomodoro Timer Design
 Duration: 10
 
-まず、いきなり実装を始めるのではなく、どういった方針・設計で進めるかをCopilotに相談してみましょう。ここから先は、すべてエージェントモードで進めていきます。
+First, instead of jumping straight into implementation, let's consult with Copilot about what approach and design to proceed with. From here on, we'll proceed entirely in agent mode.
 
-今回のようにUIを持ったWebアプリケーションを作成するにあたって役に立つのが、Copilot Chatに画像をアップロードする機能です。これを使うことで、アプリケーションのUIイメージをCopilotに理解させることができます。
+When creating web applications with UIs like this one, what's useful is Copilot Chat's image upload functionality. Using this, you can make Copilot understand your application's UI image.
 
-前ページのUIイメージをまずはプロジェクトのルートに `pomodoro.png` として保存してください。その後、チャット欄の `Add Context` をクリックし、「Image from Clipboard」または「Files & Folders...」を選択します。そして、UIイメージの画像を選択します。
+First, save the UI image from the previous page as `pomodoro.png` in the project root. Then, click `Add Context` in the chat field and select either "Image from Clipboard" or "Files & Folders...". Then select the UI image.
 
 ![VS Code Copilot Chat Context Menu](github-copilot-workshop/img/add_context2.png)
 
 ![VS Code Copilot Chat Context Menu](github-copilot-workshop/img/add_context3.png)
 
-画像のアップロードができたら、Copilot Chatに画像が表示されます。
+Once the image is uploaded, the image will be displayed in Copilot Chat.
 
-その上で、次のプロンプトを入力してみましょう。
-
-```
-このプロジェクトでポモドーロタイマーのWebアプリを作成する予定です。添付の画像はそのアプリのUIモックです。FlaskとHTML/CSS/JavaScriptを使用してこのアプリを作成するにあたって、どのような設計で進めるべきか、アーキテクチャの提案をしてください。
-```
-
-すると、推奨のWebアプリケーションアーキテクチャを提案してくれます。
-
-このアーキテクチャに対して、もっとこうした方が良いという点や考慮不足の点があれば、それを指摘してみましょう。例えば次のような指摘です。
+Then, try entering the following prompt:
 
 ```
-ユニットテストのしやすさという点を考慮して、今のアーキテクチャにもし改善や追加が必要な点があればそれも書き出してください。
+We plan to create a Pomodoro timer web app in this project. The attached image is a UI mock of that app. For creating this app using Flask and HTML/CSS/JavaScript, what design approach should we take? Please propose an architecture.
 ```
 
-このやり取りを経て、アーキテクチャの設計が固まったら、一度その内容をファイルに保存してもらいましょう。そうすることで、別のチャットセッションを開いても、同じアーキテクチャの内容を参照することができます。
+This will suggest a recommended web application architecture.
+
+If there are points you think could be improved or areas that lack consideration for this architecture, try pointing them out. For example, the following type of feedback:
 
 ```
-ここまでの会話でアーキテクチャについては固まったので、これまでの会話の内容を踏まえて、プロジェクトのルートにarchitecture.mdというファイルに、Webアプリケーションアーキテクチャ案をまとめてください。
+Considering ease of unit testing, please also list any improvements or additions needed to the current architecture.
+```
+
+After this exchange, once the architecture design is finalized, let's save the content to a file. This way, even if you open a different chat session, you can reference the same architecture content.
+
+```
+Now that the architecture has been decided through our conversation, please create a file called architecture.md in the project root summarizing the web application architecture proposal based on our conversation so far.
 ```
 
 > aside positive
 >
-> Copilot Chatでのやりとりに一区切りがついたら、新しい会話を始めることで、よりCopilotに対して明確な指示を与えることができます。新しい会話を始めるには、チャットウィンドウの上部にある「新しい会話」ボタンをクリックします。その際、今回のアーキテクチャの内容のように、今後のチャットでも参照したい内容は、今回のようにファイルに書き出して保存しておくと便利です。
+> When you reach a break in your conversation with Copilot Chat, starting a new conversation allows you to give clearer instructions to Copilot. To start a new conversation, click the "New conversation" button at the top of the chat window. In such cases, content you want to reference in future chats, like this architecture content, should be written to files and saved as we did this time.
 
 
 
-## やることを洗い出そう
+## Let's List What Needs to Be Done
 Duration: 10
 
-ここまでで、UIモックとアーキテクチャの設計が固まりました。具体的にどのような機能を実装する必要があるかを検討していきましょう。これもCopilot Chatに相談してみます。その際、pomodoro.pngとarchitecture.mdを添付しましょう。
+Now we have the UI mock and architecture design finalized. Let's examine what specific functionality needs to be implemented. We'll also consult with Copilot Chat about this. When doing so, let's attach pomodoro.png and architecture.md.
 
 ```
-このポモドーロタイマーアプリケーションを作成するにあたって、実装する必要のある機能を洗い出してください。
+For creating this Pomodoro timer application, please list the functionality that needs to be implemented.
 ```
 
-<img src="github-copilot-workshop/img/pomodoro.png" alt="機能一覧の検討" width="400" />
+<img src="github-copilot-workshop/img/pomodoro.png" alt="Feature List Consideration" width="400" />
 
-![機能洗い出しの例](github-copilot-workshop/img/10-2.list_features.png)
+![Feature Listing Example](github-copilot-workshop/img/10-2.list_features.png)
 
-この内容もCopilotとのチャットを通して、改善していきましょう。内容が固まったら、アーキテクチャの時と同様にこの内容もfeatures.mdというファイルにまとめて保存しておきましょう。
-
-```
-ありがとうございます。その内容で良さそうなので、実装する必要のある機能一覧をfeatures.mdというファイルに書いてください。
-```
-
-では、ここから実装を始めるわけですが、Copilotを使いこなすコツとしては、一度に大きな機能を実装しようとするのではなく、まずは小さな機能から実装していくことです。これにより、Copilotが提案するコードの精度が上がり、よりスムーズに開発を進めることができます。
-
-今回のアプリケーション開発を、どのような粒度で細分化して実装していくかについても、Copilotに相談してみましょう。ここでは、pomodoro.png、architecture.md、features.mdを添付しましょう。
+Let's also improve this content through chat with Copilot. Once the content is finalized, let's save this content to a file called features.md just like we did with the architecture.
 
 ```
-このポモドーロタイマーアプリケーションを段階的に実装していきたいと考えています。添付の画像とアーキテクチャ、機能一覧を踏まえて、どのような粒度で機能を実装していくべきか、段階的な実装計画を提案してください。
+Thank you. That looks good, so please write the list of functionality that needs to be implemented to a file called features.md.
 ```
 
-私が試したところ、6つのステップからなる計画を提案してくれました。この点についても、もっとこうしてほしいなどがあれば、Copilotに指摘してみましょう。そして、この内容も後で参照できるように、plan.mdというファイルにまとめて保存しておきましょう。その際、どういうプロンプトで指示するべきかは、みなさん自身で考えてみてください。
+Now we're about to start implementation, but a tip for mastering Copilot is not to try to implement large functions all at once, but to start implementing small functions first. This improves the accuracy of the code Copilot suggests and allows for smoother development progress.
 
-## 実装しよう
+Let's also consult with Copilot about what granularity to break down and implement this application development. Here, let's attach pomodoro.png, architecture.md, and features.md.
+
+```
+I want to implement this Pomodoro timer application step by step. Based on the attached image, architecture, and feature list, please suggest what granularity should be used to implement functions and propose a step-by-step implementation plan.
+```
+
+When I tried it, it suggested a plan consisting of 6 steps. If there are points you'd like to see improved, try pointing them out to Copilot. And let's save this content in a file called plan.md so it can be referenced later. Please think for yourself what prompt should be used to give instructions.
+
+## Let's Implement
 Duration: 30
 
-ここまでの準備が整ったので、いよいよ実装に取り掛かりましょう。前のステップで提案された実装計画に従って、段階的に機能を実装していきます。
+Now that we've completed the preparation, let's finally start implementation. Following the implementation plan proposed in the previous step, we'll implement functions step by step.
 
-### プロジェクト構成の準備
+### Project Structure Preparation
 
-まずは、今回のアーキテクチャに従ったプロジェクトのディレクトリ構成を作成しましょう。
+First, let's create a project directory structure that follows this architecture.
 
-まずは、`architecture.md` のようなアーキテクチャを実現するにあたって、現在のプロジェクトのフォルダ構成を修正してください。必要に応じてファイルの移動や、設定ファイルの変更も行ってください。
+First, please modify the current project folder structure to realize an architecture like `architecture.md`. Move files and change configuration files as necessary.
 
-その後、`pomodoro.png`, `architecture.md`, `plan.md` を添付した上で、次のようにCopilotに指示を出してみましょう。
+Then, with `pomodoro.png`, `architecture.md`, and `plan.md` attached, let's give Copilot instructions like this:
 
 ```
-plan.mdのステップ１を実装してください。その際、すでにこのプロジェクトにあるファイルを別のディレクトリに移動する必要があれば、その作業も実行してください。もし追加で考慮が必要なことがあれば、私に質問してください。
+Please implement step 1 of plan.md. If there are files that already exist in this project that need to be moved to other directories, please perform that work as well. If there are additional considerations needed, please ask me questions.
 ```
 
-すると、私のケースでは以下のように検討が必要な質問をしてきました。こういった場合には、必要な情報を提供しましょう。
+In my case, it asked questions that needed consideration as shown below. In such cases, provide the necessary information.
 
-![Copilotからの質問例](github-copilot-workshop/img/12-0.question_from_copilot.png)
+![Example Question from Copilot](github-copilot-workshop/img/12-0.question_from_copilot.png)
 
-その後、Copilotは、ステップ1の実装を行います。実装が完了したら、Copilotは自らの判断でプロジェクトのビルドを行い、エラーがないかを確認します。エラーが発生した場合は、そのエラーを解決するために追加で修正を行います。このような自律的な動作が、エージェントモードの特徴です。
+After that, Copilot implements step 1. Once implementation is complete, Copilot will build the project at its own discretion and check for errors. If errors occur, it will make additional fixes to resolve those errors. This autonomous behavior is characteristic of agent mode.
 
-実装が完了したら、以下の点を確認してみましょう：
+Once implementation is complete, let's check the following points:
 
-1. **ディレクトリ構造**：推奨されたアーキテクチャに沿った構成になっているか
-2. **基本ファイル**：必要な基本ファイル（app.py、HTML テンプレート、CSS ファイルなど）が作成されているか
-3. **動作確認**：簡単な動作テストを行って、エラーが発生していないか
-
-
-以下が、私の場合のステップ1の実装結果です。この段階でどのようなアプリケーションになっているかは人によって異なるでしょう。
+1. **Directory Structure**: Is the configuration aligned with the recommended architecture?
+2. **Basic Files**: Are the necessary basic files (app.py, HTML templates, CSS files, etc.) created?
+3. **Operation Check**: Perform simple operation tests to see if any errors occur
 
 
-![ステップ1実装結果例](github-copilot-workshop/img/12-1.completed_timer.png)
+Here is the result of my step 1 implementation. What kind of application it becomes at this stage will vary from person to person.
+
+
+![Step 1 Implementation Result Example](github-copilot-workshop/img/12-1.completed_timer.png)
 
 
 
 
-## テストを書こう
+## Let's Write Tests
 Duration: 20
 
-このまま実装を続ける前に、実装した機能に対してユニットテストを書いておきましょう。ユニットテストを書くことで、後のステップでの変更が既存の機能に影響を与えないことを確認できます。
+Before continuing with implementation, let's write unit tests for the implemented functionality. By writing unit tests, we can ensure that changes in later steps don't affect existing functionality.
 
-もし前ページの段階でユニットテストも実装されている場合は、このページは読み飛ばしてください。
+If unit tests were already implemented in the previous page's stage, you can skip this page.
 
-### テストの実装
+### Test Implementation
 
-次のようなプロンプトを実行してみましょう。
+Try executing a prompt like this:
 
 ```
-現在の実装に対して、ユニットテストが全くないので、ユニットテストを実装してください。
+There are no unit tests at all for the current implementation, so please implement unit tests.
 ```
 
-すると、Copilotエージェントはユニットテスト用の依存関係をインストールするために、コマンドを使って良いかどうかを尋ねてきます。このように、エージェントが何かのコマンドを実行する前には、必ずユーザーに確認を求めます。ここでは、必要なコマンドを実行することを許可するために、「Continue」をクリックします。
+Copilot Agent will then ask if it's okay to use commands to install dependencies for unit testing. Like this, agents always ask for user confirmation before executing any command. Here, click "Continue" to allow execution of necessary commands.
 
-![Copilotによるテスト実装確認](github-copilot-workshop/img/13-0.test_for_step1.png)
+![Test Implementation Confirmation by Copilot](github-copilot-workshop/img/13-0.test_for_step1.png)
 
-すると、CopilotはVS Code内のターミナル内で、先ほどのコマンドを実行し、必要な依存関係をインストールします。それ以降も同様に、Copilotが何かのコマンドを実行する前には、必ずユーザーに確認を求めます。もし、そのコマンドを実行してエラーが発生した場合は、そのエラーを解決するために、エージェントは追加の修正を行います。
+Copilot will then execute the command in VS Code's terminal and install necessary dependencies. Similarly after that, Copilot always asks for user confirmation before executing any command. If executing that command causes an error, the agent will make additional fixes to resolve that error.
 
 
-## 残りの機能を実装しよう（オプション）
+## Let's Implement the Remaining Features (Optional)
 Duration: 20
 
-このセクションは **オプション** です。基本的なCopilot機能を学習済みの方で、より高度な実装に挑戦したい場合に実施してください。
+This section is **optional**. Please do this if you've already learned basic Copilot features and want to challenge more advanced implementation.
 
-ここからは、自由課題として、残りの機能を段階的に実装していきましょう。
+From here, let's implement the remaining features step by step as a free assignment.
 
-いくつか役に立つであろうポイントをここでは紹介します。
+Here we'll introduce some potentially useful points.
 
-### UIに対して指示をしたい場合
+### When You Want to Give Instructions for UI
 
-UI上の特定の要素に対して指示を出したい場合は、UIのスクリーンショットをCopilotにアップロードすることで、その要素を認識させることができます。その際、スクリーンショットの上に特に指摘したい箇所を丸で囲むなり、矢印を引くなりして、どの要素に対して指示を出したいのかを明確にすると良いでしょう。
+When you want to give instructions for specific elements on the UI, you can upload a screenshot of the UI to Copilot to make it recognize those elements. When doing so, it's good to clearly indicate which element you want to give instructions for by circling the specific areas you want to point out on the screenshot or drawing arrows to them.
 
-または、現状のスクリーンショットと、期待するスクリーンショットを2枚アップロードすることで、その差分を確認してもらい、期待するUIにできるだけ近づくように指示を出すこともできます。
+Alternatively, you can upload two screenshots - one of the current state and one of the expected state - to have Copilot check the differences and give instructions to get as close as possible to the expected UI.
 
-### 毎回同じような指示を出している場合
+### When You're Giving Similar Instructions Repeatedly
 
-プロンプトを書いたり、文脈を指定する際に、頻繁に同じような指示を出している場合は、Copilotにその指示を覚えさせることができます。具体的には、プロジェクト内に `.github/copilot-instructions.md` というファイルを作成し、その中に指示を書いておきます。このファイルがあると、Copilotはその指示を自動的に読み込み、以降のチャットでその指示を参照することができます。
+When writing prompts or specifying context, if you're frequently giving similar instructions, you can have Copilot remember those instructions. Specifically, create a file called `.github/copilot-instructions.md` in your project and write instructions in it. When this file exists, Copilot automatically loads those instructions and can reference them in subsequent chats.
 
-以下にカスタム指示のサンプルを示します。
+Below is a sample of custom instructions.
 
 ```markdown
-このプロジェクトは、ポモドーロタイマーをFlaskで実装するものです。
+This project implements a Pomodoro timer with Flask.
 
-以下はプロジェクトの重要なファイルです。ユーザーの指示に対して、必要に応じてこれらのファイルを参照してください。
- - `pomodoro.png`: アプリケーションのUIモックです。
- - `architecture.md`: アプリケーションのアーキテクチャドキュメントです。
- - `features.md`: 実装する機能の一覧です。
- - `plan.md`: 段階的な実装計画です。
+The following are important files in the project. Please reference these files as needed for user instructions.
+ - `pomodoro.png`: This is the UI mock of the application.
+ - `architecture.md`: This is the application architecture document.
+ - `features.md`: This is the list of functions to implement.
+ - `plan.md`: This is the step-by-step implementation plan.
 ```
 
-そのほかにも、プロジェクトをビルドするコマンドやテストを実行するコマンドなど、プロジェクトに特有のコマンドを記載しておくと、Copilotはそのコマンドを自動的に使用するようになります。
+Additionally, by recording project-specific commands such as commands to build the project or execute tests, Copilot will automatically use those commands.
 
-### なかなか実装が進まなかったり、バグを解決できない場合
+### When Implementation Isn't Progressing Well or You Can't Resolve Bugs
 
-このような場合には、以下のアプローチを試してみましょう。
+In such cases, try the following approaches:
 
-- デバッグ情報を出力するように指示し、その出力をCopilotに分析させる。
-- 他のモデルを試してみる。
+- Instruct to output debug information and have Copilot analyze that output.
+- Try other models.
 
-## GitにコミットしてPushしよう
+## Let's Commit to Git and Push
 Duration: 10
 
-作成したコードをGitリポジトリにコミットしてリモートブランチにPushしましょう。ここでは3つの方法を紹介します。
+Let's commit the created code to the Git repository and push it to a remote branch. Here we'll introduce three methods.
 
-### 方法A: ターミナルでコマンドを使用
+### Method A: Using Commands in Terminal
 
-従来の方法として、ターミナルでGitコマンドを直接実行する方法です：
+The traditional method of directly executing Git commands in the terminal:
 
 ```bash
 git add .
-git commit -m "ポモドーロタイマー機能を追加"
+git commit -m "Add Pomodoro timer functionality"
 git push origin feature/pomodoro-timer
 ```
 
-### 方法B: VS Code の Source Control を使用
+### Method B: Using VS Code's Source Control
 
-VS Codeの統合されたGit機能を使用する方法です：
+Using VS Code's integrated Git functionality:
 
-1. **VS Code の Source Control タブ**を開く
-2. **変更されたファイル**の横にある **+** ボタンをクリックして、ステージングに追加
-3. ✨ボタンをクリックして、Copilotにコミットメッセージを生成させる
+1. Open **VS Code's Source Control tab**
+2. Click the **+** button next to **changed files** to add to staging
+3. Click the ✨ button to have Copilot generate a commit message
 
-![Source Control でのコミット](github-copilot-workshop/img/source-control-commit.png)
+![Source Control Commit](github-copilot-workshop/img/source-control-commit.png)
 
-4. **Commit** ボタン（青いボタン）をクリックしてリモートブランチにPush
+4. Click the **Commit** button (blue button) to push to remote branch
 
-### 方法C: MCP サーバーを使用（設定済みの方向け）
+### Method C: Using MCP Server (For Those Who Have Set It Up)
 
-MCPサーバーを設定済みの方は、エージェントモードでCopilotに直接指示できます：
-
-```
-機能の作成が完了したので、コードの差分をgitのステージングにあげてください。
-
-その後、適切なコミットメッセージでコミットいただき、リモートブランチに変更をPushしてください。
-```
-
-![MCP による Git ワークフロー](github-copilot-workshop/img/mcp-git-workflow.png)
-
-
-続いて、実装計画をGitHub Issuesとして管理していきます：
+For those who have set up MCP server, you can give direct instructions to Copilot in agent mode:
 
 ```
-plan.mdの各ステップをGitHub issuesとして起票してください
+Function creation is complete, so please add the code differences to git staging.
+
+Then please commit with an appropriate commit message and push changes to the remote branch.
 ```
 
-この指示により、Copilotは以下を実行します：
+![Git Workflow with MCP](github-copilot-workshop/img/mcp-git-workflow.png)
 
-1. `plan.md` の内容を読み取り
-2. 各ステップを個別のIssueとして起票
-3. 各Issueには以下が含まれます：
-   - ステップのタイトルと詳細説明
-   - 実装すべき機能の要件
-   - 受け入れ条件
-   - 適切なラベルと優先度
 
-これにより、計画的なプロジェクト管理とアジャイル開発が可能になります。
+Next, we'll manage the implementation plan as GitHub Issues:
+
+```
+Please create GitHub issues for each step in plan.md
+```
+
+With this instruction, Copilot will:
+
+1. Read the contents of `plan.md`
+2. Create each step as an individual Issue
+3. Each Issue will include:
+   - Step title and detailed description
+   - Requirements for functionality to implement
+   - Acceptance criteria
+   - Appropriate labels and priority
+
+This enables planned project management and agile development.
 
 ![MCP Issues](github-copilot-workshop/img/mcp-issues.png)
 
 > aside positive
 >
-> **MCP の利点**: GitHub MCPサーバーを使用することで、Copilotがリポジトリの情報、Issues、Pull Requests、ブランチ情報などのGitHubメタデータに直接アクセスし、より詳細な分析や提案を行うことができます。
+> **MCP Benefits**: By using the GitHub MCP server, Copilot can directly access GitHub metadata such as repository information, Issues, Pull Requests, branch information, etc., enabling more detailed analysis and suggestions.
 
 
-## GitHub.com上でのGitHub Copilot
+## GitHub Copilot on GitHub.com
 Duration: 15
 
-Pushした後の内容をGitHub.com上でPull Requestを立てて、Copilotのコードレビュー機能を活用しましょう。
+After pushing, let's create a Pull Request on GitHub.com for the pushed content and utilize Copilot's code review functionality.
 
-### Pull Requestの作成とCopilot Summary
+### Creating Pull Request and Copilot Summary
 
-1. GitHub上でフォークしたリポジトリにアクセス
-2. **Open a pull request** をクリック
-3. Pull Request作成画面で、**Copilotのアイコン** >> **Summary** をクリック
+1. Access your forked repository on GitHub
+2. Click **Open a pull request**
+3. On the Pull Request creation screen, click **Copilot icon** >> **Summary**
 
-![Pull RequestでのCopilot Summary](github-copilot-workshop/img/pull-request-copilot-summary.png)
+![Copilot Summary in Pull Request](github-copilot-workshop/img/pull-request-copilot-summary.png)
 
-Copilotが自動的にPull Requestの概要を生成してくれます。
+Copilot will automatically generate a summary of the Pull Request.
 
-### Copilotをレビュワーとしてアサイン
+### Assign Copilot as Reviewer
 
-**Reviewers** セクションで **Copilot** をアサインすることで、Copilotをレビュワーとしてアサインし、コードのレビューを依頼できます。
-
-> aside positive
->
-> **自動アサインの設定**: Settings >> Branches >> Rulesets >> Require a pull request before merging >> Automatically request Copilot code reviewにチェックを入れることで、Pull Requestを開いた時、自動的にCopilotがアサインされるようになります。
-
-![Copilot自動アサインの設定](github-copilot-workshop/img/copilot-auto-assign-settings.png)
-
-### Copilot Code Reviewの結果確認
-
-Pull Requestが開かれた後、Copilot Code Reviewの結果を閲覧できます：
-
-- **Pull Requestのオーバービュー**: コードの変更内容の要約
-- **指摘事項**: 潜在的な問題点の指摘
-- **改善提案**: コードの品質向上のための具体的な提案
-
-![Copilot Code Reviewの概要](github-copilot-workshop/img/copilot-code-review-overview.png)
-
-### GitHub Advanced Securityによる静的脆弱性スキャン
-
-Pull Requestには、GitHub Advanced Security（GHAS）による静的脆弱性スキャンの結果も表示されます：
-
-#### セキュリティアラートの確認
-
-![GHAS セキュリティアラート](github-copilot-workshop/img/ghas-security-alerts.png)
-
-- **高セキュリティ脆弱性**: 重要度の高いセキュリティ問題
-- **Copilot Autofix**: AIによる自動修正提案
-- **詳細な説明**: 脆弱性の内容と修正方法
-
-#### チェック結果の詳細
-
-![GHAS チェック結果](github-copilot-workshop/img/ghas-check-results.png)
+In the **Reviewers** section, you can assign **Copilot** as a reviewer to request code review from Copilot.
 
 > aside positive
 >
-> **Copilot Autofixの活用**: GitHubは検出されたセキュリティ脆弱性に対して、Copilot Autofixによる自動修正提案を提供します。これにより、セキュリティ問題を迅速に解決できます。
+> **Auto-assign Settings**: By checking Settings >> Branches >> Rulesets >> Require a pull request before merging >> Automatically request Copilot code review, Copilot will be automatically assigned when you open a Pull Request.
 
-## Issueの自動起票とCoding Agent
+![Copilot Auto-assign Settings](github-copilot-workshop/img/copilot-auto-assign-settings.png)
+
+### Check Copilot Code Review Results
+
+After the Pull Request is opened, you can view the results of Copilot Code Review:
+
+- **Pull Request Overview**: Summary of code changes
+- **Issues**: Identification of potential problems
+- **Improvement Suggestions**: Specific suggestions for improving code quality
+
+![Copilot Code Review Overview](github-copilot-workshop/img/copilot-code-review-overview.png)
+
+### Static Vulnerability Scanning with GitHub Advanced Security
+
+Pull Requests also display results from static vulnerability scanning by GitHub Advanced Security (GHAS):
+
+#### Check Security Alerts
+
+![GHAS Security Alerts](github-copilot-workshop/img/ghas-security-alerts.png)
+
+- **High Security Vulnerabilities**: High-priority security issues
+- **Copilot Autofix**: AI-powered automatic fix suggestions
+- **Detailed Descriptions**: Content of vulnerabilities and how to fix them
+
+#### Check Results Details
+
+![GHAS Check Results](github-copilot-workshop/img/ghas-check-results.png)
+
+> aside positive
+>
+> **Utilizing Copilot Autofix**: GitHub provides automatic fix suggestions through Copilot Autofix for detected security vulnerabilities. This allows you to quickly resolve security issues.
+
+## Automatic Issue Creation and Coding Agent
 Duration: 20
 
-GitHub CopilotのWebサイト版を使用して、プロジェクトの改善提案をIssueとして自動生成し、Coding Agentを活用してみましょう。
+Let's use the web version of GitHub Copilot to automatically generate project improvement suggestions as Issues and utilize Coding Agent.
 
-### GitHub Copilotでのissue自動起票
+### Automatic Issue Creation with GitHub Copilot
 
-1. **GitHub.com** にアクセスし、右上の **Copilot** アイコンをクリック
-2. Chatのコンテキストに自身のリポジトリが追加されていることを確認
-3. 以下のプロンプトを入力します：
+1. Access **GitHub.com** and click the **Copilot** icon in the top right
+2. Confirm that your repository is added to the Chat context
+3. Enter the following prompt:
 
 ```
-ポモドーロタイマーのカスタマイズを行うために３つのissueを起票してください。
+Please create 3 issues for customizing the Pomodoro timer.
 
-パターンA: 視覚的フィードバックの強化
+Pattern A: Enhanced Visual Feedback
 
-円形プログレスバーのアニメーション: 残り時間に応じて滑らかに減少するアニメーション
-色の変化: 時間経過に応じて青→黄→赤にグラデーション変化
-背景エフェクト: 集中時間中は背景にパーティクルエフェクトや波紋アニメーション
-テスト目的: 視覚的な没入感がユーザーの集中力に与える影響を測定
+Circular progress bar animation: Smooth decreasing animation based on remaining time
+Color changes: Gradient changes from blue→yellow→red as time progresses
+Background effects: Particle effects or ripple animations in the background during focus time
+Test purpose: Measure the impact of visual immersion on user concentration
 
-パターンB: カスタマイズ性の向上
+Pattern B: Improved Customization
 
-時間設定の柔軟化: 25分固定ではなく、15/25/35/45分から選択可能
-テーマ切り替え: ダーク/ライト/フォーカスモード（ミニマル）
-サウンド設定: 開始音/終了音/tick音のオン/オフ切り替え
-休憩時間カスタム: 5/10/15分から選択
-テスト目的: 個人の好みに合わせた設定がユーザー継続率に与える影響を測定
+Flexible time settings: Selectable from 15/25/35/45 minutes instead of fixed 25 minutes
+Theme switching: Dark/Light/Focus mode (minimal)
+Sound settings: On/off toggle for start/end/tick sounds
+Custom break time: Choose from 5/10/15 minutes
+Test purpose: Measure the impact of personalized settings on user retention rates
 
-パターンC: ゲーミフィケーション要素の追加
+Pattern C: Addition of Gamification Elements
 
-経験値システム: 完了したポモドーロに応じてXPとレベルアップ
-達成バッジ: 「3日連続」「今週10回完了」などの実績システム
-週間/月間統計: より詳細なグラフ表示（完了率、平均集中時間など）
-ストリーク表示: 連続日数のカウント表示
-テスト目的: ゲーミフィケーション要素がモチベーション維持と継続利用に与える影響を測定
+Experience point system: XP and level up based on completed Pomodoros
+Achievement badges: Achievement system like "3 consecutive days", "10 completions this week"
+Weekly/monthly statistics: More detailed graph displays (completion rate, average focus time, etc.)
+Streak display: Display consecutive day count
+Test purpose: Measure the impact of gamification elements on motivation maintenance and continued use
 ```
 
-![GitHub Copilotでのissue作成](github-copilot-workshop/img/github-copilot-issue-creation.png)
+![Issue Creation with GitHub Copilot](github-copilot-workshop/img/github-copilot-issue-creation.png)
 
-### Issueの作成とCoding Agentのアサイン
+### Issue Creation and Coding Agent Assignment
 
-1. **Copilotが3つのIssueを自動生成**します
-2. 各Issueの内容を確認し、必要に応じて編集
-3. **Create** ボタンをクリックして各Issueを作成
-4. Issue画面に遷移後、**Assignees** セクションで **Copilot** を選択してCoding Agentをアサイン
+1. **Copilot automatically generates 3 Issues**
+2. Review the content of each Issue and edit as necessary
+3. Click the **Create** button to create each Issue
+4. After navigating to the Issue screen, select **Copilot** in the **Assignees** section to assign Coding Agent
 
-![Coding AgentをIssueにアサイン](github-copilot-workshop/img/coding-agent-assignment.png)
+![Assign Coding Agent to Issue](github-copilot-workshop/img/coding-agent-assignment.png)
 
-### 期待されるPull Requestの結果
+### Expected Pull Request Results
 
-Coding Agentがアサインされると、以下のような結果が期待できます：
+When Coding Agent is assigned, you can expect the following results:
 
-- **自動的なコード実装**: 各Issueの要件に基づいた機能実装
-- **Pull Requestの作成**: 実装完了後の自動PR作成
-- **包括的なテスト**: 単体テストとUIテストの両方を含む
+- **Automatic Code Implementation**: Feature implementation based on each Issue's requirements
+- **Pull Request Creation**: Automatic PR creation after implementation completion
+- **Comprehensive Testing**: Including both unit tests and UI tests
 
-#### パターンA: 視覚的フィードバックの強化
+#### Pattern A: Enhanced Visual Feedback
 
-![視覚的フィードバック強化のPR結果](github-copilot-workshop/img/pr-result-visual-feedback.png)
+![PR Result for Visual Feedback Enhancement](github-copilot-workshop/img/pr-result-visual-feedback.png)
 
-#### パターンB: カスタマイズ性の向上
+#### Pattern B: Improved Customization
 
-![カスタマイズ性向上のPR結果](github-copilot-workshop/img/pr-result-customization.png)
+![PR Result for Customization Improvement](github-copilot-workshop/img/pr-result-customization.png)
 
-#### パターンC: ゲーミフィケーション要素の追加
+#### Pattern C: Addition of Gamification Elements
 
-![ゲーミフィケーション要素のPR結果](github-copilot-workshop/img/pr-result-gamification.png)
+![PR Result for Gamification Elements](github-copilot-workshop/img/pr-result-gamification.png)
 
 > aside positive
 >
-> **MCP Serverの活用**: GitHub MCP ServerとPlaywright MCP Serverが初期設定としてCoding Agentに含まれています。これにより、単体テストだけではなく、スクリーンショットによるUIの自動チェックも行うことができます。Coding Agentは実装した機能が期待通りに動作するかを視覚的に検証し、より品質の高いコードを提供します。
+> **Utilizing MCP Server**: GitHub MCP Server and Playwright MCP Server are included as default settings in Coding Agent. This allows not only unit testing but also automatic UI checking through screenshots. Coding Agent visually verifies whether implemented features work as expected and provides higher quality code.
 
-## おめでとうございます 🎉
+## Congratulations 🎉
 Duration: 5
 
-### 今日学んだこと
+### What We Learned Today
 
-このワークショップでは以下のことを学びました：
+In this workshop, we learned the following:
 
-- GitHub Copilotの基本的な使い方
-- Copilot Chatでのコード解説・改善
-- エージェント機能の活用
-- 実際のアプリケーション開発でのCopilot活用
+- Basic usage of GitHub Copilot
+- Code explanation and improvement with Copilot Chat
+- Utilizing agent functionality
+- Leveraging Copilot in actual application development
 
-### 次のステップ
+### Next Steps
 
-- 実際のプロジェクトでCopilotを活用してみる
-- より複雑なアプリケーション開発に挑戦する
-- Copilotの新機能をキャッチアップする
+- Try using Copilot in actual projects
+- Challenge more complex application development
+- Keep up with new Copilot features
 
-### リソース
+### Resources
 
 - [GitHub Copilot Documentation](https://docs.github.com/copilot)
-- [GitHub Copilot ベストプラクティス](https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot)
+- [GitHub Copilot Best Practices](https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot)
 
-お疲れさまでした！
+Great work!

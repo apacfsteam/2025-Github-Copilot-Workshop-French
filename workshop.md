@@ -996,7 +996,7 @@ Method using VS Code's integrated Git functionality:
 2. Click the **+** button next to **changed files** to add to staging
 3. Click the ✨ button to have Copilot generate a commit message
 
-![Source Control でのコミット](github-copilot-workshop/img/source-control-commit.png)
+![Source Control Commit](github-copilot-workshop/img/source-control-commit.png)
 
 4. Click the **Commit** button (blue button) to push to the remote branch
 
