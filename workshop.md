@@ -248,7 +248,7 @@ class Point3D:
 
 ### Let's Also Try with TODO Comments
 
-Replace `二次元` (two-dimensional) with `三次元` (three-dimensional) in the commented first line.
+Replace `2D` (two-dimensional) with `3D` (three-dimensional) in the commented first line.
 
 ```python
 # Class representing points in three-dimensional space
