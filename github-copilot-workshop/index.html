@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>GitHub Copilot Workshop</title>
+  <title>Atelier GitHub Copilot</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
@@ -23,164 +23,164 @@
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid=""
                   id="github-copilot-workshop"
-                  title="GitHub Copilot Workshop"
+                  title="Atelier GitHub Copilot"
                   environment="web"
                   feedback-link="https://example.com/feedback">
     
-      <google-codelab-step label="About the Workshop" duration="5">
-        <p>Welcome to the GitHub Copilot Workshop! In this workshop, you will learn how to use GitHub Copilot to explain and improve code. GitHub Copilot Chat enables interactive dialogue with AI through a chat experience. Let&#39;s learn how to use GitHub Copilot through this workshop!</p>
-<p class="image-container"><img alt="GitHub Copilot Logo" src="img/dcd9c52ce37f5b19.png"></p>
-<h2 is-upgraded>Today&#39;s Goals</h2>
+      <google-codelab-step label="À propos de l&#39;atelier" duration="5">
+        <p>Bienvenue à l&#39;Atelier GitHub Copilot ! Dans cet atelier, vous apprendrez à utiliser GitHub Copilot pour expliquer et améliorer le code. GitHub Copilot Chat permet un dialogue interactif avec l&#39;IA à travers une expérience de chat. Apprenons à utiliser GitHub Copilot à travers cet atelier !</p>
+<p class="image-container"><img alt="Logo GitHub Copilot" src="img/dcd9c52ce37f5b19.png"></p>
+<h2 is-upgraded>Objectifs du jour</h2>
 <ul>
-<li>Understand the various features of GitHub Copilot</li>
-<li>Develop a new application using agent mode</li>
+<li>Comprendre les différentes fonctionnalités de GitHub Copilot</li>
+<li>Développer une nouvelle application en utilisant le mode agent</li>
 </ul>
-<h2 is-upgraded>Prerequisites</h2>
+<h2 is-upgraded>Prérequis</h2>
 <ul>
-<li>Visual Studio Code is installed</li>
-<li>GitHub Copilot license is available</li>
-<li>GitHub account is available</li>
+<li>Visual Studio Code est installé</li>
+<li>Une licence GitHub Copilot est disponible</li>
+<li>Un compte GitHub est disponible</li>
 </ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Project Setup" duration="15">
-        <p>This workshop uses the following GitHub repository:</p>
-<p><strong>Project URL</strong>: https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python</p>
-<h2 is-upgraded>Step 1: Fork the Repository</h2>
-<p>First, open the project URL above in your browser and fork the repository:</p>
+      <google-codelab-step label="Configuration du projet" duration="15">
+        <p>Cet atelier utilise le dépôt GitHub suivant :</p>
+<p><strong>URL du projet</strong> : https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python</p>
+<h2 is-upgraded>Étape 1 : Forker le dépôt</h2>
+<p>Tout d&#39;abord, ouvrez l&#39;URL du projet ci-dessus dans votre navigateur et forkez le dépôt :</p>
 <ol type="1">
-<li>Open the project URL (https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python) in your browser</li>
-<li>Click the <strong>Fork</strong> button in the top right</li>
+<li>Ouvrez l&#39;URL du projet (https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python) dans votre navigateur</li>
+<li>Cliquez sur le bouton <strong>Fork</strong> en haut à droite</li>
 </ol>
-<p class="image-container"><img alt="Click Fork button" src="img/57690ce147443e0a.png"></p>
+<p class="image-container"><img alt="Cliquer sur le bouton Fork" src="img/57690ce147443e0a.png"></p>
 <ol type="1" start="3">
-<li>Click the <strong>Create fork</strong> button on the fork creation screen</li>
+<li>Cliquez sur le bouton <strong>Create fork</strong> sur l&#39;écran de création du fork</li>
 </ol>
-<p class="image-container"><img alt="Click Create fork button" src="img/92b19af6bb66c85d.png"></p>
-<p>Once the fork is complete, a copy of the repository will be created in your GitHub account.</p>
-<h2 is-upgraded>Step 2: Development Environment Setup</h2>
-<p>Using your forked repository, you can start the project using one of the following methods:</p>
-<h3 is-upgraded>Method A: Use GitHub Codespaces (Recommended)</h3>
+<p class="image-container"><img alt="Cliquer sur le bouton Create fork" src="img/92b19af6bb66c85d.png"></p>
+<p>Une fois le fork terminé, une copie du dépôt sera créée dans votre compte GitHub.</p>
+<h2 is-upgraded>Étape 2 : Configuration de l&#39;environnement de développement</h2>
+<p>En utilisant votre dépôt forké, vous pouvez démarrer le projet en utilisant l&#39;une des méthodes suivantes :</p>
+<h3 is-upgraded>Méthode A : Utiliser GitHub Codespaces (Recommandé)</h3>
 <ol type="1">
-<li>On your forked repository page (<code>https://github.com/[your-username]/2025-Github-Copilot-Workshop-Python</code>)</li>
-<li>Click the green <strong>Code</strong> button</li>
-<li>Select the <strong>Codespaces</strong> tab</li>
-<li>Click <strong>Create codespace on main</strong></li>
+<li>Sur la page de votre dépôt forké (<code>https://github.com/[votre-nom-utilisateur]/2025-Github-Copilot-Workshop-Python</code>)</li>
+<li>Cliquez sur le bouton vert <strong>Code</strong></li>
+<li>Sélectionnez l&#39;onglet <strong>Codespaces</strong></li>
+<li>Cliquez sur <strong>Create codespace on main</strong></li>
 </ol>
-<p class="image-container"><img alt="Codespaces Setup" src="img/da697969a846a2d4.png"></p>
-<aside class="special"><p><strong>Tip</strong>: Using Codespaces launches a VS Code-like environment in your browser, allowing you to start development immediately.</p>
+<p class="image-container"><img alt="Configuration de Codespaces" src="img/da697969a846a2d4.png"></p>
+<aside class="special"><p><strong>Astuce</strong> : L&#39;utilisation de Codespaces lance un environnement de type VS Code dans votre navigateur, vous permettant de commencer le développement immédiatement.</p>
 </aside>
-<h3 is-upgraded>Method B: Clone to Local Environment</h3>
-<p>If you have VS Code installed locally:</p>
+<h3 is-upgraded>Méthode B : Cloner dans l&#39;environnement local</h3>
+<p>Si vous avez VS Code installé localement :</p>
 <ol type="1">
-<li>Open Terminal or Command Prompt</li>
-<li>Clone your forked repository with the following command:</li>
+<li>Ouvrez le Terminal ou l&#39;Invite de commandes</li>
+<li>Clonez votre dépôt forké avec la commande suivante :</li>
 </ol>
-<pre><code language="language-bash" class="language-bash">git clone https://github.com/[your-username]/2025-Github-Copilot-Workshop-Python.git
+<pre><code language="language-bash" class="language-bash">git clone https://github.com/[votre-nom-utilisateur]/2025-Github-Copilot-Workshop-Python.git
 </code></pre>
 <ol type="1" start="3">
-<li>Navigate to the cloned directory:</li>
+<li>Naviguez vers le répertoire cloné :</li>
 </ol>
 <pre><code language="language-bash" class="language-bash">cd 2025-Github-Copilot-Workshop-Python
 </code></pre>
 <ol type="1" start="4">
-<li>Open the project in VS Code:</li>
+<li>Ouvrez le projet dans VS Code :</li>
 </ol>
 <pre><code language="language-bash" class="language-bash">code .
 </code></pre>
-<h2 is-upgraded>Step 3: Install Required Extensions</h2>
-<p>After opening the project, please install the following extensions:</p>
+<h2 is-upgraded>Étape 3 : Installer les extensions requises</h2>
+<p>Après avoir ouvert le projet, veuillez installer les extensions suivantes :</p>
 <ol type="1">
-<li>Install <strong>GitHub Copilot</strong> extension</li>
-<li>Install <strong>GitHub Copilot Chat</strong> extension</li>
-<li>Install <strong>Python</strong> extension</li>
+<li>Installer l&#39;extension <strong>GitHub Copilot</strong></li>
+<li>Installer l&#39;extension <strong>GitHub Copilot Chat</strong></li>
+<li>Installer l&#39;extension <strong>Python</strong></li>
 </ol>
-<h2 is-upgraded>Step 4: Configuration Check</h2>
+<h2 is-upgraded>Étape 4 : Vérification de la configuration</h2>
 <ol type="1">
-<li>Confirm that you are signed in to your GitHub account in VS Code</li>
-<li>Confirm that Copilot functionality is enabled</li>
-<li>Confirm that the Python interpreter is set up correctly</li>
+<li>Confirmez que vous êtes connecté à votre compte GitHub dans VS Code</li>
+<li>Confirmez que la fonctionnalité Copilot est activée</li>
+<li>Confirmez que l&#39;interpréteur Python est correctement configuré</li>
 </ol>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Try Code Completion" duration="10">
-        <p>Let&#39;s experience GitHub Copilot&#39;s basic code completion functionality.</p>
-<h2 is-upgraded>Install Copilot Extensions</h2>
+      <google-codelab-step label="Essayer la complétion de code" duration="10">
+        <p>Découvrons la fonctionnalité de base de complétion de code de GitHub Copilot.</p>
+<h2 is-upgraded>Installer les extensions Copilot</h2>
 <ol type="1">
-<li>Install <strong>GitHub Copilot</strong> extension</li>
-<li>Install <strong>GitHub Copilot Chat</strong> extension</li>
+<li>Installer l&#39;extension <strong>GitHub Copilot</strong></li>
+<li>Installer l&#39;extension <strong>GitHub Copilot Chat</strong></li>
 </ol>
-<h2 is-upgraded>Configuration Check</h2>
-<p>Make sure you are signed in to VS Code.</p>
-<h2 is-upgraded>Try Code Completion</h2>
-<p>Create a new Python file and enter the following comment:</p>
-<pre><code language="language-python" class="language-python"># Function to calculate Fibonacci sequence
+<h2 is-upgraded>Vérification de la configuration</h2>
+<p>Assurez-vous que vous êtes connecté à VS Code.</p>
+<h2 is-upgraded>Essayer la complétion de code</h2>
+<p>Créez un nouveau fichier Python et entrez le commentaire suivant :</p>
+<pre><code language="language-python" class="language-python"># Fonction pour calculer la suite de Fibonacci
 def fibonacci(n):
 </code></pre>
-<p>Verify that Copilot automatically suggests code.</p>
-<aside class="special"><p><strong>Tip</strong>: Use the <code>Tab</code> key to accept suggestions and <code>Alt+]</code> to see the next suggestion.</p>
+<p>Vérifiez que Copilot suggère automatiquement du code.</p>
+<aside class="special"><p><strong>Astuce</strong> : Utilisez la touche <code>Tab</code> pour accepter les suggestions et <code>Alt+]</code> pour voir la suggestion suivante.</p>
 </aside>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="GitHub Copilot Next Edit Suggestions Setup Instructions" duration="10">
-        <h2 is-upgraded>Overview</h2>
-<p>⚙️ <a href="vscode://settings/github.copilot.nextEditSuggestions.enabled" target="_blank"><code>github.copilot.nextEditSuggestions.enabled</code></a> is a setting that enables GitHub Copilot&#39;s next-generation edit suggestion feature. This feature allows you to receive more advanced code editing suggestions.</p>
-<h2 is-upgraded>1. Open VS Code</h2>
-<h2 is-upgraded>2. Access Settings</h2>
-<p>Open the settings screen using one of the following methods:</p>
-<h3 is-upgraded>Method A: From Menu</h3>
+      <google-codelab-step label="Instructions de configuration des suggestions d&#39;édition suivantes de GitHub Copilot" duration="10">
+        <h2 is-upgraded>Vue d&#39;ensemble</h2>
+<p>⚙️ <a href="vscode://settings/github.copilot.nextEditSuggestions.enabled" target="_blank"><code>github.copilot.nextEditSuggestions.enabled</code></a> est un paramètre qui active la fonctionnalité de suggestion d&#39;édition de nouvelle génération de GitHub Copilot. Cette fonctionnalité vous permet de recevoir des suggestions d&#39;édition de code plus avancées.</p>
+<h2 is-upgraded>1. Ouvrir VS Code</h2>
+<h2 is-upgraded>2. Accéder aux paramètres</h2>
+<p>Ouvrez l&#39;écran des paramètres en utilisant l&#39;une des méthodes suivantes :</p>
+<h3 is-upgraded>Méthode A : Depuis le menu</h3>
 <ul>
-<li><strong>Windows/Linux</strong>: <code>File</code> → <code>Preferences</code> → <code>Settings</code></li>
-<li><strong>macOS</strong>: <code>Code</code> → <code>Settings...</code> → <code>Settings</code></li>
+<li><strong>Windows/Linux</strong> : <code>File</code> → <code>Preferences</code> → <code>Settings</code></li>
+<li><strong>macOS</strong> : <code>Code</code> → <code>Settings...</code> → <code>Settings</code></li>
 </ul>
-<h3 is-upgraded>Method B: Keyboard Shortcut</h3>
+<h3 is-upgraded>Méthode B : Raccourci clavier</h3>
 <ul>
-<li><strong>Windows/Linux</strong>: <code>Ctrl + ,</code></li>
-<li><strong>macOS</strong>: <code>Cmd + ,</code></li>
+<li><strong>Windows/Linux</strong> : <code>Ctrl + ,</code></li>
+<li><strong>macOS</strong> : <code>Cmd + ,</code></li>
 </ul>
-<h3 is-upgraded>Method C: Command Palette</h3>
+<h3 is-upgraded>Méthode C : Palette de commandes</h3>
 <ul>
-<li><code>Ctrl + Shift + P</code> (Windows/Linux) or <code>Cmd + Shift + P</code> (macOS)</li>
-<li>Select <code>Preferences: Open Settings (UI)</code></li>
+<li><code>Ctrl + Shift + P</code> (Windows/Linux) ou <code>Cmd + Shift + P</code> (macOS)</li>
+<li>Sélectionnez <code>Preferences: Open Settings (UI)</code></li>
 </ul>
-<h2 is-upgraded>3. Search Settings</h2>
-<p>Enter the following in the settings search box:</p>
+<h2 is-upgraded>3. Rechercher les paramètres</h2>
+<p>Entrez ce qui suit dans la boîte de recherche des paramètres :</p>
 <pre><code>github.copilot.nextEditSuggestions.enabled
 </code></pre>
-<h2 is-upgraded>4. Enable Setting</h2>
+<h2 is-upgraded>4. Activer le paramètre</h2>
 <ul>
-<li>Check the checkbox for the setting item shown in search results</li>
-<li>Or change <code>false</code> to <code>true</code></li>
+<li>Cochez la case pour l&#39;élément de paramètre affiché dans les résultats de recherche</li>
+<li>Ou changez <code>false</code> en <code>true</code></li>
 </ul>
-<h2 is-upgraded>5. Confirm Setting</h2>
-<p>Verify the setting is correctly applied:</p>
+<h2 is-upgraded>5. Confirmer le paramètre</h2>
+<p>Vérifiez que le paramètre est correctement appliqué :</p>
 <ul>
-<li>Restart VS Code (recommended)</li>
-<li>Edit code in the editor and confirm the new suggestion feature works</li>
+<li>Redémarrez VS Code (recommandé)</li>
+<li>Éditez du code dans l&#39;éditeur et confirmez que la nouvelle fonctionnalité de suggestion fonctionne</li>
 </ul>
-<h2 is-upgraded>Alternative Method: Direct Edit in settings.json</h2>
-<h3 is-upgraded>1. Open settings.json file</h3>
+<h2 is-upgraded>Méthode alternative : Édition directe dans settings.json</h2>
+<h3 is-upgraded>1. Ouvrir le fichier settings.json</h3>
 <ul>
-<li><code>Ctrl + Shift + P</code> (Windows/Linux) or <code>Cmd + Shift + P</code> (macOS)</li>
-<li>Select <code>Preferences: Open User Settings (JSON)</code></li>
+<li><code>Ctrl + Shift + P</code> (Windows/Linux) ou <code>Cmd + Shift + P</code> (macOS)</li>
+<li>Sélectionnez <code>Preferences: Open User Settings (JSON)</code></li>
 </ul>
-<h3 is-upgraded>2. Add Setting</h3>
+<h3 is-upgraded>2. Ajouter le paramètre</h3>
 <pre><code language="language-json" class="language-json">{
     &#34;github.copilot.nextEditSuggestions.enabled&#34;: true
 }
 </code></pre>
-<h3 is-upgraded>3. Save File</h3>
+<h3 is-upgraded>3. Enregistrer le fichier</h3>
 <ul>
-<li><code>Ctrl + S</code> (Windows/Linux) or <code>Cmd + S</code> (macOS)</li>
+<li><code>Ctrl + S</code> (Windows/Linux) ou <code>Cmd + S</code> (macOS)</li>
 </ul>
-<h2 is-upgraded>Let&#39;s Try It Out</h2>
-<p>Open the <code>point.py</code> file included in the project. This file contains a class representing points in two-dimensional space:</p>
+<h2 is-upgraded>Essayons-le</h2>
+<p>Ouvrez le fichier <code>point.py</code> inclus dans le projet. Ce fichier contient une classe représentant des points dans l&#39;espace à deux dimensions. Copiez l&#39;extrait de code ci-dessous dans le fichier <code>point.py</code>.</p>
 <pre><code language="language-python" class="language-python">import math
 
 class Point2D:
@@ -196,21 +196,21 @@ class Point2D:
     def __str__(self):
         return f&#34;Point2D({self.x}, {self.y})&#34;
 </code></pre>
-<p>Now, we want to extend this class to represent points in three-dimensional space. First, let&#39;s manually change the class name to <code>Point3D</code>. GitHub Copilot will then suggest the next edit candidates.</p>
-<aside class="special"><p><strong>Important</strong>: It may take some time for Next Edit Suggestion proposals to appear. Please wait patiently.</p>
+<p>Maintenant, nous voulons étendre cette classe pour représenter des points dans l&#39;espace à trois dimensions. Tout d&#39;abord, changeons manuellement le nom de la classe en <code>Point3D</code>. GitHub Copilot suggérera ensuite les prochains candidats d&#39;édition.</p>
+<aside class="special"><p><strong>Important</strong> : Il peut falloir un certain temps pour que les propositions de suggestion d&#39;édition suivante apparaissent. Veuillez patienter.</p>
 </aside>
-<p>The suggestions should show changes like:</p>
+<p>Les suggestions devraient afficher des changements comme :</p>
 <ul>
-<li>Adding <code>z</code> parameter to the <code>__init__</code> method</li>
-<li>Adding <code>self.z = z</code></li>
-<li>Extending the <code>distance_to</code> method for three-dimensional distance calculation</li>
-<li>Displaying z coordinate in the <code>__str__</code> method</li>
+<li>Ajout du paramètre <code>z</code> à la méthode <code>__init__</code></li>
+<li>Ajout de <code>self.z = z</code></li>
+<li>Extension de la méthode <code>distance_to</code> pour le calcul de distance en trois dimensions</li>
+<li>Affichage de la coordonnée z dans la méthode <code>__str__</code></li>
 </ul>
-<p>In this state, pressing the <code>Tab</code> key will move the cursor to the location where GitHub Copilot is making suggestions. To accept the suggestion, press the <code>Tab</code> key again.</p>
-<p>GitHub Copilot should then suggest the next edit candidate. This suggestion can also be accepted by pressing the <code>Tab</code> key. Using Next Edit Suggestion allows you to edit code efficiently.</p>
-<h2 is-upgraded>Let&#39;s See the Results</h2>
-<p>Let&#39;s continue extending the Point2D class to Point3D. You should be able to adapt all methods for three-dimensional space.</p>
-<p>Expected final code example:</p>
+<p>Dans cet état, appuyer sur la touche <code>Tab</code> déplacera le curseur à l&#39;emplacement où GitHub Copilot fait des suggestions. Pour accepter la suggestion, appuyez à nouveau sur la touche <code>Tab</code>.</p>
+<p>GitHub Copilot devrait ensuite suggérer le prochain candidat d&#39;édition. Cette suggestion peut également être acceptée en appuyant sur la touche <code>Tab</code>. L&#39;utilisation de la suggestion d&#39;édition suivante vous permet d&#39;éditer le code efficacement.</p>
+<h2 is-upgraded>Voyons les résultats</h2>
+<p>Continuons à étendre la classe Point2D en Point3D. Vous devriez pouvoir adapter toutes les méthodes pour l&#39;espace à trois dimensions.</p>
+<p>Exemple de code final attendu :</p>
 <pre><code language="language-python" class="language-python">import math
 
 class Point3D:
@@ -228,48 +228,48 @@ class Point3D:
     def __str__(self):
         return f&#34;Point3D({self.x}, {self.y}, {self.z})&#34;
 </code></pre>
-<h2 is-upgraded>Let&#39;s Also Try with TODO Comments</h2>
-<p>Replace <code>2D</code> (two-dimensional) with <code>3D</code> (three-dimensional) in the commented first line.</p>
-<pre><code language="language-python" class="language-python"># Class representing points in three-dimensional space
+<h2 is-upgraded>Essayons aussi avec les commentaires TODO</h2>
+<p>Remplacez <code>2D</code> (deux dimensions) par <code>3D</code> (trois dimensions) dans la première ligne commentée.</p>
+<pre><code language="language-python" class="language-python"># Classe représentant des points dans l&#39;espace à trois dimensions
 class Point2D:
     def __init__(self, x, y):
         self.x = x
         self.y = y
     
     def distance_to(self, other):
-        # TODO: Add distance calculation code here
+        # TODO: Ajouter le code de calcul de distance ici
         pass
     
     def __str__(self):
-        # TODO: Return string representation
+        # TODO: Retourner la représentation en chaîne
         pass
 </code></pre>
-<p>Place the cursor after the TODO comments and check Copilot&#39;s suggestions.</p>
-<h2 is-upgraded>Important Notes</h2>
+<p>Placez le curseur après les commentaires TODO et vérifiez les suggestions de Copilot.</p>
+<h2 is-upgraded>Notes importantes</h2>
 <ul>
-<li>Make sure VS Code&#39;s GitHub Copilot extension is updated to the latest version</li>
-<li>Restarting VS Code is recommended after setting changes</li>
+<li>Assurez-vous que l&#39;extension GitHub Copilot de VS Code est mise à jour à la dernière version</li>
+<li>Le redémarrage de VS Code est recommandé après les changements de paramètres</li>
 </ul>
-<h2 is-upgraded>Troubleshooting</h2>
-<h3 is-upgraded>If Settings Are Not Found</h3>
+<h2 is-upgraded>Dépannage</h2>
+<h3 is-upgraded>Si les paramètres ne sont pas trouvés</h3>
 <ol type="1">
-<li>Confirm GitHub Copilot extension is installed</li>
-<li>Confirm extension is updated to the latest version</li>
-<li>Restart VS Code and try again</li>
+<li>Confirmez que l&#39;extension GitHub Copilot est installée</li>
+<li>Confirmez que l&#39;extension est mise à jour à la dernière version</li>
+<li>Redémarrez VS Code et réessayez</li>
 </ol>
-<h3 is-upgraded>If Functionality Doesn&#39;t Work</h3>
+<h3 is-upgraded>Si la fonctionnalité ne fonctionne pas</h3>
 <ol type="1">
-<li>Confirm you are logged in to GitHub Copilot</li>
-<li>Check internet connection</li>
-<li>Check VS Code console for error messages</li>
+<li>Confirmez que vous êtes connecté à GitHub Copilot</li>
+<li>Vérifiez la connexion Internet</li>
+<li>Vérifiez les messages d&#39;erreur dans la console VS Code</li>
 </ol>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Copilot Chat Hands-on Preparation" duration="5">
-        <h2 is-upgraded>Create File</h2>
-<p>Please save the following file as <code>delivery_manager.py</code>.</p>
+      <google-codelab-step label="Préparation pratique de Copilot Chat" duration="5">
+        <h2 is-upgraded>Créer un fichier</h2>
+<p>Veuillez enregistrer le fichier suivant sous le nom <code>delivery_manager.py</code>.</p>
 <pre><code language="language-python" class="language-python">import time
 import random
 from typing import List, Callable, Optional
@@ -277,70 +277,65 @@ from dataclasses import dataclass, field
 from enum import Enum
 
 
-class EventArgs:
-    &#34;&#34;&#34;Base class for event arguments&#34;&#34;&#34;
-    pass
-
-
 class Event:
-    &#34;&#34;&#34;Class equivalent to C#&#39;s event&#34;&#34;&#34;
+    &#34;&#34;&#34;Classe d&#39;événement simple (équivalent des événements Unity)&#34;&#34;&#34;
     
     def __init__(self):
         self._handlers: List[Callable] = []
     
     def add_handler(self, handler: Callable):
-        &#34;&#34;&#34;Add event handler&#34;&#34;&#34;
+        &#34;&#34;&#34;Ajouter un gestionnaire d&#39;événements&#34;&#34;&#34;
         if handler not in self._handlers:
             self._handlers.append(handler)
     
     def remove_handler(self, handler: Callable):
-        &#34;&#34;&#34;Remove event handler&#34;&#34;&#34;
+        &#34;&#34;&#34;Supprimer un gestionnaire d&#39;événements&#34;&#34;&#34;
         if handler in self._handlers:
             self._handlers.remove(handler)
     
-    def invoke(self, sender, args: EventArgs = None):
-        &#34;&#34;&#34;Fire event&#34;&#34;&#34;
+    def invoke(self, sender, args=None):
+        &#34;&#34;&#34;Déclencher un événement&#34;&#34;&#34;
         for handler in self._handlers:
-            handler(sender, args or EventArgs())
+            handler(sender, args)
 
 
 @dataclass
 class KitchenObjectSO:
-    &#34;&#34;&#34;Kitchen object data class&#34;&#34;&#34;
-    name: str
+    &#34;&#34;&#34;Classe de données d&#39;objet de cuisine&#34;&#34;&#34;
+    object_name: str
     object_id: int
 
 
 @dataclass
 class RecipeSO:
-    &#34;&#34;&#34;Recipe data class&#34;&#34;&#34;
-    name: str
-    kitchen_object_so_list: List[KitchenObjectSO] = field(default_factory=list)
+    &#34;&#34;&#34;Classe de données de recette&#34;&#34;&#34;
+    recipe_name: str
+    kitchen_object_so_list: List[KitchenObjectSO]
 
 
 @dataclass
 class RecipeListSO:
-    &#34;&#34;&#34;Recipe list data class&#34;&#34;&#34;
+    &#34;&#34;&#34;Classe de données de liste de recettes&#34;&#34;&#34;
     recipe_so_list: List[RecipeSO] = field(default_factory=list)
 
 
 class PlateKitchenObject:
-    &#34;&#34;&#34;Plate kitchen object&#34;&#34;&#34;
+    &#34;&#34;&#34;Objet de cuisine assiette&#34;&#34;&#34;
     
     def __init__(self):
         self._kitchen_object_so_list: List[KitchenObjectSO] = []
     
     def add_kitchen_object(self, kitchen_object: KitchenObjectSO):
-        &#34;&#34;&#34;Add kitchen object&#34;&#34;&#34;
+        &#34;&#34;&#34;Ajouter un objet de cuisine&#34;&#34;&#34;
         self._kitchen_object_so_list.append(kitchen_object)
     
     def get_kitchen_object_so_list(self) -&gt; List[KitchenObjectSO]:
-        &#34;&#34;&#34;Get kitchen object list&#34;&#34;&#34;
+        &#34;&#34;&#34;Obtenir la liste des objets de cuisine&#34;&#34;&#34;
         return self._kitchen_object_so_list.copy()
 
 
 class KitchenGameManager:
-    &#34;&#34;&#34;Kitchen game manager (Singleton)&#34;&#34;&#34;
+    &#34;&#34;&#34;Gestionnaire de jeu de cuisine (Singleton)&#34;&#34;&#34;
     
     _instance: Optional[&#39;KitchenGameManager&#39;] = None
     
@@ -349,37 +344,37 @@ class KitchenGameManager:
     
     @classmethod
     def get_instance(cls) -&gt; &#39;KitchenGameManager&#39;:
-        &#34;&#34;&#34;Get Singleton instance&#34;&#34;&#34;
+        &#34;&#34;&#34;Obtenir l&#39;instance Singleton&#34;&#34;&#34;
         if cls._instance is None:
             cls._instance = cls()
         return cls._instance
     
     def is_game_playing(self) -&gt; bool:
-        &#34;&#34;&#34;Check if game is in progress&#34;&#34;&#34;
+        &#34;&#34;&#34;Vérifier si le jeu est en cours&#34;&#34;&#34;
         return self._is_game_playing
     
     def start_game(self):
-        &#34;&#34;&#34;Start game&#34;&#34;&#34;
+        &#34;&#34;&#34;Démarrer le jeu&#34;&#34;&#34;
         self._is_game_playing = True
     
     def stop_game(self):
-        &#34;&#34;&#34;Stop game&#34;&#34;&#34;
+        &#34;&#34;&#34;Arrêter le jeu&#34;&#34;&#34;
         self._is_game_playing = False
 
 
 class DeliveryManager:
-    &#34;&#34;&#34;Delivery management class (Python version)&#34;&#34;&#34;
+    &#34;&#34;&#34;Classe de gestion de livraison (version Python)&#34;&#34;&#34;
     
     _instance: Optional[&#39;DeliveryManager&#39;] = None
     
     def __init__(self, recipe_list_so: RecipeListSO):
-        # Event definitions
+        # Définitions d&#39;événements
         self.on_recipe_spawned = Event()
         self.on_recipe_completed = Event()
         self.on_recipe_success = Event()
         self.on_recipe_failed = Event()
         
-        # Private variables
+        # Variables privées
         self._recipe_list_so = recipe_list_so
         self._waiting_recipe_so_list: List[RecipeSO] = []
         self._spawn_recipe_timer = 0.0
@@ -390,15 +385,15 @@ class DeliveryManager:
     
     @classmethod
     def get_instance(cls, recipe_list_so: RecipeListSO = None) -&gt; &#39;DeliveryManager&#39;:
-        &#34;&#34;&#34;Get Singleton instance&#34;&#34;&#34;
+        &#34;&#34;&#34;Obtenir l&#39;instance Singleton&#34;&#34;&#34;
         if cls._instance is None:
             if recipe_list_so is None:
-                raise ValueError(&#34;recipe_list_so is required for initial creation&#34;)
+                raise ValueError(&#34;recipe_list_so est requis pour la création initiale&#34;)
             cls._instance = cls(recipe_list_so)
         return cls._instance
     
     def update(self):
-        &#34;&#34;&#34;Frame update processing (equivalent to Unity&#39;s Update)&#34;&#34;&#34;
+        &#34;&#34;&#34;Traitement de mise à jour par image (équivalent à Update d&#39;Unity)&#34;&#34;&#34;
         current_time = time.time()
         delta_time = current_time - self._last_update_time
         self._last_update_time = current_time
@@ -412,28 +407,28 @@ class DeliveryManager:
             if (kitchen_game_manager.is_game_playing() and 
                 len(self._waiting_recipe_so_list) &lt; self._waiting_recipes_max):
                 
-                # Randomly select recipe
+                # Sélectionner une recette au hasard
                 waiting_recipe_so = random.choice(self._recipe_list_so.recipe_so_list)
                 self._waiting_recipe_so_list.append(waiting_recipe_so)
                 
-                # Fire event
+                # Déclencher l&#39;événement
                 self.on_recipe_spawned.invoke(self)
     
     def deliver_recipe(self, plate_kitchen_object: PlateKitchenObject):
-        &#34;&#34;&#34;Check if recipe ingredients match plate ingredients&#34;&#34;&#34;
+        &#34;&#34;&#34;Vérifier si les ingrédients de la recette correspondent aux ingrédients de l&#39;assiette&#34;&#34;&#34;
         
         for i, waiting_recipe_so in enumerate(self._waiting_recipe_so_list):
             plate_ingredients = plate_kitchen_object.get_kitchen_object_so_list()
             
-            # Check if ingredient counts match
+            # Vérifier si le nombre d&#39;ingrédients correspond
             if len(waiting_recipe_so.kitchen_object_so_list) == len(plate_ingredients):
                 plate_contents_matches_recipe = True
                 
-                # Check each recipe ingredient
+                # Vérifier chaque ingrédient de la recette
                 for recipe_kitchen_object_so in waiting_recipe_so.kitchen_object_so_list:
                     ingredient_found = False
                     
-                    # Match with plate ingredients
+                    # Correspondre avec les ingrédients de l&#39;assiette
                     for plate_kitchen_object_so in plate_ingredients:
                         if plate_kitchen_object_so == recipe_kitchen_object_so:
                             ingredient_found = True
@@ -443,549 +438,494 @@ class DeliveryManager:
                         plate_contents_matches_recipe = False
                         break
                 
-                # If ingredients match completely
+                # Si les ingrédients correspondent complètement
                 if plate_contents_matches_recipe:
                     self._successful_recipes_amount += 1
                     self._waiting_recipe_so_list.pop(i)
                     
-                    # Fire success events
+                    # Déclencher les événements de succès
                     self.on_recipe_completed.invoke(self)
                     self.on_recipe_success.invoke(self)
                     return
         
-        # If no matching recipe found
+        # Si aucune recette correspondante n&#39;est trouvée
         self.on_recipe_failed.invoke(self)
     
     def get_waiting_recipe_so_list(self) -&gt; List[RecipeSO]:
-        &#34;&#34;&#34;Get waiting recipe list&#34;&#34;&#34;
+        &#34;&#34;&#34;Obtenir la liste des recettes en attente&#34;&#34;&#34;
         return self._waiting_recipe_so_list.copy()
     
     def get_successful_recipes_amount(self) -&gt; int:
-        &#34;&#34;&#34;Get number of successful recipes&#34;&#34;&#34;
+        &#34;&#34;&#34;Obtenir le nombre de recettes réussies&#34;&#34;&#34;
         return self._successful_recipes_amount
 
 
-# Usage example
+# Exemple d&#39;utilisation
 if __name__ == &#34;__main__&#34;:
-    # Create sample data
-    tomato = KitchenObjectSO(&#34;Tomato&#34;, 1)
-    lettuce = KitchenObjectSO(&#34;Lettuce&#34;, 2)
-    bread = KitchenObjectSO(&#34;Bread&#34;, 3)
+    # Créer des données d&#39;exemple
+    tomato = KitchenObjectSO(&#34;Tomate&#34;, 1)
+    lettuce = KitchenObjectSO(&#34;Laitue&#34;, 2)
+    bread = KitchenObjectSO(&#34;Pain&#34;, 3)
     
-    # Sample recipes
+    # Recettes d&#39;exemple
     sandwich_recipe = RecipeSO(&#34;Sandwich&#34;, [bread, lettuce, tomato])
-    salad_recipe = RecipeSO(&#34;Salad&#34;, [lettuce, tomato])
-    
+    salad_recipe = RecipeSO(&#34;Salade&#34;, [lettuce, tomato])
     recipe_list = RecipeListSO([sandwich_recipe, salad_recipe])
     
-    # Initialize game manager and delivery manager
+    # Initialiser le gestionnaire de jeu et le gestionnaire de livraison
     game_manager = KitchenGameManager.get_instance()
     game_manager.start_game()
     
     delivery_manager = DeliveryManager.get_instance(recipe_list)
     
-    # Set up event handlers
+    # Configurer les gestionnaires d&#39;événements
     def on_recipe_spawned(sender, args):
-        print(&#34;New recipe has been generated!&#34;)
+        print(&#34;Une nouvelle recette a été générée !&#34;)
     
     def on_recipe_success(sender, args):
-        print(&#34;Recipe delivery successful!&#34;)
+        print(&#34;Livraison de recette réussie !&#34;)
     
     def on_recipe_failed(sender, args):
-        print(&#34;Recipe delivery failed...&#34;)
+        print(&#34;Échec de la livraison de la recette...&#34;)
     
     delivery_manager.on_recipe_spawned.add_handler(on_recipe_spawned)
     delivery_manager.on_recipe_success.add_handler(on_recipe_success)
     delivery_manager.on_recipe_failed.add_handler(on_recipe_failed)
     
-    # Sample execution
-    print(&#34;Game starting...&#34;)
+    # Exécution d&#39;exemple
+    print(&#34;Démarrage du jeu...&#34;)
     
-    # Run update process for 5 seconds
+    # Exécuter le processus de mise à jour pendant 5 secondes
     start_time = time.time()
     while time.time() - start_time &lt; 5:
         delivery_manager.update()
-        time.sleep(0.1)  # Update every 100ms
+        time.sleep(0.1)  # Mise à jour toutes les 100ms
     
-    print(f&#34;Number of waiting recipes: {len(delivery_manager.get_waiting_recipe_so_list())}&#34;)
+    print(f&#34;Nombre de recettes en attente : {len(delivery_manager.get_waiting_recipe_so_list())}&#34;)
     
-    # Sample delivery test
+    # Test de livraison d&#39;exemple
     plate = PlateKitchenObject()
     plate.add_kitchen_object(bread)
     plate.add_kitchen_object(lettuce)
     plate.add_kitchen_object(tomato)
     
-    print(&#34;Delivering sandwich...&#34;)
+    print(&#34;Livraison du sandwich...&#34;)
     delivery_manager.deliver_recipe(plate)
     
-    print(f&#34;Number of successful recipes: {delivery_manager.get_successful_recipes_amount()}&#34;)
+    print(f&#34;Nombre de recettes réussies : {delivery_manager.get_successful_recipes_amount()}&#34;)
 </code></pre>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Explain Code" duration="15">
-        <p>Let&#39;s have Copilot Chat explain this code.</p>
-<h2 is-upgraded>Open Copilot Chat</h2>
+      <google-codelab-step label="Expliquer le code" duration="15">
+        <p>Faisons expliquer ce code par Copilot Chat.</p>
+<h2 is-upgraded>Ouvrir Copilot Chat</h2>
 <ol type="1">
-<li>Click the <strong>Chat</strong> icon (chat bubble icon) in the VS Code sidebar to open Copilot Chat</li>
-<li>Or open the Chat panel with <code>Ctrl+Alt+I</code> (on macOS <code>Ctrl+Cmd+I</code>)</li>
+<li>Cliquez sur l&#39;icône <strong>Chat</strong> (icône de bulle de chat) dans la barre latérale de VS Code pour ouvrir Copilot Chat</li>
+<li>Ou ouvrez le panneau Chat avec <code>Ctrl+Alt+I</code> (sur macOS <code>Ctrl+Cmd+I</code>)</li>
 </ol>
-<h2 is-upgraded>Check Chat Mode</h2>
-<p>Confirm the chat mode is set to &#34;Question&#34; (we&#39;ll introduce &#34;Agent&#34; mode later).</p>
-<h2 is-upgraded>Request File Explanation</h2>
+<h2 is-upgraded>Vérifier le mode Chat</h2>
+<p>Confirmez que le mode chat est défini sur &#34;Question&#34; (nous présenterons le mode &#34;Agent&#34; plus tard).</p>
+<h2 is-upgraded>Demander l&#39;explication du fichier</h2>
 <ol type="1">
-<li>Enter <code>#delivery_manager.py</code> in the chat field</li>
-<li>Enter the prompt &#34;Please explain this entire file.&#34;</li>
-<li>Press Enter and Copilot Chat will explain the entire <code>delivery_manager.py</code> file</li>
+<li>Entrez <code>#delivery_manager.py</code> dans le champ de chat</li>
+<li>Entrez le prompt &#34;Veuillez expliquer ce fichier entier.&#34;</li>
+<li>Appuyez sur Entrée et Copilot Chat expliquera l&#39;intégralité du fichier <code>delivery_manager.py</code></li>
 </ol>
-<aside class="special"><p><strong>Tip</strong>: By adding <code>#</code> before a filename, you can include that entire file as context.</p>
+<aside class="special"><p><strong>Astuce</strong> : En ajoutant <code>#</code> avant un nom de fichier, vous pouvez inclure ce fichier entier comme contexte.</p>
 </aside>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Ask About Code Improvement Areas" duration="15">
-        <h2 is-upgraded>Exercise</h2>
-<p>Let&#39;s ask Copilot Chat about the problematic parts of this code.</p>
-<h2 is-upgraded>1. Ask About Overall Class Issues</h2>
-<p>First, let&#39;s ask what problems this code has as a whole class.</p>
-<p>Ask Copilot Chat:</p>
-<pre><code>Looking at this entire DeliveryManager class, what problems and improvement points are there? Please tell me from the perspectives of design patterns, code quality, and maintainability.
+      <google-codelab-step label="Demander des domaines d&#39;amélioration du code" duration="15">
+        <h2 is-upgraded>Exercice</h2>
+<p>Demandons à Copilot Chat quelles sont les parties problématiques de ce code.</p>
+<h2 is-upgraded>1. Demander les problèmes globaux de la classe</h2>
+<p>Tout d&#39;abord, demandons quels problèmes ce code a dans son ensemble en tant que classe.</p>
+<p>Demandez à Copilot Chat :</p>
+<pre><code>En examinant cette classe DeliveryManager dans son ensemble, quels problèmes et points d&#39;amélioration y a-t-il ? Veuillez me le dire du point de vue des modèles de conception, de la qualité du code et de la maintenabilité.
 </code></pre>
-<h2 is-upgraded>2. Focus on Specific Methods for Improvement Points</h2>
-<p>Next, let&#39;s focus on the <code>deliver_recipe()</code> method and ask what methods exist to improve this method.</p>
-<h3 is-upgraded>Steps:</h3>
+<h2 is-upgraded>2. Se concentrer sur des méthodes spécifiques pour les points d&#39;amélioration</h2>
+<p>Ensuite, concentrons-nous sur la méthode <code>deliver_recipe()</code> et demandons quelles méthodes existent pour améliorer cette méthode.</p>
+<h3 is-upgraded>Étapes :</h3>
 <ol type="1">
-<li>Enter <code>#deliver_recipe</code> in the chat field</li>
-<li>Candidates for code elements (functions, classes, variables, etc.) will be displayed</li>
-<li>Select the <code>deliver_recipe</code> method</li>
-<li>Enter the following question:</li>
+<li>Entrez <code>#deliver_recipe</code> dans le champ de chat</li>
+<li>Les candidats pour les éléments de code (fonctions, classes, variables, etc.) seront affichés</li>
+<li>Sélectionnez la méthode <code>deliver_recipe</code></li>
+<li>Entrez la question suivante :</li>
 </ol>
-<pre><code>What methods are there to improve this deliver_recipe method? Please make suggestions from the perspectives of readability, performance, and error handling.
+<pre><code>Quelles méthodes existent pour améliorer cette méthode deliver_recipe ? Veuillez faire des suggestions du point de vue de la lisibilité, des performances et de la gestion des erreurs.
 </code></pre>
-<aside class="special"><p><strong>Tip</strong>: Using <code>#</code> allows you to ask pinpointed questions about specific code elements. This allows you to get more specific and useful improvement suggestions.</p>
+<aside class="special"><p><strong>Astuce</strong> : L&#39;utilisation de <code>#</code> vous permet de poser des questions ciblées sur des éléments de code spécifiques. Cela vous permet d&#39;obtenir des suggestions d&#39;amélioration plus spécifiques et utiles.</p>
 </aside>
-<h2 is-upgraded>Code Review Function</h2>
-<p>To improve the current code, ask Copilot Chat:</p>
-<pre><code>Please improve this Python code. I&#39;d like suggestions from the perspectives of performance, readability, and error handling.
+<h2 is-upgraded>Fonction de révision du code</h2>
+<p>Pour améliorer le code actuel, demandez à Copilot Chat :</p>
+<pre><code>Veuillez améliorer ce code Python. J&#39;aimerais des suggestions du point de vue des performances, de la lisibilité et de la gestion des erreurs.
 </code></pre>
-<h2 is-upgraded>Check from Security Perspective</h2>
-<pre><code>Are there any security issues with this code?
-</code></pre>
-<h2 is-upgraded>Check Best Practices</h2>
-<pre><code>Please check if this follows Python best practices.
+<h2 is-upgraded>Vérifier du point de vue de la sécurité</h2>
+<pre><code>Y a-t-il des problèmes de sécurité avec ce code ?
 </code></pre>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Let&#39;s Try Agent Mode" duration="10">
-        <p>So far we&#39;ve been using Copilot Chat in &#34;Question&#34; mode, but now let&#39;s try &#34;Agent&#34; mode. Agents can understand user intent and execute tasks more autonomously. Through practical examples, we&#39;ll learn how agents function.</p>
-<h2 is-upgraded>Switch to Agent Mode</h2>
-<p>First, with the <code>delivery_manager.py</code> file open, select &#34;Agent&#34; from the mode selection in Copilot Chat.</p>
-<p class="image-container"><img alt="Agent Mode Selection 2" style="width: 600.00px" src="img/bcc926772d6a58dd.png">   </p>
-<p class="image-container"><img alt="Agent Mode Selection" style="width: 600.00px" src="img/428f81215165ebb9.png"></p>
-<h2 is-upgraded>Identify Issues</h2>
-<p>Then, enter the following prompt:</p>
-<pre><code>Please list the issues that exist in the DeliveryManager class. Then, present improvement plans to solve each issue.
-</code></pre>
-<p class="image-container"><img alt="Issue Analysis by GPT-4.1" src="img/960f54c952f11b7e.png"></p>
-<p>It should suggest multiple improvement points.</p>
-<h2 is-upgraded>Try with Different Models</h2>
-<p>By trying the same question with different models, you can compare the characteristics of each model.</p>
-<p class="image-container"><img alt="Issue Analysis by Claude 4.0" src="img/aea2847314548d11.png"></p>
-<h2 is-upgraded>Implement Improvements</h2>
-<p>Now let&#39;s have them implement the improvement suggestions they provided:</p>
-<pre><code>Please implement all the improvement suggestions you presented.
-</code></pre>
-<p>Copilot will then make direct code changes to the code open in the editor. However, this is still at the suggestion stage, and the user decides whether to accept these changes. You can accept or reject by clicking the &#34;Keep&#34; or &#34;Undo&#34; button above the chat field.</p>
-<h2 is-upgraded>Agent Autonomy</h2>
-<p>Here, let&#39;s check the comments returned by the agent. The agent didn&#39;t just follow instructions and change code, but may also confirm that errors occurred after code changes and try to fix those errors too. In an appropriate environment, the agent automatically detects errors that occur after code changes and attempts to fix them. In this way, agents can understand user intent and execute tasks more autonomously.</p>
-<h2 is-upgraded>Confirm Command Execution</h2>
-<p>When using agent mode, Copilot may ask whether it&#39;s okay to execute commands. This is because Copilot always asks for user confirmation before executing any command. Check the command content, and if there&#39;s no problem executing it, click &#34;Allow this time&#34;. This allows Copilot to execute that command and make necessary changes.</p>
-<aside class="special"><p><strong>Important</strong>: In agent mode, Copilot operates more autonomously, so make sure to carefully review the suggested changes before accepting them.</p>
-</aside>
+      <google-codelab-step label="Comprendre le mode Agent" duration="10">
+        <h2 is-upgraded>Qu&#39;est-ce que le mode Agent ?</h2>
+<p>Le mode Agent est une fonctionnalité puissante de GitHub Copilot qui permet à l&#39;IA de prendre des actions de manière autonome pendant le développement. Contrairement au mode Question traditionnel (mode Q&amp;R), le mode Agent permet à Copilot d&#39;effectuer la série d&#39;actions suivantes automatiquement.</p>
+<p class="image-container"><img alt="Mode Agent vs Mode Question" src="img/428f81215165ebb9.png"></p>
+<h2 is-upgraded>Caractéristiques du mode Agent</h2>
+<ul>
+<li><strong>Lecture et modification de fichiers</strong> : Le mode Agent lit et modifie automatiquement les fichiers nécessaires</li>
+<li><strong>Exécution de commandes</strong> : Exécution de commandes dans le terminal (par exemple, installation de packages, exécution de tests)</li>
+<li><strong>Création et édition de plusieurs fichiers</strong> : Génération de nouveau code et modification du code existant</li>
+<li><strong>Révision automatique</strong> : Exécution de tests et vérification de linting après les changements de code</li>
+</ul>
+<h2 is-upgraded>Cas d&#39;utilisation</h2>
+<ul>
+<li>Développement de nouvelles fonctionnalités</li>
+<li>Refactorisation de code</li>
+<li>Correction de bugs</li>
+<li>Écriture de tests</li>
+<li>Configuration de projets</li>
+</ul>
+<h2 is-upgraded>Démarrer le mode Agent</h2>
+<ol type="1">
+<li>Dans le panneau Copilot Chat, vérifiez la liste déroulante en haut</li>
+<li>Sélectionnez <strong>Agent</strong> au lieu de &#34;Question&#34;</li>
+<li>Ou tapez <code>@workspace</code> dans le champ de chat</li>
+</ol>
+<p class="image-container"><img alt="Sélection du mode Agent" src="img/bcc926772d6a58dd.png"></p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Settings for Next Task (Optional)" duration="20">
-        <p>This section is <strong>optional</strong>. If you want to try more advanced features after learning the basic functions of GitHub Copilot, please proceed.</p>
-<h2 is-upgraded>1. Prepare Branch</h2>
-<h3 is-upgraded>Step 1: Reset Staged Changes</h3>
-<p>Return all changes currently in the staging area to the working directory:</p>
-<pre><code language="language-bash" class="language-bash">git restore .
-</code></pre>
-<h3 is-upgraded>Step 2: Create New Branch</h3>
-<p>Create and switch to the feature/pomodoro branch:</p>
-<pre><code language="language-bash" class="language-bash">git checkout -b feature/pomodoro
-</code></pre>
-<h2 is-upgraded>2. GitHub Advanced Security (GHAS) Setup</h2>
-<p>By enabling GitHub Advanced Security&#39;s Code Scanning feature, you can automatically detect code vulnerabilities.</p>
+      <google-codelab-step label="Instructions de configuration de l&#39;agent Copilot" duration="5">
+        <p>Veuillez confirmer que l&#39;agent Copilot peut être utilisé. Si les informations du compte sont nécessaires pour utiliser l&#39;agent Copilot, veuillez vous connecter à partir de l&#39;écran de connexion affiché.</p>
+<p>Ensuite, veuillez vérifier les paramètres suivants :</p>
+<h2 is-upgraded>Activer <code>copilot-chat.agentic.claude-3.5-sonnet.enabled</code></h2>
+<p>Cette fonctionnalité de paramètre vous permet d&#39;utiliser <strong>Claude 3.5 Sonnet</strong> dans Copilot Agent. Activez-la en modifiant directement <code>settings.json</code>.</p>
 <ol type="1">
-<li>Click the <strong>Settings</strong> tab in your forked repository</li>
-<li>Select <strong>Security</strong> → <strong>Code security</strong> from the left sidebar</li>
-<li>Click <strong>Set up</strong> in the <strong>Code scanning</strong> section</li>
+<li>Ouvrez la palette de commandes avec <code>Ctrl + Shift + P</code> (Windows/Linux) ou <code>Cmd + Shift + P</code> (macOS)</li>
+<li>Sélectionnez <code>Preferences: Open User Settings (JSON)</code></li>
+<li>Ajoutez le paramètre suivant :</li>
 </ol>
-<p class="image-container"><img alt="GHAS Code Scanning Setup" src="img/96a57e2d2f8719ce.png"></p>
+<pre><code language="language-json" class="language-json">{
+    &#34;github.copilot.chat.agentic.claude-3.5-sonnet.enabled&#34;: true
+}
+</code></pre>
 <ol type="1" start="4">
-<li>Select <strong>Default</strong> (recommended)</li>
+<li>Enregistrez le fichier avec <code>Ctrl + S</code> (Windows/Linux) ou <code>Cmd + S</code> (macOS)</li>
 </ol>
-<p class="image-container"><img alt="GHAS Default Configuration" src="img/e4bb34522ad67510.png"></p>
-<ol type="1" start="5">
-<li>Click <strong>Enable CodeQL</strong></li>
-</ol>
-<p>This will execute automatic code scanning when pushing or creating pull requests.</p>
-<h2 is-upgraded>3. Verify Copilot Features</h2>
-<p>Let&#39;s verify the Copilot features available on GitHub.</p>
-<ol type="1">
-<li>Click your profile icon in the top right of GitHub</li>
-<li>Select <strong>Your Copilot</strong></li>
-</ol>
-<p class="image-container"><img alt="Your Copilot Menu" src="img/cd8cb696a64d45f7.png"></p>
-<p>Confirm the following features are enabled:</p>
-<ul>
-<li><strong>Copilot in GitHub.com</strong> - Use Copilot on the GitHub website</li>
-<li><strong>Copilot coding agent</strong> - More advanced coding assistance</li>
-<li><strong>MCP servers in Copilot</strong> - Use Model Context Protocol servers</li>
-</ul>
-<aside class="warning"><p><strong>Plan Limitations</strong>: Advanced features like Copilot Code Review and Coding Agent are only available in GitHub Copilot Business/Enterprise plans. If you&#39;re using the Free plan, these features are not available.</p>
+<aside class="special"><p><strong>Astuce</strong> : Claude 3.5 Sonnet est un modèle linguistique haute performance adapté aux tâches de développement complexes.</p>
 </aside>
-<h2 is-upgraded>4. GitHub MCP Server Setup</h2>
-<p>By using Model Context Protocol (MCP) servers, you can extend Copilot&#39;s functionality.</p>
-<h3 is-upgraded>Step 1: Add MCP Server</h3>
+<h2 is-upgraded>Activer <code>copilot-chat.agentic.deepThinking.enabled</code></h2>
+<p>Cette fonctionnalité de paramètre active la fonctionnalité de <strong>réflexion profonde</strong> de Copilot Agent. Activez-la en modifiant <code>settings.json</code>.</p>
 <ol type="1">
-<li>Open command palette in VS Code: <code>Ctrl+Shift+P</code> (Windows/Linux) / <code>Cmd+Shift+P</code> (Mac)</li>
-<li>Type and select <code>mcp: add server</code></li>
+<li>Ouvrez la palette de commandes avec <code>Ctrl + Shift + P</code> (Windows/Linux) ou <code>Cmd + Shift + P</code> (macOS)</li>
+<li>Sélectionnez <code>Preferences: Open User Settings (JSON)</code></li>
+<li>Ajoutez le paramètre suivant :</li>
 </ol>
-<p class="image-container"><img alt="MCP Add Server" src="img/daaeee38e7f7841.png"></p>
-<ol type="1" start="3">
-<li>Select <strong>HTTP</strong></li>
-<li>Enter server URL: <code>https://api.githubcopilot.com/mcp/</code></li>
-<li>Enter <code>github-mcp-server</code> in the Server ID field (or press Enter to skip)</li>
-<li>Select <strong>Save to this workspace</strong> for the save location</li>
-<li>Authenticate with your GitHub account</li>
+<pre><code language="language-json" class="language-json">{
+    &#34;github.copilot.chat.agentic.deepThinking.enabled&#34;: true
+}
+</code></pre>
+<ol type="1" start="4">
+<li>Enregistrez le fichier avec <code>Ctrl + S</code> (Windows/Linux) ou <code>Cmd + S</code> (macOS)</li>
 </ol>
-<h3 is-upgraded>Step 2: Verify MCP Server Startup</h3>
-<p>MCP server configuration is saved in <code>.vscode/mcp.json</code>.</p>
-<p class="image-container"><img alt="MCP JSON Config" src="img/b091c4e566965094.png"></p>
-<h3 is-upgraded>Step 3: Enable Tools</h3>
-<ol type="1">
-<li>Click the tools button in Copilot Chat</li>
-</ol>
-<p class="image-container"><img alt="MCP Tools Button" src="img/f08d67d89c4bd3e9.png"></p>
-<ol type="1" start="2">
-<li>Confirm the GitHub MCP server appears in the list</li>
-<li>Check the checkbox to enable</li>
-</ol>
-<p class="image-container"><img alt="MCP Enable Tools" src="img/d4c85eab549c0355.png"></p>
-<p>Now you can reference GitHub information directly in Copilot Chat.</p>
-<aside class="special"><p><strong>Tip</strong>: Using MCP servers allows Copilot to directly access repository information, Issues, Pull Requests, etc., providing more detailed answers and suggestions.</p>
+<aside class="special"><p><strong>Astuce</strong> : La fonctionnalité de réflexion profonde permet à Copilot Agent d&#39;effectuer une analyse et une réflexion plus profondes pour résoudre des problèmes complexes.</p>
 </aside>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Let&#39;s Create a Pomodoro Timer" duration="30">
-        <p>So far, we&#39;ve learned the basic usage of GitHub Copilot available in VS Code. Next, let&#39;s actually develop an application.</p>
-<p>In this hands-on, we&#39;ll develop a Pomodoro timer application. This application has functionality to set work time and break time and manage timers.</p>
-<p>We aim to create an application with the following UI:</p>
-<p class="image-container"><img alt="Pomodoro Timer UI" src="img/8e24c2d7e6a91e1b.png"></p>
-<p>Let&#39;s first create a new Python file in VS Code. Since we want to create this as a web application, we&#39;ll use Flask. Let&#39;s name the main file &#34;app.py&#34;.</p>
-<h2 is-upgraded>Project Overview</h2>
-<p>Create a web timer application for the Pomodoro Technique.</p>
-<h2 is-upgraded>Required Features</h2>
+<h2 is-upgraded>Notes</h2>
 <ul>
-<li>25-minute work timer</li>
-<li>5-minute break timer</li>
-<li>Timer start/stop/reset</li>
-<li>Progress display and statistics functionality</li>
-<li>Browser notifications and sound notifications</li>
-<li>Responsive web UI</li>
+<li>Assurez-vous que l&#39;extension GitHub Copilot est mise à jour à la dernière version</li>
+<li>Le redémarrage de VS Code est recommandé après les changements de paramètres</li>
+<li>Ces fonctionnalités peuvent nécessiter un accès bêta ou des autorisations spéciales selon votre licence</li>
 </ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Think About Pomodoro Timer Design" duration="10">
-        <p>First, rather than starting implementation immediately, let&#39;s consult with Copilot about what approach and design to proceed with. From here on, we&#39;ll proceed entirely in agent mode.</p>
-<p>What&#39;s helpful when creating a web application with UI like this is Copilot Chat&#39;s image upload functionality. Using this, you can make Copilot understand your application&#39;s UI image.</p>
-<p>First, save the UI image from the previous page as <code>pomodoro.png</code> in the project root. Then, click <code>Add Context</code> in the chat field and select &#34;Image from Clipboard&#34; or &#34;Files &amp; Folders...&#34;. Then select the UI image.</p>
-<p class="image-container"><img alt="VS Code Copilot Chat Context Menu" src="img/32ba4d287403b2f9.png"></p>
-<p class="image-container"><img alt="VS Code Copilot Chat Context Menu" src="img/aadb91ba110fa522.png"></p>
-<p>Once the image is uploaded, it will be displayed in Copilot Chat.</p>
-<p>Then, enter the following prompt:</p>
-<pre><code>We plan to create a Pomodoro timer web app in this project. The attached image is a UI mock for that app. What design should we proceed with to create this app using Flask and HTML/CSS/JavaScript? Please suggest an architecture.
-</code></pre>
-<p>It will then suggest a recommended web application architecture.</p>
-<p>If there are points that should be improved or considerations that are lacking in this architecture, try pointing them out. For example, the following suggestion:</p>
-<pre><code>Considering the ease of unit testing, please also list any improvements or additions needed to the current architecture.
-</code></pre>
-<p>After this exchange, once the architectural design is settled, let&#39;s save that content to a file once. By doing so, you can reference the same architectural content even if you open a different chat session.</p>
-<pre><code>Since the architecture has been settled through our conversation so far, please compile a web application architecture proposal in a file called architecture.md in the project root, based on the content of our conversation.
-</code></pre>
-<aside class="special"><p>When a conversation with Copilot Chat reaches a conclusion, you can give clearer instructions to Copilot by starting a new conversation. To start a new conversation, click the &#34;New conversation&#34; button at the top of the chat window. At that time, content you want to reference in future chats, like the architectural content this time, is convenient to write out and save to files as we did here.</p>
-</aside>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Let&#39;s List What Needs to Be Done" duration="10">
-        <p>Now that the UI mock and architectural design are established, let&#39;s consider what specific functionality needs to be implemented. Let&#39;s consult with Copilot Chat about this too. At that time, let&#39;s attach pomodoro.png and architecture.md.</p>
-<pre><code>For creating this Pomodoro timer application, please list the necessary functions that need to be implemented.
-</code></pre>
-<p class="image-container"><img alt="Feature List Consideration" style="width: 400.00px" src="img/8e24c2d7e6a91e1b.png"></p>
-<p class="image-container"><img alt="Feature Identification Example" src="img/20a6ec3e5b2f7c50.png"></p>
-<p>Let&#39;s improve this content through chat with Copilot. Once the content is finalized, let&#39;s save this content in a file called features.md, just like we did with the architecture.</p>
-<pre><code>Thank you. That content looks good, so please write the list of functions that need to be implemented in a file called features.md.
-</code></pre>
-<p>Now we&#39;re about to start implementation, but a tip for mastering Copilot is not to try to implement large functions all at once, but to start implementing small functions first. This improves the accuracy of the code Copilot suggests and allows for smoother development progress.</p>
-<p>Let&#39;s also consult with Copilot about what granularity to break down and implement this application development. Here, let&#39;s attach pomodoro.png, architecture.md, and features.md.</p>
-<pre><code>I want to implement this Pomodoro timer application step by step. Based on the attached image, architecture, and feature list, please suggest what granularity should be used to implement functions and propose a step-by-step implementation plan.
-</code></pre>
-<p>When I tried it, it suggested a plan consisting of 6 steps. If there are points you&#39;d like to see improved, try pointing them out to Copilot. And let&#39;s save this content in a file called plan.md so it can be referenced later. Please think for yourself what prompt should be used to give instructions.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Let&#39;s Implement" duration="30">
-        <p>Now that all the preparation is complete, let&#39;s finally start implementation. Following the implementation plan suggested in the previous step, we&#39;ll implement functionality step by step.</p>
-<h2 is-upgraded>Project Structure Preparation</h2>
-<p>First, let&#39;s create a project directory structure according to our architecture.</p>
-<p>First, please modify the current project folder structure to realize an architecture like <code>architecture.md</code>. Move files and change configuration files as necessary.</p>
-<p>Then, after attaching <code>pomodoro.png</code>, <code>architecture.md</code>, and <code>plan.md</code>, give instructions to Copilot like this:</p>
-<pre><code>Please implement step 1 of plan.md. If you need to move files that already exist in this project to different directories, please perform that work as well. If there are additional considerations needed, please ask me questions.
-</code></pre>
-<p>In my case, it asked questions that needed consideration as shown below. In such cases, provide the necessary information.</p>
-<p class="image-container"><img alt="Example Questions from Copilot" src="img/8254991301cd47cd.png"></p>
-<p>After that, Copilot implements step 1. Once implementation is complete, Copilot builds the project on its own initiative and checks for errors. If errors occur, it makes additional corrections to resolve those errors. This kind of autonomous behavior is characteristic of agent mode.</p>
-<p>Once implementation is complete, check the following points:</p>
-<ol type="1">
-<li><strong>Directory Structure</strong>: Is it structured according to the recommended architecture?</li>
-<li><strong>Basic Files</strong>: Are the necessary basic files (app.py, HTML templates, CSS files, etc.) created?</li>
-<li><strong>Operation Check</strong>: Perform simple operation tests to see if any errors occur?</li>
-</ol>
-<p>Below is the result of step 1 implementation in my case. What kind of application this becomes at this stage will differ from person to person.</p>
-<p class="image-container"><img alt="Step 1 Implementation Result Example" src="img/99241f822533e37a.png"></p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Let&#39;s Write Tests" duration="20">
-        <p>Before continuing with implementation, let&#39;s write unit tests for the implemented functionality. By writing unit tests, we can confirm that changes in later steps don&#39;t affect existing functionality.</p>
-<p>If unit tests are already implemented at the stage of the previous page, please skip this page.</p>
-<h2 is-upgraded>Test Implementation</h2>
-<p>Try executing a prompt like this:</p>
-<pre><code>There are no unit tests at all for the current implementation, so please implement unit tests.
-</code></pre>
-<p>Copilot agent will then ask whether it&#39;s okay to use commands to install dependencies for unit testing. Like this, agents always ask for user confirmation before executing any command. Here, click &#34;Continue&#34; to allow execution of necessary commands.</p>
-<p class="image-container"><img alt="Test Implementation Confirmation by Copilot" src="img/c724e1c653e2c6b3.png"></p>
-<p>Copilot then executes the previous command in the terminal within VS Code and installs necessary dependencies. Similarly afterwards, Copilot always asks for user confirmation before executing any command. If executing that command causes an error, the agent makes additional corrections to resolve that error.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Let&#39;s Implement Remaining Features (Optional)" duration="20">
-        <p>This section is <strong>optional</strong>. Please proceed if you have already learned basic Copilot functions and want to challenge more advanced implementation.</p>
-<p>From here, let&#39;s implement the remaining features step by step as a free exercise.</p>
-<p>Here are some points that should be helpful.</p>
-<h2 is-upgraded>When You Want to Give Instructions for UI</h2>
-<p>When you want to give instructions for specific elements on the UI, you can make Copilot recognize those elements by uploading a UI screenshot to Copilot. At that time, it&#39;s good to circle or draw arrows on the screenshot to clearly indicate which elements you want to give instructions for.</p>
-<p>Alternatively, you can upload two screenshots - the current one and the expected one - to have Copilot check the differences and give instructions to get as close as possible to the expected UI.</p>
-<h2 is-upgraded>When Giving the Same Instructions Repeatedly</h2>
-<p>When writing prompts or specifying context, if you&#39;re frequently giving similar instructions, you can have Copilot remember those instructions. Specifically, create a file called <code>.github/copilot-instructions.md</code> in your project and write instructions in it. When this file exists, Copilot automatically loads those instructions and can reference them in subsequent chats.</p>
-<p>Below is a sample of custom instructions.</p>
-<pre><code language="language-markdown" class="language-markdown">This project implements a Pomodoro timer with Flask.
-
-The following are important files in the project. Please reference these files as needed for user instructions.
- - `pomodoro.png`: This is the UI mock of the application.
- - `architecture.md`: This is the application architecture document.
- - `features.md`: This is the list of functions to implement.
- - `plan.md`: This is the step-by-step implementation plan.
-</code></pre>
-<p>Additionally, by recording project-specific commands such as commands to build the project or execute tests, Copilot will automatically use those commands.</p>
-<h2 is-upgraded>When Implementation Doesn&#39;t Progress or Bugs Can&#39;t Be Resolved</h2>
-<p>In such cases, try the following approaches:</p>
+      <google-codelab-step label="Créons un minuteur Pomodoro" duration="30">
+        <p>Jusqu&#39;à présent, nous avons appris l&#39;utilisation de base de GitHub Copilot disponible dans VS Code. Ensuite, développons réellement une application.</p>
+<p>Dans ce travail pratique, nous développerons une application de minuteur Pomodoro. Cette application a des fonctionnalités pour définir le temps de travail et le temps de pause et gérer les minuteurs.</p>
+<p>Nous visons à créer une application avec l&#39;interface utilisateur suivante :</p>
+<p class="image-container"><img alt="Interface utilisateur du minuteur Pomodoro" src="img/8e24c2d7e6a91e1b.png"></p>
+<p>Créons d&#39;abord un nouveau fichier Python dans VS Code. Puisque nous voulons créer cela en tant qu&#39;application web, nous utiliserons Flask. Nommons le fichier principal &#34;app.py&#34;.</p>
+<h2 is-upgraded>Vue d&#39;ensemble du projet</h2>
+<p>Créer une application web de minuteur pour la technique Pomodoro.</p>
+<h2 is-upgraded>Fonctionnalités requises</h2>
 <ul>
-<li>Give instructions to output debug information and have Copilot analyze that output.</li>
-<li>Try other models.</li>
+<li>Minuteur de travail de 25 minutes</li>
+<li>Minuteur de pause de 5 minutes</li>
+<li>Démarrage/arrêt/réinitialisation du minuteur</li>
+<li>Affichage de la progression et fonctionnalité de statistiques</li>
+<li>Notifications du navigateur et notifications sonores</li>
+<li>Interface utilisateur web réactive</li>
 </ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Let&#39;s Commit to Git and Push" duration="10">
-        <p>Let&#39;s commit the created code to the Git repository and push it to a remote branch. Here we&#39;ll introduce three methods.</p>
-<h2 is-upgraded>Method A: Use Commands in Terminal</h2>
-<p>The traditional method of directly executing Git commands in the terminal:</p>
+      <google-codelab-step label="Réfléchir à la conception du minuteur Pomodoro" duration="10">
+        <p>Tout d&#39;abord, plutôt que de commencer l&#39;implémentation immédiatement, consultons Copilot sur l&#39;approche et la conception à adopter. À partir de maintenant, nous procéderons entièrement en mode agent.</p>
+<p>Ce qui est utile lors de la création d&#39;une application web avec une interface utilisateur comme celle-ci est la fonctionnalité de téléchargement d&#39;image de Copilot Chat. En l&#39;utilisant, vous pouvez faire comprendre à Copilot l&#39;image de l&#39;interface utilisateur de votre application.</p>
+<p>Tout d&#39;abord, enregistrez l&#39;image de l&#39;interface utilisateur de la page précédente sous le nom <code>pomodoro.png</code> à la racine du projet. Ensuite, cliquez sur <code>Add Context</code> dans le champ de chat et sélectionnez &#34;Image from Clipboard&#34; ou &#34;Files &amp; Folders...&#34;. Puis sélectionnez l&#39;image de l&#39;interface utilisateur.</p>
+<p class="image-container"><img alt="Menu contextuel du chat Copilot de VS Code" src="img/32ba4d287403b2f9.png"></p>
+<p class="image-container"><img alt="Menu contextuel du chat Copilot de VS Code" src="img/aadb91ba110fa522.png"></p>
+<p>Une fois l&#39;image téléchargée, elle sera affichée dans Copilot Chat.</p>
+<p>Ensuite, entrez le prompt suivant :</p>
+<pre><code>Nous prévoyons de créer une application web de minuteur Pomodoro dans ce projet. L&#39;image ci-jointe est une maquette d&#39;interface utilisateur pour cette application. Quelle conception devrions-nous adopter pour créer cette application en utilisant Flask et HTML/CSS/JavaScript ? Veuillez suggérer une architecture.
+</code></pre>
+<p>Il suggérera alors une architecture d&#39;application web recommandée.</p>
+<p>S&#39;il y a des points qui devraient être améliorés ou des considérations qui manquent dans cette architecture, essayez de les signaler. Par exemple, la suggestion suivante :</p>
+<pre><code>En considérant la facilité des tests unitaires, veuillez également énumérer toutes les améliorations ou ajouts nécessaires à l&#39;architecture actuelle.
+</code></pre>
+<p>Après cet échange, une fois la conception architecturale établie, sauvegardons ce contenu dans un fichier. Ce faisant, vous pouvez référencer le même contenu architectural même si vous ouvrez une session de chat différente.</p>
+<pre><code>Puisque l&#39;architecture a été établie à travers notre conversation jusqu&#39;à présent, veuillez compiler une proposition d&#39;architecture d&#39;application web dans un fichier appelé architecture.md à la racine du projet, basée sur le contenu de notre conversation.
+</code></pre>
+<aside class="special"><p>Lorsqu&#39;une conversation avec Copilot Chat atteint une conclusion, vous pouvez donner des instructions plus claires à Copilot en commençant une nouvelle conversation. Pour démarrer une nouvelle conversation, cliquez sur le bouton &#34;Nouvelle conversation&#34; en haut de la fenêtre de chat. À ce moment-là, le contenu que vous souhaitez référencer dans les futurs chats, comme le contenu architectural cette fois, est pratique à écrire et à sauvegarder dans des fichiers comme nous l&#39;avons fait ici.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Listons ce qui doit être fait" duration="10">
+        <p>Maintenant que la maquette de l&#39;interface utilisateur et la conception architecturale sont établies, considérons quelles fonctionnalités spécifiques doivent être implémentées. Consultons également Copilot Chat à ce sujet. À ce moment-là, attachons pomodoro.png et architecture.md.</p>
+<pre><code>Pour créer cette application de minuteur Pomodoro, veuillez énumérer les fonctions nécessaires qui doivent être implémentées.
+</code></pre>
+<p class="image-container"><img alt="Considération de la liste des fonctionnalités" style="width: 400.00px" src="img/8e24c2d7e6a91e1b.png"></p>
+<p class="image-container"><img alt="Exemple d&amp;rsquo;identification des fonctionnalités" src="img/20a6ec3e5b2f7c50.png"></p>
+<p>Améliorons ce contenu par le chat avec Copilot. Une fois le contenu finalisé, sauvegardons ce contenu dans un fichier appelé features.md, tout comme nous l&#39;avons fait avec l&#39;architecture.</p>
+<pre><code>Merci. Ce contenu semble bon, alors veuillez écrire la liste des fonctions qui doivent être implémentées dans un fichier appelé features.md.
+</code></pre>
+<p>Nous sommes sur le point de commencer l&#39;implémentation, mais une astuce pour maîtriser Copilot est de ne pas essayer d&#39;implémenter de grandes fonctions d&#39;un seul coup, mais de commencer par implémenter de petites fonctions en premier. Cela améliore la précision du code que Copilot suggère et permet une progression plus fluide du développement.</p>
+<p>Consultons également Copilot sur la granularité à utiliser pour décomposer et implémenter ce développement d&#39;application. Ici, attachons pomodoro.png, architecture.md et features.md.</p>
+<pre><code>Je veux implémenter cette application de minuteur Pomodoro étape par étape. Sur la base de l&#39;image jointe, de l&#39;architecture et de la liste des fonctionnalités, veuillez suggérer quelle granularité devrait être utilisée pour implémenter les fonctions et proposer un plan d&#39;implémentation étape par étape.
+</code></pre>
+<p>Quand j&#39;ai essayé, il a suggéré un plan composé de 6 étapes. S&#39;il y a des points que vous aimeriez voir améliorés, essayez de les signaler à Copilot. Et sauvegardons ce contenu dans un fichier appelé plan.md pour qu&#39;il puisse être référencé plus tard. Veuillez réfléchir vous-même au prompt qui devrait être utilisé pour donner des instructions.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Implémentons" duration="30">
+        <p>Maintenant que toute la préparation est complète, commençons enfin l&#39;implémentation. En suivant le plan d&#39;implémentation suggéré à l&#39;étape précédente, nous implémenterons la fonctionnalité étape par étape.</p>
+<h2 is-upgraded>Préparation de la structure du projet</h2>
+<p>Tout d&#39;abord, créons une structure de répertoire de projet selon notre architecture.</p>
+<p>Veuillez d&#39;abord modifier la structure actuelle du dossier du projet pour réaliser une architecture comme <code>architecture.md</code>. Déplacez les fichiers et modifiez les fichiers de configuration si nécessaire.</p>
+<p>Ensuite, après avoir attaché <code>pomodoro.png</code>, <code>architecture.md</code> et <code>plan.md</code>, donnez des instructions à Copilot comme ceci :</p>
+<pre><code>Veuillez implémenter l&#39;étape 1 de plan.md. Si vous devez déplacer des fichiers qui existent déjà dans ce projet vers différents répertoires, veuillez également effectuer ce travail. S&#39;il y a des considérations supplémentaires nécessaires, veuillez me poser des questions.
+</code></pre>
+<p>Dans mon cas, il a posé des questions qui nécessitaient une considération comme indiqué ci-dessous. Dans de tels cas, fournissez les informations nécessaires.</p>
+<p class="image-container"><img alt="Exemple de questions de Copilot" src="img/8254991301cd47cd.png"></p>
+<p>Après cela, Copilot implémente l&#39;étape 1. Une fois l&#39;implémentation terminée, Copilot construit le projet de sa propre initiative et vérifie les erreurs. Si des erreurs se produisent, il fait des corrections supplémentaires pour résoudre ces erreurs. Ce genre de comportement autonome est caractéristique du mode agent.</p>
+<p>Une fois l&#39;implémentation terminée, vérifiez les points suivants :</p>
+<ol type="1">
+<li><strong>Structure des répertoires</strong> : Est-elle structurée selon l&#39;architecture recommandée ?</li>
+<li><strong>Fichiers de base</strong> : Les fichiers de base nécessaires (app.py, modèles HTML, fichiers CSS, etc.) sont-ils créés ?</li>
+<li><strong>Vérification du fonctionnement</strong> : Effectuez des tests de fonctionnement simples pour voir si des erreurs se produisent ?</li>
+</ol>
+<p>Ci-dessous le résultat de l&#39;implémentation de l&#39;étape 1 dans mon cas. Quel type d&#39;application cela devient à ce stade différera d&#39;une personne à l&#39;autre.</p>
+<p class="image-container"><img alt="Exemple de résultat d&amp;rsquo;implémentation de l&amp;rsquo;étape 1" src="img/99241f822533e37a.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Écrivons des tests" duration="20">
+        <p>Avant de continuer avec l&#39;implémentation, écrivons des tests unitaires pour la fonctionnalité implémentée. En écrivant des tests unitaires, nous pouvons confirmer que les changements dans les étapes ultérieures n&#39;affectent pas la fonctionnalité existante.</p>
+<p>Si des tests unitaires sont déjà implémentés à l&#39;étape de la page précédente, veuillez sauter cette page.</p>
+<h2 is-upgraded>Implémentation des tests</h2>
+<p>Essayez d&#39;exécuter un prompt comme celui-ci :</p>
+<pre><code>Il n&#39;y a pas du tout de tests unitaires pour l&#39;implémentation actuelle, alors veuillez implémenter des tests unitaires.
+</code></pre>
+<p>L&#39;agent Copilot demandera alors s&#39;il est possible d&#39;utiliser des commandes pour installer les dépendances pour les tests unitaires. Comme ceci, les agents demandent toujours la confirmation de l&#39;utilisateur avant d&#39;exécuter une commande. Ici, cliquez sur &#34;Continuer&#34; pour autoriser l&#39;exécution des commandes nécessaires.</p>
+<p class="image-container"><img alt="Confirmation de l&amp;rsquo;implémentation des tests par Copilot" src="img/c724e1c653e2c6b3.png"></p>
+<p>Copilot exécute ensuite la commande précédente dans le terminal dans VS Code et installe les dépendances nécessaires. De même par la suite, Copilot demande toujours la confirmation de l&#39;utilisateur avant d&#39;exécuter une commande. Si l&#39;exécution de cette commande provoque une erreur, l&#39;agent fait des corrections supplémentaires pour résoudre cette erreur.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Implémentons les fonctionnalités restantes (Optionnel)" duration="20">
+        <p>Cette section est <strong>optionnelle</strong>. Veuillez continuer si vous avez déjà appris les fonctions de base de Copilot et souhaitez relever une implémentation plus avancée.</p>
+<p>À partir de maintenant, implémentons les fonctionnalités restantes étape par étape en tant qu&#39;exercice libre.</p>
+<p>Voici quelques points qui devraient être utiles.</p>
+<h2 is-upgraded>Lorsque vous voulez donner des instructions pour l&#39;interface utilisateur</h2>
+<p>Lorsque vous souhaitez donner des instructions pour des éléments spécifiques sur l&#39;interface utilisateur, vous pouvez faire reconnaître ces éléments à Copilot en téléchargeant une capture d&#39;écran de l&#39;interface utilisateur vers Copilot. À ce moment-là, il est bon d&#39;encercler ou de dessiner des flèches sur la capture d&#39;écran pour indiquer clairement quels éléments vous souhaitez donner des instructions.</p>
+<p>Alternativement, vous pouvez télécharger deux captures d&#39;écran - celle actuelle et celle attendue - pour que Copilot vérifie les différences et donne des instructions pour se rapprocher le plus possible de l&#39;interface utilisateur attendue.</p>
+<h2 is-upgraded>Lorsque vous donnez les mêmes instructions de manière répétée</h2>
+<p>Lors de l&#39;écriture de prompts ou de la spécification de contexte, si vous donnez fréquemment des instructions similaires, vous pouvez faire en sorte que Copilot se souvienne de ces instructions. Plus précisément, créez un fichier appelé <code>.github/copilot-instructions.md</code> dans votre projet et écrivez-y des instructions. Lorsque ce fichier existe, Copilot charge automatiquement ces instructions et peut les référencer dans les chats suivants.</p>
+<p>Ci-dessous un exemple d&#39;instructions personnalisées.</p>
+<pre><code language="language-markdown" class="language-markdown">Ce projet implémente un minuteur Pomodoro avec Flask.
+
+Les suivants sont des fichiers importants dans le projet. Veuillez référencer ces fichiers selon les besoins pour les instructions de l&#39;utilisateur.
+ - `pomodoro.png` : Ceci est la maquette de l&#39;interface utilisateur de l&#39;application.
+ - `architecture.md` : Ceci est le document d&#39;architecture de l&#39;application.
+ - `features.md` : Ceci est la liste des fonctions à implémenter.
+ - `plan.md` : Ceci est le plan d&#39;implémentation étape par étape.
+</code></pre>
+<p>De plus, en enregistrant des commandes spécifiques au projet telles que des commandes pour construire le projet ou exécuter des tests, Copilot utilisera automatiquement ces commandes.</p>
+<h2 is-upgraded>Lorsque l&#39;implémentation ne progresse pas ou que les bugs ne peuvent pas être résolus</h2>
+<p>Dans de tels cas, essayez les approches suivantes :</p>
+<ul>
+<li>Donnez des instructions pour afficher des informations de débogage et demandez à Copilot d&#39;analyser cette sortie.</li>
+<li>Essayez d&#39;autres modèles.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Committons dans Git et poussons" duration="10">
+        <p>Committons le code créé dans le dépôt Git et poussons-le vers une branche distante. Ici, nous présenterons trois méthodes.</p>
+<h2 is-upgraded>Méthode A : Utiliser les commandes dans le terminal</h2>
+<p>La méthode traditionnelle d&#39;exécution directe des commandes Git dans le terminal :</p>
 <pre><code language="language-bash" class="language-bash">git add .
-git commit -m &#34;Add Pomodoro timer functionality&#34;
+git commit -m &#34;Ajouter la fonctionnalité de minuteur Pomodoro&#34;
 git push origin feature/pomodoro-timer
 </code></pre>
-<h2 is-upgraded>Method B: Use VS Code Source Control</h2>
-<p>Method using VS Code&#39;s integrated Git functionality:</p>
+<h2 is-upgraded>Méthode B : Utiliser le contrôle de source de VS Code</h2>
+<p>Méthode utilisant la fonctionnalité Git intégrée de VS Code :</p>
 <ol type="1">
-<li>Open <strong>VS Code&#39;s Source Control tab</strong></li>
-<li>Click the <strong>+</strong> button next to <strong>changed files</strong> to add to staging</li>
-<li>Click the ✨ button to have Copilot generate a commit message</li>
+<li>Ouvrez l&#39;<strong>onglet Contrôle de source de VS Code</strong></li>
+<li>Cliquez sur le bouton <strong>+</strong> à côté des <strong>fichiers modifiés</strong> pour ajouter à la zone de staging</li>
+<li>Cliquez sur le bouton ✨ pour que Copilot génère un message de commit</li>
 </ol>
-<p class="image-container"><img alt="Source Control Commit" src="img/10f6739b9515ce77.png"></p>
+<p class="image-container"><img alt="Commit du contrôle de source" src="img/10f6739b9515ce77.png"></p>
 <ol type="1" start="4">
-<li>Click the <strong>Commit</strong> button (blue button) to push to the remote branch</li>
+<li>Cliquez sur le bouton <strong>Commit</strong> (bouton bleu) pour pousser vers la branche distante</li>
 </ol>
-<h2 is-upgraded>Method C: Use MCP Server (For Those Who Have Set It Up)</h2>
-<p>If you have already set up MCP server, you can give instructions directly to Copilot in agent mode:</p>
-<pre><code>Function creation is complete, so please add the code differences to git staging.
+<h2 is-upgraded>Méthode C : Utiliser le serveur MCP (Pour ceux qui l&#39;ont configuré)</h2>
+<p>Si vous avez déjà configuré le serveur MCP, vous pouvez donner des instructions directement à Copilot en mode agent :</p>
+<pre><code>La création de la fonction est terminée, alors veuillez ajouter les différences de code à la zone de staging git.
 
-Then, please commit with an appropriate commit message and push the changes to the remote branch.
+Ensuite, veuillez committer avec un message de commit approprié et pousser les changements vers la branche distante.
 </code></pre>
-<p class="image-container"><img alt="Git Workflow with MCP" src="img/26ebf645a750b3a6.png"></p>
-<p>Next, we&#39;ll manage the implementation plan as GitHub Issues:</p>
-<pre><code>Please create issues on GitHub for each step in plan.md
+<p class="image-container"><img alt="Flux de travail Git avec MCP" src="img/26ebf645a750b3a6.png"></p>
+<p>Ensuite, nous gérerons le plan d&#39;implémentation en tant que problèmes GitHub :</p>
+<pre><code>Veuillez créer des problèmes sur GitHub pour chaque étape dans plan.md
 </code></pre>
-<p>This instruction will have Copilot execute the following:</p>
-<ol type="1">
-<li>Read the contents of <code>plan.md</code></li>
-<li>Create individual Issues for each step</li>
-<li>Each Issue will include: <ul>
-<li>Step title and detailed description</li>
-<li>Requirements for functions to implement</li>
-<li>Acceptance criteria</li>
-<li>Appropriate labels and priority</li>
+<p>Cette instruction fera exécuter à Copilot ce qui suit :</p>
+<ul>
+<li>Créer un problème individuel sur GitHub pour chaque étape dans <code>plan.md</code></li>
+<li>Définir un titre et une description appropriés pour chaque problème</li>
+<li>Utiliser des étiquettes appropriées</li>
 </ul>
-</li>
-</ol>
-<p>This enables planned project management and agile development.</p>
-<p class="image-container"><img alt="MCP Issues" src="img/b03e6ea597ff6ae3.png"></p>
-<aside class="special"><p><strong>MCP Benefits</strong>: By using GitHub MCP Server, Copilot can directly access repository information, Issues, Pull Requests, branch information and other GitHub metadata to provide more detailed analysis and suggestions.</p>
+<aside class="special"><p><strong>Remarque</strong> : Cette fonctionnalité utilise GitHub MCP. Elle ne sera disponible que si GitHub MCP est activé. Pour utiliser GitHub MCP, vous devez configurer GitHub MCP dans Copilot Agent.</p>
 </aside>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="GitHub Copilot on GitHub.com" duration="15">
-        <p>After pushing, let&#39;s create a Pull Request on GitHub.com and utilize Copilot&#39;s code review functionality.</p>
-<h2 is-upgraded>Creating Pull Request and Copilot Summary</h2>
-<ol type="1">
-<li>Access your forked repository on GitHub</li>
-<li>Click <strong>Open a pull request</strong></li>
-<li>On the Pull Request creation screen, click <strong>Copilot icon</strong> » <strong>Summary</strong></li>
-</ol>
-<p class="image-container"><img alt="Copilot Summary in Pull Request" src="img/f379c36d2daae6be.png"></p>
-<p>Copilot will automatically generate a summary of the Pull Request.</p>
-<h2 is-upgraded>Assign Copilot as Reviewer</h2>
-<p>In the <strong>Reviewers</strong> section, you can assign <strong>Copilot</strong> as a reviewer to request code review from Copilot.</p>
-<aside class="special"><p><strong>Auto-assign Setting</strong>: By checking Settings » Branches » Rulesets » Require a pull request before merging » Automatically request Copilot code review, Copilot will be automatically assigned when opening Pull Requests.</p>
-</aside>
-<p class="image-container"><img alt="Copilot Auto-assign Settings" src="img/bc9c16ab7a83d165.png"></p>
-<h2 is-upgraded>Check Copilot Code Review Results</h2>
-<p>After the Pull Request is opened, you can view Copilot Code Review results:</p>
+      <google-codelab-step label="Révision de code et analyse de sécurité avec Copilot" duration="15">
+        <p>Lorsque vous envoyez votre code, GitHub Copilot et GitHub Advanced Security effectuent automatiquement une révision de code et une analyse de vulnérabilités de sécurité.</p>
+<h2 is-upgraded>Révision de code avec GitHub Copilot</h2>
+<p>GitHub Copilot détecte automatiquement les problèmes de qualité du code dans votre Pull Request et suggère des améliorations.</p>
+<p class="image-container"><img alt="Révision de code Copilot dans PR" src="img/190eae2847f8b194.png"></p>
+<p>Les révisions de code par Copilot incluent :</p>
 <ul>
-<li><strong>Pull Request Overview</strong>: Summary of code changes</li>
-<li><strong>Issues Identified</strong>: Pointing out potential problems</li>
-<li><strong>Improvement Suggestions</strong>: Specific suggestions for improving code quality</li>
+<li><strong>Problèmes de qualité du code</strong> : Violations de normes de codage, duplication de code</li>
+<li><strong>Problèmes de performance</strong> : Code inefficace, goulots d&#39;étranglement potentiels</li>
+<li><strong>Suggestions d&#39;amélioration</strong> : Suggestions spécifiques pour améliorer la qualité du code</li>
 </ul>
-<p class="image-container"><img alt="Copilot Code Review Overview" src="img/190eae2847f8b194.png"></p>
-<h2 is-upgraded>Static Vulnerability Scanning by GitHub Advanced Security</h2>
-<p>Pull Requests also display results from static vulnerability scanning by GitHub Advanced Security (GHAS):</p>
-<h3 is-upgraded>Check Security Alerts</h3>
-<p class="image-container"><img alt="GHAS Security Alerts" src="img/a5a70f95b612809a.png"></p>
+<p class="image-container"><img alt="Vue d&amp;rsquo;ensemble de la révision de code Copilot" src="img/190eae2847f8b194.png"></p>
+<h2 is-upgraded>Analyse statique de vulnérabilités par GitHub Advanced Security</h2>
+<p>Les Pull Requests affichent également les résultats de l&#39;analyse statique de vulnérabilités par GitHub Advanced Security (GHAS) :</p>
+<h3 is-upgraded>Vérifier les alertes de sécurité</h3>
+<p class="image-container"><img alt="Alertes de sécurité GHAS" src="img/a5a70f95b612809a.png"></p>
 <ul>
-<li><strong>High Security Vulnerabilities</strong>: High-priority security issues</li>
-<li><strong>Copilot Autofix</strong>: Automatic fix suggestions by AI</li>
-<li><strong>Detailed Explanations</strong>: Content and fixing methods for vulnerabilities</li>
+<li><strong>Vulnérabilités de sécurité élevées</strong> : Problèmes de sécurité à haute priorité</li>
+<li><strong>Autofix Copilot</strong> : Suggestions de correction automatique par IA</li>
+<li><strong>Explications détaillées</strong> : Contenu et méthodes de correction des vulnérabilités</li>
 </ul>
-<h3 is-upgraded>Detailed Check Results</h3>
-<p class="image-container"><img alt="GHAS Check Results" src="img/b79fd737fef0ad88.png"></p>
-<aside class="special"><p><strong>Utilizing Copilot Autofix</strong>: GitHub provides automatic fix suggestions through Copilot Autofix for detected security vulnerabilities. This allows quick resolution of security issues.</p>
+<h3 is-upgraded>Résultats de vérification détaillés</h3>
+<p class="image-container"><img alt="Résultats de vérification GHAS" src="img/b79fd737fef0ad88.png"></p>
+<aside class="special"><p><strong>Utilisation de Copilot Autofix</strong> : GitHub fournit des suggestions de correction automatique via Copilot Autofix pour les vulnérabilités de sécurité détectées. Cela permet une résolution rapide des problèmes de sécurité.</p>
 </aside>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Automatic Issue Creation and Coding Agent" duration="20">
-        <p>Let&#39;s use the website version of GitHub Copilot to automatically generate project improvement suggestions as Issues and utilize Coding Agent.</p>
-<h2 is-upgraded>Automatic Issue Creation with GitHub Copilot</h2>
+      <google-codelab-step label="Création automatique de problèmes et agent de codage" duration="20">
+        <p>Utilisons la version site web de GitHub Copilot pour générer automatiquement des suggestions d&#39;amélioration de projet en tant que problèmes et utiliser l&#39;agent de codage.</p>
+<h2 is-upgraded>Création automatique de problèmes avec GitHub Copilot</h2>
 <ol type="1">
-<li>Access <strong>GitHub.com</strong> and click the <strong>Copilot</strong> icon in the top right</li>
-<li>Confirm your repository is added to the Chat context</li>
-<li>Enter the following prompt:</li>
+<li>Accédez à <strong>GitHub.com</strong> et cliquez sur l&#39;icône <strong>Copilot</strong> en haut à droite</li>
+<li>Confirmez que votre dépôt est ajouté au contexte du chat</li>
+<li>Entrez le prompt suivant :</li>
 </ol>
-<pre><code>Please create 3 issues to customize the Pomodoro timer.
+<pre><code>Veuillez créer 3 problèmes pour personnaliser le minuteur Pomodoro.
 
-Pattern A: Enhanced Visual Feedback
+Modèle A : Retour visuel amélioré
 
-Circular progress bar animation: Smooth decreasing animation based on remaining time
-Color changes: Gradient change from blue→yellow→red as time passes
-Background effects: Particle effects or ripple animations during focus time
-Test purpose: Measure the impact of visual immersion on user concentration
+Animation de la barre de progression circulaire : Animation de décroissance fluide basée sur le temps restant
+Changements de couleur : Changement de dégradé de bleu→jaune→rouge au fil du temps
+Effets d&#39;arrière-plan : Effets de particules ou animations d&#39;ondulation pendant le temps de concentration
+But du test : Mesurer l&#39;impact de l&#39;immersion visuelle sur la concentration de l&#39;utilisateur
 
-Pattern B: Improved Customizability
+Modèle B : Personnalisation améliorée
 
-Flexible time settings: Selectable from 15/25/35/45 minutes instead of fixed 25 minutes
-Theme switching: Dark/Light/Focus mode (minimal)
-Sound settings: On/off toggle for start/end/tick sounds
-Custom break time: Selectable from 5/10/15 minutes
-Test purpose: Measure the impact of personalized settings on user retention rate
+Paramètres de temps flexibles : Sélectionnable parmi 15/25/35/45 minutes au lieu de 25 minutes fixes
+Changement de thème : Mode sombre/clair/concentration (minimal)
+Paramètres sonores : Bouton marche/arrêt pour les sons de début/fin/tic-tac
+Temps de pause personnalisé : Sélectionnable parmi 5/10/15 minutes
+But du test : Mesurer l&#39;impact des paramètres personnalisés sur le taux de rétention des utilisateurs
 
-Pattern C: Adding Gamification Elements
+Modèle C : Ajout d&#39;éléments de gamification
 
-Experience point system: XP and level up based on completed Pomodoros
-Achievement badges: Achievement system like &#34;3 consecutive days&#34;, &#34;10 completions this week&#34;
-Weekly/monthly statistics: More detailed graph display (completion rate, average focus time, etc.)
-Streak display: Consecutive day count display
-Test purpose: Measure the impact of gamification elements on motivation maintenance and continued use
+Système de points d&#39;expérience : XP et niveau basés sur les Pomodoros terminés
+Badges de réussite : Système de réussite comme &#34;3 jours consécutifs&#34;, &#34;10 complétions cette semaine&#34;
+Statistiques hebdomadaires/mensuelles : Affichage graphique plus détaillé (taux de complétion, temps de concentration moyen, etc.)
+Affichage de série : Affichage du nombre de jours consécutifs
+But du test : Mesurer l&#39;impact des éléments de gamification sur le maintien de la motivation et l&#39;utilisation continue
 </code></pre>
-<p class="image-container"><img alt="Issue Creation with GitHub Copilot" src="img/a69389a1032d0aab.png"></p>
-<h2 is-upgraded>Issue Creation and Coding Agent Assignment</h2>
+<p class="image-container"><img alt="Création de problèmes avec GitHub Copilot" src="img/a69389a1032d0aab.png"></p>
+<h2 is-upgraded>Création de problèmes et affectation de l&#39;agent de codage</h2>
 <ol type="1">
-<li><strong>Copilot automatically generates 3 Issues</strong></li>
-<li>Review the content of each Issue and edit as necessary</li>
-<li>Click the <strong>Create</strong> button to create each Issue</li>
-<li>After transitioning to the Issue screen, select <strong>Copilot</strong> in the <strong>Assignees</strong> section to assign the Coding Agent</li>
+<li><strong>Copilot génère automatiquement 3 problèmes</strong></li>
+<li>Examinez le contenu de chaque problème et modifiez si nécessaire</li>
+<li>Cliquez sur le bouton <strong>Create</strong> pour créer chaque problème</li>
+<li>Après la transition vers l&#39;écran du problème, sélectionnez <strong>Copilot</strong> dans la section <strong>Assignees</strong> pour affecter l&#39;agent de codage</li>
 </ol>
-<p class="image-container"><img alt="Assign Coding Agent to Issue" src="img/14fa8fd6031e20b8.png"></p>
-<h2 is-upgraded>Expected Pull Request Results</h2>
-<p>When Coding Agent is assigned, the following results can be expected:</p>
+<p class="image-container"><img alt="Affecter l&amp;rsquo;agent de codage au problème" src="img/14fa8fd6031e20b8.png"></p>
+<h2 is-upgraded>Résultats attendus de Pull Request</h2>
+<p>Lorsque l&#39;agent de codage est affecté, les résultats suivants peuvent être attendus :</p>
 <ul>
-<li><strong>Automatic Code Implementation</strong>: Function implementation based on each Issue&#39;s requirements</li>
-<li><strong>Pull Request Creation</strong>: Automatic PR creation after implementation completion</li>
-<li><strong>Comprehensive Testing</strong>: Including both unit tests and UI tests</li>
+<li><strong>Implémentation automatique du code</strong> : Implémentation de fonction basée sur les exigences de chaque problème</li>
+<li><strong>Création de Pull Request</strong> : Création automatique de PR après l&#39;achèvement de l&#39;implémentation</li>
+<li><strong>Tests complets</strong> : Y compris les tests unitaires et les tests d&#39;interface utilisateur</li>
 </ul>
-<h3 is-upgraded>Pattern A: Enhanced Visual Feedback</h3>
-<p class="image-container"><img alt="PR Result for Enhanced Visual Feedback" src="img/705e39500bad3885.png"></p>
-<h3 is-upgraded>Pattern B: Improved Customizability</h3>
-<p class="image-container"><img alt="PR Result for Improved Customizability" src="img/8184bbbafbf918ee.png"></p>
-<h3 is-upgraded>Pattern C: Adding Gamification Elements</h3>
-<p class="image-container"><img alt="PR Result for Gamification Elements" src="img/3e0271a144640fba.png"></p>
-<aside class="special"><p><strong>Utilizing MCP Server</strong>: GitHub MCP Server and Playwright MCP Server are included as initial settings in Coding Agent. This allows not only unit testing but also automatic UI checking through screenshots. Coding Agent visually verifies that implemented functions work as expected and provides higher quality code.</p>
+<h3 is-upgraded>Modèle A : Retour visuel amélioré</h3>
+<p class="image-container"><img alt="Résultat PR pour retour visuel amélioré" src="img/705e39500bad3885.png"></p>
+<h3 is-upgraded>Modèle B : Personnalisation améliorée</h3>
+<p class="image-container"><img alt="Résultat PR pour personnalisation améliorée" src="img/8184bbbafbf918ee.png"></p>
+<h3 is-upgraded>Modèle C : Ajout d&#39;éléments de gamification</h3>
+<p class="image-container"><img alt="Résultat PR pour éléments de gamification" src="img/3e0271a144640fba.png"></p>
+<aside class="special"><p><strong>Utilisation du serveur MCP</strong> : Le serveur GitHub MCP et le serveur Playwright MCP sont inclus comme paramètres initiaux dans l&#39;agent de codage. Cela permet non seulement les tests unitaires mais aussi la vérification automatique de l&#39;interface utilisateur par captures d&#39;écran. L&#39;agent de codage vérifie visuellement que les fonctions implémentées fonctionnent comme prévu et fournit un code de meilleure qualité.</p>
 </aside>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Congratulations 🎉" duration="5">
-        <h2 is-upgraded>What We Learned Today</h2>
-<p>In this workshop, we learned the following:</p>
+      <google-codelab-step label="Félicitations 🎉" duration="5">
+        <h2 is-upgraded>Ce que nous avons appris aujourd&#39;hui</h2>
+<p>Dans cet atelier, nous avons appris ce qui suit :</p>
 <ul>
-<li>Basic usage of GitHub Copilot</li>
-<li>Code explanation and improvement with Copilot Chat</li>
-<li>Utilizing agent functionality</li>
-<li>Copilot utilization in actual application development</li>
+<li>Utilisation de base de GitHub Copilot</li>
+<li>Explication et amélioration du code avec Copilot Chat</li>
+<li>Utilisation de la fonctionnalité agent</li>
+<li>Utilisation de Copilot dans le développement d&#39;applications réelles</li>
 </ul>
-<h2 is-upgraded>Next Steps</h2>
+<h2 is-upgraded>Prochaines étapes</h2>
 <ul>
-<li>Try using Copilot in actual projects</li>
-<li>Challenge more complex application development</li>
-<li>Keep up with new Copilot features</li>
+<li>Essayez d&#39;utiliser Copilot dans des projets réels</li>
+<li>Relevez le défi de développement d&#39;applications plus complexes</li>
+<li>Restez informé des nouvelles fonctionnalités de Copilot</li>
 </ul>
-<h2 is-upgraded>Resources</h2>
+<h2 is-upgraded>Ressources</h2>
 <ul>
-<li><a href="https://docs.github.com/copilot" target="_blank">GitHub Copilot Documentation</a></li>
-<li><a href="https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot" target="_blank">GitHub Copilot Best Practices</a></li>
+<li><a href="https://docs.github.com/copilot" target="_blank">Documentation GitHub Copilot</a></li>
+<li><a href="https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot" target="_blank">Meilleures pratiques de GitHub Copilot</a></li>
 </ul>
-<p>Great work!</p>
+<p>Excellent travail !</p>
 
 
       </google-codelab-step>

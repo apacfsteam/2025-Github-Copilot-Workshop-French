@@ -3,19 +3,19 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2025-08-27T15:09:46Z",
+  "updated": "2025-10-27T01:16:13Z",
   "id": "github-copilot-workshop",
-  "duration": 275,
-  "title": "GitHub Copilot Workshop",
-  "summary": "GitHub Copilot Workshop",
+  "duration": 260,
+  "title": "Atelier GitHub Copilot",
+  "summary": "Atelier GitHub Copilot",
   "source": "workshop.md",
   "theme": "",
   "status": [
-    "published"
+    "publié"
   ],
   "category": [
-    "ai",
-    "development"
+    "ia",
+    "développement"
   ],
   "tags": [
     "web"
