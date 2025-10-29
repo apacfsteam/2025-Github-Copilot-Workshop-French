@@ -1,192 +1,192 @@
-author: Your Name
-summary: GitHub Copilot Workshop
+author: Votre Nom
+summary: Atelier GitHub Copilot
 id: github-copilot-workshop
-categories: AI, Development
+categories: IA, Développement
 environments: Web
-status: Published
+status: Publié
 feedback link: https://example.com/feedback
 
-# GitHub Copilot Workshop
+# Atelier GitHub Copilot
 
-## About the Workshop
+## À propos de l'atelier
 Duration: 5
 
-Welcome to the GitHub Copilot Workshop! In this workshop, you will learn how to use GitHub Copilot to explain and improve code.
-GitHub Copilot Chat enables interactive dialogue with AI through a chat experience. Let's learn how to use GitHub Copilot through this workshop!
+Bienvenue à l'Atelier GitHub Copilot ! Dans cet atelier, vous apprendrez à utiliser GitHub Copilot pour expliquer et améliorer le code.
+GitHub Copilot Chat permet un dialogue interactif avec l'IA à travers une expérience de chat. Apprenons à utiliser GitHub Copilot à travers cet atelier !
 
-![GitHub Copilot Logo](github-copilot-workshop/img/octocat_copilot.png)
+![Logo GitHub Copilot](github-copilot-workshop/img/octocat_copilot.png)
 
-### Today's Goals
-- Understand the various features of GitHub Copilot
-- Develop a new application using agent mode
+### Objectifs du jour
+- Comprendre les différentes fonctionnalités de GitHub Copilot
+- Développer une nouvelle application en utilisant le mode agent
 
-### Prerequisites
-- Visual Studio Code is installed
-- GitHub Copilot license is available
-- GitHub account is available
+### Prérequis
+- Visual Studio Code est installé
+- Une licence GitHub Copilot est disponible
+- Un compte GitHub est disponible
 
-## Project Setup
+## Configuration du projet
 Duration: 15
 
-This workshop uses the following GitHub repository:
+Cet atelier utilise le dépôt GitHub suivant :
 
-**Project URL**: https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python
+**URL du projet** : https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python
 
-### Step 1: Fork the Repository
+### Étape 1 : Forker le dépôt
 
-First, open the project URL above in your browser and fork the repository:
+Tout d'abord, ouvrez l'URL du projet ci-dessus dans votre navigateur et forkez le dépôt :
 
-1. Open the project URL (https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python) in your browser
-2. Click the **Fork** button in the top right
+1. Ouvrez l'URL du projet (https://github.com/moulongzhang/2025-Github-Copilot-Workshop-Python) dans votre navigateur
+2. Cliquez sur le bouton **Fork** en haut à droite
 
-![Click Fork button](github-copilot-workshop/img/fork-step1.png)
+![Cliquer sur le bouton Fork](github-copilot-workshop/img/fork-step1.png)
 
-3. Click the **Create fork** button on the fork creation screen
+3. Cliquez sur le bouton **Create fork** sur l'écran de création du fork
 
-![Click Create fork button](github-copilot-workshop/img/fork-step2.png)
+![Cliquer sur le bouton Create fork](github-copilot-workshop/img/fork-step2.png)
 
-Once the fork is complete, a copy of the repository will be created in your GitHub account.
+Une fois le fork terminé, une copie du dépôt sera créée dans votre compte GitHub.
 
-### Step 2: Development Environment Setup
+### Étape 2 : Configuration de l'environnement de développement
 
-Using your forked repository, you can start the project using one of the following methods:
+En utilisant votre dépôt forké, vous pouvez démarrer le projet en utilisant l'une des méthodes suivantes :
 
-#### Method A: Use GitHub Codespaces (Recommended)
+#### Méthode A : Utiliser GitHub Codespaces (Recommandé)
 
-1. On your forked repository page (`https://github.com/[your-username]/2025-Github-Copilot-Workshop-Python`)
-2. Click the green **Code** button
-3. Select the **Codespaces** tab
-4. Click **Create codespace on main**
+1. Sur la page de votre dépôt forké (`https://github.com/[votre-nom-utilisateur]/2025-Github-Copilot-Workshop-Python`)
+2. Cliquez sur le bouton vert **Code**
+3. Sélectionnez l'onglet **Codespaces**
+4. Cliquez sur **Create codespace on main**
 
-![Codespaces Setup](github-copilot-workshop/img/github-codespaces.png)
+![Configuration de Codespaces](github-copilot-workshop/img/github-codespaces.png)
 
 > aside positive
 >
-> **Tip**: Using Codespaces launches a VS Code-like environment in your browser, allowing you to start development immediately.
+> **Astuce** : L'utilisation de Codespaces lance un environnement de type VS Code dans votre navigateur, vous permettant de commencer le développement immédiatement.
 
 
-#### Method B: Clone to Local Environment
+#### Méthode B : Cloner dans l'environnement local
 
-If you have VS Code installed locally:
+Si vous avez VS Code installé localement :
 
-1. Open Terminal or Command Prompt
-2. Clone your forked repository with the following command:
+1. Ouvrez le Terminal ou l'Invite de commandes
+2. Clonez votre dépôt forké avec la commande suivante :
 
 ```bash
-git clone https://github.com/[your-username]/2025-Github-Copilot-Workshop-Python.git
+git clone https://github.com/[votre-nom-utilisateur]/2025-Github-Copilot-Workshop-Python.git
 ```
 
-3. Navigate to the cloned directory:
+3. Naviguez vers le répertoire cloné :
 
 ```bash
 cd 2025-Github-Copilot-Workshop-Python
 ```
 
-4. Open the project in VS Code:
+4. Ouvrez le projet dans VS Code :
 
 ```bash
 code .
 ```
 
-### Step 3: Install Required Extensions
+### Étape 3 : Installer les extensions requises
 
-After opening the project, please install the following extensions:
+Après avoir ouvert le projet, veuillez installer les extensions suivantes :
 
-1. Install **GitHub Copilot** extension
-2. Install **GitHub Copilot Chat** extension
-3. Install **Python** extension
+1. Installer l'extension **GitHub Copilot**
+2. Installer l'extension **GitHub Copilot Chat**
+3. Installer l'extension **Python**
 
-### Step 4: Configuration Check
+### Étape 4 : Vérification de la configuration
 
-1. Confirm that you are signed in to your GitHub account in VS Code
-2. Confirm that Copilot functionality is enabled
-3. Confirm that the Python interpreter is set up correctly
+1. Confirmez que vous êtes connecté à votre compte GitHub dans VS Code
+2. Confirmez que la fonctionnalité Copilot est activée
+3. Confirmez que l'interpréteur Python est correctement configuré
 
-## Try Code Completion
+## Essayer la complétion de code
 Duration: 10
 
-Let's experience GitHub Copilot's basic code completion functionality.
+Découvrons la fonctionnalité de base de complétion de code de GitHub Copilot.
 
-### Install Copilot Extensions
+### Installer les extensions Copilot
 
-1. Install **GitHub Copilot** extension
-2. Install **GitHub Copilot Chat** extension
+1. Installer l'extension **GitHub Copilot**
+2. Installer l'extension **GitHub Copilot Chat**
 
-### Configuration Check
-Make sure you are signed in to VS Code.
+### Vérification de la configuration
+Assurez-vous que vous êtes connecté à VS Code.
 
-### Try Code Completion
+### Essayer la complétion de code
 
-Create a new Python file and enter the following comment:
+Créez un nouveau fichier Python et entrez le commentaire suivant :
 
 ```python
-# Function to calculate Fibonacci sequence
+# Fonction pour calculer la suite de Fibonacci
 def fibonacci(n):
 ```
 
-Verify that Copilot automatically suggests code.
+Vérifiez que Copilot suggère automatiquement du code.
 
 > aside positive
 >
-> **Tip**: Use the `Tab` key to accept suggestions and `Alt+]` to see the next suggestion.
+> **Astuce** : Utilisez la touche `Tab` pour accepter les suggestions et `Alt+]` pour voir la suggestion suivante.
 
-## GitHub Copilot Next Edit Suggestions Setup Instructions
+## Instructions de configuration des suggestions d'édition suivantes de GitHub Copilot
 Duration: 10
 
-### Overview
-⚙️ [`github.copilot.nextEditSuggestions.enabled`](vscode://settings/github.copilot.nextEditSuggestions.enabled) is a setting that enables GitHub Copilot's next-generation edit suggestion feature. This feature allows you to receive more advanced code editing suggestions.
+### Vue d'ensemble
+⚙️ [`github.copilot.nextEditSuggestions.enabled`](vscode://settings/github.copilot.nextEditSuggestions.enabled) est un paramètre qui active la fonctionnalité de suggestion d'édition de nouvelle génération de GitHub Copilot. Cette fonctionnalité vous permet de recevoir des suggestions d'édition de code plus avancées.
 
-### 1. Open VS Code
+### 1. Ouvrir VS Code
 
-### 2. Access Settings
-Open the settings screen using one of the following methods:
+### 2. Accéder aux paramètres
+Ouvrez l'écran des paramètres en utilisant l'une des méthodes suivantes :
 
-#### Method A: From Menu
-- **Windows/Linux**: `File` → `Preferences` → `Settings`
-- **macOS**: `Code` → `Settings...` → `Settings`
+#### Méthode A : Depuis le menu
+- **Windows/Linux** : `File` → `Preferences` → `Settings`
+- **macOS** : `Code` → `Settings...` → `Settings`
 
-#### Method B: Keyboard Shortcut
-- **Windows/Linux**: `Ctrl + ,`
-- **macOS**: `Cmd + ,`
+#### Méthode B : Raccourci clavier
+- **Windows/Linux** : `Ctrl + ,`
+- **macOS** : `Cmd + ,`
 
-#### Method C: Command Palette
-- `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (macOS)
-- Select `Preferences: Open Settings (UI)`
+#### Méthode C : Palette de commandes
+- `Ctrl + Shift + P` (Windows/Linux) ou `Cmd + Shift + P` (macOS)
+- Sélectionnez `Preferences: Open Settings (UI)`
 
-### 3. Search Settings
-Enter the following in the settings search box:
+### 3. Rechercher les paramètres
+Entrez ce qui suit dans la boîte de recherche des paramètres :
 ```
 github.copilot.nextEditSuggestions.enabled
 ```
 
-### 4. Enable Setting
-- Check the checkbox for the setting item shown in search results
-- Or change `false` to `true`
+### 4. Activer le paramètre
+- Cochez la case pour l'élément de paramètre affiché dans les résultats de recherche
+- Ou changez `false` en `true`
 
-### 5. Confirm Setting
-Verify the setting is correctly applied:
-- Restart VS Code (recommended)
-- Edit code in the editor and confirm the new suggestion feature works
+### 5. Confirmer le paramètre
+Vérifiez que le paramètre est correctement appliqué :
+- Redémarrez VS Code (recommandé)
+- Éditez du code dans l'éditeur et confirmez que la nouvelle fonctionnalité de suggestion fonctionne
 
-### Alternative Method: Direct Edit in settings.json
+### Méthode alternative : Édition directe dans settings.json
 
-#### 1. Open settings.json file
-- `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (macOS)
-- Select `Preferences: Open User Settings (JSON)`
+#### 1. Ouvrir le fichier settings.json
+- `Ctrl + Shift + P` (Windows/Linux) ou `Cmd + Shift + P` (macOS)
+- Sélectionnez `Preferences: Open User Settings (JSON)`
 
-#### 2. Add Setting
+#### 2. Ajouter le paramètre
 ```json
 {
     "github.copilot.nextEditSuggestions.enabled": true
 }
 ```
 
-#### 3. Save File
-- `Ctrl + S` (Windows/Linux) or `Cmd + S` (macOS)
+#### 3. Enregistrer le fichier
+- `Ctrl + S` (Windows/Linux) ou `Cmd + S` (macOS)
 
-### Let's Try It Out
+### Essayons-le
 
-Open the `point.py` file included in the project. This file contains a class representing points in two-dimensional space. Copy the below code snippet into the `point.py` file.
+Ouvrez le fichier `point.py` inclus dans le projet. Ce fichier contient une classe représentant des points dans l'espace à deux dimensions. Copiez l'extrait de code ci-dessous dans le fichier `point.py`.
 
 ```python
 import math
@@ -205,27 +205,27 @@ class Point2D:
         return f"Point2D({self.x}, {self.y})"
 ```
 
-Now, we want to extend this class to represent points in three-dimensional space. First, let's manually change the class name to `Point3D`. GitHub Copilot will then suggest the next edit candidates.
+Maintenant, nous voulons étendre cette classe pour représenter des points dans l'espace à trois dimensions. Tout d'abord, changeons manuellement le nom de la classe en `Point3D`. GitHub Copilot suggérera ensuite les prochains candidats d'édition.
 
 > aside positive
 >
-> **Important**: It may take some time for Next Edit Suggestion proposals to appear. Please wait patiently.
+> **Important** : Il peut falloir un certain temps pour que les propositions de suggestion d'édition suivante apparaissent. Veuillez patienter.
 
-The suggestions should show changes like:
-- Adding `z` parameter to the `__init__` method
-- Adding `self.z = z`
-- Extending the `distance_to` method for three-dimensional distance calculation
-- Displaying z coordinate in the `__str__` method
+Les suggestions devraient afficher des changements comme :
+- Ajout du paramètre `z` à la méthode `__init__`
+- Ajout de `self.z = z`
+- Extension de la méthode `distance_to` pour le calcul de distance en trois dimensions
+- Affichage de la coordonnée z dans la méthode `__str__`
 
-In this state, pressing the `Tab` key will move the cursor to the location where GitHub Copilot is making suggestions. To accept the suggestion, press the `Tab` key again.
+Dans cet état, appuyer sur la touche `Tab` déplacera le curseur à l'emplacement où GitHub Copilot fait des suggestions. Pour accepter la suggestion, appuyez à nouveau sur la touche `Tab`.
 
-GitHub Copilot should then suggest the next edit candidate. This suggestion can also be accepted by pressing the `Tab` key. Using Next Edit Suggestion allows you to edit code efficiently.
+GitHub Copilot devrait ensuite suggérer le prochain candidat d'édition. Cette suggestion peut également être acceptée en appuyant sur la touche `Tab`. L'utilisation de la suggestion d'édition suivante vous permet d'éditer le code efficacement.
 
-### Let's See the Results
+### Voyons les résultats
 
-Let's continue extending the Point2D class to Point3D. You should be able to adapt all methods for three-dimensional space.
+Continuons à étendre la classe Point2D en Point3D. Vous devriez pouvoir adapter toutes les méthodes pour l'espace à trois dimensions.
 
-Expected final code example:
+Exemple de code final attendu :
 
 ```python
 import math
@@ -246,51 +246,51 @@ class Point3D:
         return f"Point3D({self.x}, {self.y}, {self.z})"
 ```
 
-### Let's Also Try with TODO Comments
+### Essayons aussi avec les commentaires TODO
 
-Replace `2D` (two-dimensional) with `3D` (three-dimensional) in the commented first line.
+Remplacez `2D` (deux dimensions) par `3D` (trois dimensions) dans la première ligne commentée.
 
 ```python
-# Class representing points in three-dimensional space
+# Classe représentant des points dans l'espace à trois dimensions
 class Point2D:
     def __init__(self, x, y):
         self.x = x
         self.y = y
     
     def distance_to(self, other):
-        # TODO: Add distance calculation code here
+        # TODO: Ajouter le code de calcul de distance ici
         pass
     
     def __str__(self):
-        # TODO: Return string representation
+        # TODO: Retourner la représentation en chaîne
         pass
 ```
 
-Place the cursor after the TODO comments and check Copilot's suggestions.
+Placez le curseur après les commentaires TODO et vérifiez les suggestions de Copilot.
 
-### Important Notes
+### Notes importantes
 
-- Make sure VS Code's GitHub Copilot extension is updated to the latest version
-- Restarting VS Code is recommended after setting changes
+- Assurez-vous que l'extension GitHub Copilot de VS Code est mise à jour à la dernière version
+- Le redémarrage de VS Code est recommandé après les changements de paramètres
 
-### Troubleshooting
+### Dépannage
 
-#### If Settings Are Not Found
-1. Confirm GitHub Copilot extension is installed
-2. Confirm extension is updated to the latest version
-3. Restart VS Code and try again
+#### Si les paramètres ne sont pas trouvés
+1. Confirmez que l'extension GitHub Copilot est installée
+2. Confirmez que l'extension est mise à jour à la dernière version
+3. Redémarrez VS Code et réessayez
 
-#### If Functionality Doesn't Work
-1. Confirm you are logged in to GitHub Copilot
-2. Check internet connection
-3. Check VS Code console for error messages
+#### Si la fonctionnalité ne fonctionne pas
+1. Confirmez que vous êtes connecté à GitHub Copilot
+2. Vérifiez la connexion Internet
+3. Vérifiez les messages d'erreur dans la console VS Code
 
-## Copilot Chat Hands-on Preparation
+## Préparation pratique de Copilot Chat
 Duration: 5
 
-### Create File
+### Créer un fichier
 
-Please save the following file as `delivery_manager.py`.
+Veuillez enregistrer le fichier suivant sous le nom `delivery_manager.py`.
 
 ```python
 import time
@@ -300,70 +300,65 @@ from dataclasses import dataclass, field
 from enum import Enum
 
 
-class EventArgs:
-    """Base class for event arguments"""
-    pass
-
-
 class Event:
-    """Class equivalent to C#'s event"""
+    """Classe d'événement simple (équivalent des événements Unity)"""
     
     def __init__(self):
         self._handlers: List[Callable] = []
     
     def add_handler(self, handler: Callable):
-        """Add event handler"""
+        """Ajouter un gestionnaire d'événements"""
         if handler not in self._handlers:
             self._handlers.append(handler)
     
     def remove_handler(self, handler: Callable):
-        """Remove event handler"""
+        """Supprimer un gestionnaire d'événements"""
         if handler in self._handlers:
             self._handlers.remove(handler)
     
-    def invoke(self, sender, args: EventArgs = None):
-        """Fire event"""
+    def invoke(self, sender, args=None):
+        """Déclencher un événement"""
         for handler in self._handlers:
-            handler(sender, args or EventArgs())
+            handler(sender, args)
 
 
 @dataclass
 class KitchenObjectSO:
-    """Kitchen object data class"""
-    name: str
+    """Classe de données d'objet de cuisine"""
+    object_name: str
     object_id: int
 
 
 @dataclass
 class RecipeSO:
-    """Recipe data class"""
-    name: str
-    kitchen_object_so_list: List[KitchenObjectSO] = field(default_factory=list)
+    """Classe de données de recette"""
+    recipe_name: str
+    kitchen_object_so_list: List[KitchenObjectSO]
 
 
 @dataclass
 class RecipeListSO:
-    """Recipe list data class"""
+    """Classe de données de liste de recettes"""
     recipe_so_list: List[RecipeSO] = field(default_factory=list)
 
 
 class PlateKitchenObject:
-    """Plate kitchen object"""
+    """Objet de cuisine assiette"""
     
     def __init__(self):
         self._kitchen_object_so_list: List[KitchenObjectSO] = []
     
     def add_kitchen_object(self, kitchen_object: KitchenObjectSO):
-        """Add kitchen object"""
+        """Ajouter un objet de cuisine"""
         self._kitchen_object_so_list.append(kitchen_object)
     
     def get_kitchen_object_so_list(self) -> List[KitchenObjectSO]:
-        """Get kitchen object list"""
+        """Obtenir la liste des objets de cuisine"""
         return self._kitchen_object_so_list.copy()
 
 
 class KitchenGameManager:
-    """Kitchen game manager (Singleton)"""
+    """Gestionnaire de jeu de cuisine (Singleton)"""
     
     _instance: Optional['KitchenGameManager'] = None
     
@@ -372,37 +367,37 @@ class KitchenGameManager:
     
     @classmethod
     def get_instance(cls) -> 'KitchenGameManager':
-        """Get Singleton instance"""
+        """Obtenir l'instance Singleton"""
         if cls._instance is None:
             cls._instance = cls()
         return cls._instance
     
     def is_game_playing(self) -> bool:
-        """Check if game is in progress"""
+        """Vérifier si le jeu est en cours"""
         return self._is_game_playing
     
     def start_game(self):
-        """Start game"""
+        """Démarrer le jeu"""
         self._is_game_playing = True
     
     def stop_game(self):
-        """Stop game"""
+        """Arrêter le jeu"""
         self._is_game_playing = False
 
 
 class DeliveryManager:
-    """Delivery management class (Python version)"""
+    """Classe de gestion de livraison (version Python)"""
     
     _instance: Optional['DeliveryManager'] = None
     
     def __init__(self, recipe_list_so: RecipeListSO):
-        # Event definitions
+        # Définitions d'événements
         self.on_recipe_spawned = Event()
         self.on_recipe_completed = Event()
         self.on_recipe_success = Event()
         self.on_recipe_failed = Event()
         
-        # Private variables
+        # Variables privées
         self._recipe_list_so = recipe_list_so
         self._waiting_recipe_so_list: List[RecipeSO] = []
         self._spawn_recipe_timer = 0.0
@@ -413,15 +408,15 @@ class DeliveryManager:
     
     @classmethod
     def get_instance(cls, recipe_list_so: RecipeListSO = None) -> 'DeliveryManager':
-        """Get Singleton instance"""
+        """Obtenir l'instance Singleton"""
         if cls._instance is None:
             if recipe_list_so is None:
-                raise ValueError("recipe_list_so is required for initial creation")
+                raise ValueError("recipe_list_so est requis pour la création initiale")
             cls._instance = cls(recipe_list_so)
         return cls._instance
     
     def update(self):
-        """Frame update processing (equivalent to Unity's Update)"""
+        """Traitement de mise à jour par image (équivalent à Update d'Unity)"""
         current_time = time.time()
         delta_time = current_time - self._last_update_time
         self._last_update_time = current_time
@@ -435,28 +430,28 @@ class DeliveryManager:
             if (kitchen_game_manager.is_game_playing() and 
                 len(self._waiting_recipe_so_list) < self._waiting_recipes_max):
                 
-                # Randomly select recipe
+                # Sélectionner une recette au hasard
                 waiting_recipe_so = random.choice(self._recipe_list_so.recipe_so_list)
                 self._waiting_recipe_so_list.append(waiting_recipe_so)
                 
-                # Fire event
+                # Déclencher l'événement
                 self.on_recipe_spawned.invoke(self)
     
     def deliver_recipe(self, plate_kitchen_object: PlateKitchenObject):
-        """Check if recipe ingredients match plate ingredients"""
+        """Vérifier si les ingrédients de la recette correspondent aux ingrédients de l'assiette"""
         
         for i, waiting_recipe_so in enumerate(self._waiting_recipe_so_list):
             plate_ingredients = plate_kitchen_object.get_kitchen_object_so_list()
             
-            # Check if ingredient counts match
+            # Vérifier si le nombre d'ingrédients correspond
             if len(waiting_recipe_so.kitchen_object_so_list) == len(plate_ingredients):
                 plate_contents_matches_recipe = True
                 
-                # Check each recipe ingredient
+                # Vérifier chaque ingrédient de la recette
                 for recipe_kitchen_object_so in waiting_recipe_so.kitchen_object_so_list:
                     ingredient_found = False
                     
-                    # Match with plate ingredients
+                    # Correspondre avec les ingrédients de l'assiette
                     for plate_kitchen_object_so in plate_ingredients:
                         if plate_kitchen_object_so == recipe_kitchen_object_so:
                             ingredient_found = True
@@ -466,727 +461,623 @@ class DeliveryManager:
                         plate_contents_matches_recipe = False
                         break
                 
-                # If ingredients match completely
+                # Si les ingrédients correspondent complètement
                 if plate_contents_matches_recipe:
                     self._successful_recipes_amount += 1
                     self._waiting_recipe_so_list.pop(i)
                     
-                    # Fire success events
+                    # Déclencher les événements de succès
                     self.on_recipe_completed.invoke(self)
                     self.on_recipe_success.invoke(self)
                     return
         
-        # If no matching recipe found
+        # Si aucune recette correspondante n'est trouvée
         self.on_recipe_failed.invoke(self)
     
     def get_waiting_recipe_so_list(self) -> List[RecipeSO]:
-        """Get waiting recipe list"""
+        """Obtenir la liste des recettes en attente"""
         return self._waiting_recipe_so_list.copy()
     
     def get_successful_recipes_amount(self) -> int:
-        """Get number of successful recipes"""
+        """Obtenir le nombre de recettes réussies"""
         return self._successful_recipes_amount
 
 
-# Usage example
+# Exemple d'utilisation
 if __name__ == "__main__":
-    # Create sample data
-    tomato = KitchenObjectSO("Tomato", 1)
-    lettuce = KitchenObjectSO("Lettuce", 2)
-    bread = KitchenObjectSO("Bread", 3)
+    # Créer des données d'exemple
+    tomato = KitchenObjectSO("Tomate", 1)
+    lettuce = KitchenObjectSO("Laitue", 2)
+    bread = KitchenObjectSO("Pain", 3)
     
-    # Sample recipes
+    # Recettes d'exemple
     sandwich_recipe = RecipeSO("Sandwich", [bread, lettuce, tomato])
-    salad_recipe = RecipeSO("Salad", [lettuce, tomato])
-    
+    salad_recipe = RecipeSO("Salade", [lettuce, tomato])
     recipe_list = RecipeListSO([sandwich_recipe, salad_recipe])
     
-    # Initialize game manager and delivery manager
+    # Initialiser le gestionnaire de jeu et le gestionnaire de livraison
     game_manager = KitchenGameManager.get_instance()
     game_manager.start_game()
     
     delivery_manager = DeliveryManager.get_instance(recipe_list)
     
-    # Set up event handlers
+    # Configurer les gestionnaires d'événements
     def on_recipe_spawned(sender, args):
-        print("New recipe has been generated!")
+        print("Une nouvelle recette a été générée !")
     
     def on_recipe_success(sender, args):
-        print("Recipe delivery successful!")
+        print("Livraison de recette réussie !")
     
     def on_recipe_failed(sender, args):
-        print("Recipe delivery failed...")
+        print("Échec de la livraison de la recette...")
     
     delivery_manager.on_recipe_spawned.add_handler(on_recipe_spawned)
     delivery_manager.on_recipe_success.add_handler(on_recipe_success)
     delivery_manager.on_recipe_failed.add_handler(on_recipe_failed)
     
-    # Sample execution
-    print("Game starting...")
+    # Exécution d'exemple
+    print("Démarrage du jeu...")
     
-    # Run update process for 5 seconds
+    # Exécuter le processus de mise à jour pendant 5 secondes
     start_time = time.time()
     while time.time() - start_time < 5:
         delivery_manager.update()
-        time.sleep(0.1)  # Update every 100ms
+        time.sleep(0.1)  # Mise à jour toutes les 100ms
     
-    print(f"Number of waiting recipes: {len(delivery_manager.get_waiting_recipe_so_list())}")
+    print(f"Nombre de recettes en attente : {len(delivery_manager.get_waiting_recipe_so_list())}")
     
-    # Sample delivery test
+    # Test de livraison d'exemple
     plate = PlateKitchenObject()
     plate.add_kitchen_object(bread)
     plate.add_kitchen_object(lettuce)
     plate.add_kitchen_object(tomato)
     
-    print("Delivering sandwich...")
+    print("Livraison du sandwich...")
     delivery_manager.deliver_recipe(plate)
     
-    print(f"Number of successful recipes: {delivery_manager.get_successful_recipes_amount()}")
+    print(f"Nombre de recettes réussies : {delivery_manager.get_successful_recipes_amount()}")
 ```
 
-## Explain Code
+## Expliquer le code
 Duration: 15
 
-Let's have Copilot Chat explain this code.
+Faisons expliquer ce code par Copilot Chat.
 
-### Open Copilot Chat
+### Ouvrir Copilot Chat
 
-1. Click the **Chat** icon (chat bubble icon) in the VS Code sidebar to open Copilot Chat
-2. Or open the Chat panel with `Ctrl+Alt+I` (on macOS `Ctrl+Cmd+I`)
+1. Cliquez sur l'icône **Chat** (icône de bulle de chat) dans la barre latérale de VS Code pour ouvrir Copilot Chat
+2. Ou ouvrez le panneau Chat avec `Ctrl+Alt+I` (sur macOS `Ctrl+Cmd+I`)
 
-### Check Chat Mode
+### Vérifier le mode Chat
 
-Confirm the chat mode is set to "Question" (we'll introduce "Agent" mode later).
+Confirmez que le mode chat est défini sur "Question" (nous présenterons le mode "Agent" plus tard).
 
-### Request File Explanation
+### Demander l'explication du fichier
 
-1. Enter `#delivery_manager.py` in the chat field
-2. Enter the prompt "Please explain this entire file."
-3. Press Enter and Copilot Chat will explain the entire `delivery_manager.py` file
+1. Entrez `#delivery_manager.py` dans le champ de chat
+2. Entrez le prompt "Veuillez expliquer ce fichier entier."
+3. Appuyez sur Entrée et Copilot Chat expliquera l'intégralité du fichier `delivery_manager.py`
 
 > aside positive
 >
-> **Tip**: By adding `#` before a filename, you can include that entire file as context.
+> **Astuce** : En ajoutant `#` avant un nom de fichier, vous pouvez inclure ce fichier entier comme contexte.
 
-## Ask About Code Improvement Areas
+## Demander des domaines d'amélioration du code
 Duration: 15
 
-### Exercise
+### Exercice
 
-Let's ask Copilot Chat about the problematic parts of this code.
+Demandons à Copilot Chat quelles sont les parties problématiques de ce code.
 
-### 1. Ask About Overall Class Issues
+### 1. Demander les problèmes globaux de la classe
 
-First, let's ask what problems this code has as a whole class.
+Tout d'abord, demandons quels problèmes ce code a dans son ensemble en tant que classe.
 
-Ask Copilot Chat:
-
-```
-Looking at this entire DeliveryManager class, what problems and improvement points are there? Please tell me from the perspectives of design patterns, code quality, and maintainability.
-```
-
-### 2. Focus on Specific Methods for Improvement Points
-
-Next, let's focus on the `deliver_recipe()` method and ask what methods exist to improve this method.
-
-#### Steps:
-1. Enter `#deliver_recipe` in the chat field
-2. Candidates for code elements (functions, classes, variables, etc.) will be displayed
-3. Select the `deliver_recipe` method
-4. Enter the following question:
+Demandez à Copilot Chat :
 
 ```
-What methods are there to improve this deliver_recipe method? Please make suggestions from the perspectives of readability, performance, and error handling.
+En examinant cette classe DeliveryManager dans son ensemble, quels problèmes et points d'amélioration y a-t-il ? Veuillez me le dire du point de vue des modèles de conception, de la qualité du code et de la maintenabilité.
+```
+
+### 2. Se concentrer sur des méthodes spécifiques pour les points d'amélioration
+
+Ensuite, concentrons-nous sur la méthode `deliver_recipe()` et demandons quelles méthodes existent pour améliorer cette méthode.
+
+#### Étapes :
+1. Entrez `#deliver_recipe` dans le champ de chat
+2. Les candidats pour les éléments de code (fonctions, classes, variables, etc.) seront affichés
+3. Sélectionnez la méthode `deliver_recipe`
+4. Entrez la question suivante :
+
+```
+Quelles méthodes existent pour améliorer cette méthode deliver_recipe ? Veuillez faire des suggestions du point de vue de la lisibilité, des performances et de la gestion des erreurs.
 ```
 
 > aside positive
 >
-> **Tip**: Using `#` allows you to ask pinpointed questions about specific code elements. This allows you to get more specific and useful improvement suggestions.
+> **Astuce** : L'utilisation de `#` vous permet de poser des questions ciblées sur des éléments de code spécifiques. Cela vous permet d'obtenir des suggestions d'amélioration plus spécifiques et utiles.
 
-### Code Review Function
+### Fonction de révision du code
 
-To improve the current code, ask Copilot Chat:
-
-```
-Please improve this Python code. I'd like suggestions from the perspectives of performance, readability, and error handling.
-```
-
-### Check from Security Perspective
+Pour améliorer le code actuel, demandez à Copilot Chat :
 
 ```
-Are there any security issues with this code?
+Veuillez améliorer ce code Python. J'aimerais des suggestions du point de vue des performances, de la lisibilité et de la gestion des erreurs.
 ```
 
-### Check Best Practices
+### Vérifier du point de vue de la sécurité
 
 ```
-Please check if this follows Python best practices.
+Y a-t-il des problèmes de sécurité avec ce code ?
 ```
 
-## Let's Try Agent Mode
+## Comprendre le mode Agent
 Duration: 10
 
-So far we've been using Copilot Chat in "Question" mode, but now let's try "Agent" mode. Agents can understand user intent and execute tasks more autonomously. Through practical examples, we'll learn how agents function.
+### Qu'est-ce que le mode Agent ?
 
-### Switch to Agent Mode
+Le mode Agent est une fonctionnalité puissante de GitHub Copilot qui permet à l'IA de prendre des actions de manière autonome pendant le développement. Contrairement au mode Question traditionnel (mode Q&R), le mode Agent permet à Copilot d'effectuer la série d'actions suivantes automatiquement.
 
-First, with the `delivery_manager.py` file open, select "Agent" from the mode selection in Copilot Chat.
+![Mode Agent vs Mode Question](github-copilot-workshop/img/agent-vs-question.png)
 
-<div align="center">
-  <img src="github-copilot-workshop/img/agent_mode2.png" alt="Agent Mode Selection 2" width="600" />
-  
-  <div style="height: 24;"></div>
-  
-  <img src="github-copilot-workshop/img/agent_mode.png" alt="Agent Mode Selection" width="600" />
-</div>
+### Caractéristiques du mode Agent
 
-### Identify Issues
+- **Lecture et modification de fichiers** : Le mode Agent lit et modifie automatiquement les fichiers nécessaires
+- **Exécution de commandes** : Exécution de commandes dans le terminal (par exemple, installation de packages, exécution de tests)
+- **Création et édition de plusieurs fichiers** : Génération de nouveau code et modification du code existant
+- **Révision automatique** : Exécution de tests et vérification de linting après les changements de code
 
-Then, enter the following prompt:
+### Cas d'utilisation
 
+- Développement de nouvelles fonctionnalités
+- Refactorisation de code
+- Correction de bugs
+- Écriture de tests
+- Configuration de projets
+
+### Démarrer le mode Agent
+
+1. Dans le panneau Copilot Chat, vérifiez la liste déroulante en haut
+2. Sélectionnez **Agent** au lieu de "Question"
+3. Ou tapez `@workspace` dans le champ de chat
+
+![Sélection du mode Agent](github-copilot-workshop/img/agent-mode-selection.png)
+
+## Instructions de configuration de l'agent Copilot
+Duration: 5
+
+Veuillez confirmer que l'agent Copilot peut être utilisé. Si les informations du compte sont nécessaires pour utiliser l'agent Copilot, veuillez vous connecter à partir de l'écran de connexion affiché.
+
+Ensuite, veuillez vérifier les paramètres suivants :
+
+### Activer `copilot-chat.agentic.claude-3.5-sonnet.enabled`
+
+Cette fonctionnalité de paramètre vous permet d'utiliser **Claude 3.5 Sonnet** dans Copilot Agent. Activez-la en modifiant directement `settings.json`.
+
+1. Ouvrez la palette de commandes avec `Ctrl + Shift + P` (Windows/Linux) ou `Cmd + Shift + P` (macOS)
+2. Sélectionnez `Preferences: Open User Settings (JSON)`
+3. Ajoutez le paramètre suivant :
+
+```json
+{
+    "github.copilot.chat.agentic.claude-3.5-sonnet.enabled": true
+}
 ```
-Please list the issues that exist in the DeliveryManager class. Then, present improvement plans to solve each issue.
-```
 
-![Issue Analysis by GPT-4.1](github-copilot-workshop/img/agent_GPT4.1.png)
-
-It should suggest multiple improvement points.
-
-### Try with Different Models
-
-By trying the same question with different models, you can compare the characteristics of each model.
-
-![Issue Analysis by Claude 4.0](github-copilot-workshop/img/agent_Calude4.0.png)
-
-### Implement Improvements
-
-Now let's have them implement the improvement suggestions they provided:
-
-```
-Please implement all the improvement suggestions you presented.
-```
-
-Copilot will then make direct code changes to the code open in the editor. However, this is still at the suggestion stage, and the user decides whether to accept these changes. You can accept or reject by clicking the "Keep" or "Undo" button above the chat field.
-
-### Agent Autonomy
-
-Here, let's check the comments returned by the agent. The agent didn't just follow instructions and change code, but may also confirm that errors occurred after code changes and try to fix those errors too. In an appropriate environment, the agent automatically detects errors that occur after code changes and attempts to fix them. In this way, agents can understand user intent and execute tasks more autonomously.
-
-### Confirm Command Execution
-
-When using agent mode, Copilot may ask whether it's okay to execute commands. This is because Copilot always asks for user confirmation before executing any command. Check the command content, and if there's no problem executing it, click "Allow this time". This allows Copilot to execute that command and make necessary changes.
+4. Enregistrez le fichier avec `Ctrl + S` (Windows/Linux) ou `Cmd + S` (macOS)
 
 > aside positive
 >
-> **Important**: In agent mode, Copilot operates more autonomously, so make sure to carefully review the suggested changes before accepting them.
+> **Astuce** : Claude 3.5 Sonnet est un modèle linguistique haute performance adapté aux tâches de développement complexes.
 
-## Settings for Next Task (Optional)
-Duration: 20
+### Activer `copilot-chat.agentic.deepThinking.enabled`
 
-This section is **optional**. If you want to try more advanced features after learning the basic functions of GitHub Copilot, please proceed.
+Cette fonctionnalité de paramètre active la fonctionnalité de **réflexion profonde** de Copilot Agent. Activez-la en modifiant `settings.json`.
 
-### 1. Prepare Branch
+1. Ouvrez la palette de commandes avec `Ctrl + Shift + P` (Windows/Linux) ou `Cmd + Shift + P` (macOS)
+2. Sélectionnez `Preferences: Open User Settings (JSON)`
+3. Ajoutez le paramètre suivant :
 
-#### Step 1: Reset Staged Changes
-
-Return all changes currently in the staging area to the working directory:
-
-```bash
-git restore .
+```json
+{
+    "github.copilot.chat.agentic.deepThinking.enabled": true
+}
 ```
 
-#### Step 2: Create New Branch
-
-Create and switch to the feature/pomodoro branch:
-
-```bash
-git checkout -b feature/pomodoro
-```
-
-### 2. GitHub Advanced Security (GHAS) Setup
-
-By enabling GitHub Advanced Security's Code Scanning feature, you can automatically detect code vulnerabilities.
-
-1. Click the **Settings** tab in your forked repository
-2. Select **Security** → **Code security** from the left sidebar
-3. Click **Set up** in the **Code scanning** section
-
-![GHAS Code Scanning Setup](github-copilot-workshop/img/code-scanning-setup.png)
-
-4. Select **Default** (recommended)
-
-![GHAS Default Configuration](github-copilot-workshop/img/code-scanning-default.png)
-
-5. Click **Enable CodeQL**
-
-This will execute automatic code scanning when pushing or creating pull requests.
-
-### 3. Verify Copilot Features
-
-Let's verify the Copilot features available on GitHub.
-
-1. Click your profile icon in the top right of GitHub
-2. Select **Your Copilot**
-
-![Your Copilot Menu](github-copilot-workshop/img/your-copilot-menu.png)
-
-Confirm the following features are enabled:
-
-- **Copilot in GitHub.com** - Use Copilot on the GitHub website
-- **Copilot coding agent** - More advanced coding assistance
-- **MCP servers in Copilot** - Use Model Context Protocol servers
-
-> aside negative
->
-> **Plan Limitations**: Advanced features like Copilot Code Review and Coding Agent are only available in GitHub Copilot Business/Enterprise plans. If you're using the Free plan, these features are not available.
-
-### 4. GitHub MCP Server Setup
-
-By using Model Context Protocol (MCP) servers, you can extend Copilot's functionality.
-
-#### Step 1: Add MCP Server
-
-1. Open command palette in VS Code: `Ctrl+Shift+P` (Windows/Linux) / `Cmd+Shift+P` (Mac)
-2. Type and select `mcp: add server`
-
-![MCP Add Server](github-copilot-workshop/img/mcp-add-server.png)
-
-3. Select **HTTP**
-4. Enter server URL: `https://api.githubcopilot.com/mcp/`
-5. Enter `github-mcp-server` in the Server ID field (or press Enter to skip)
-6. Select **Save to this workspace** for the save location
-7. Authenticate with your GitHub account
-
-#### Step 2: Verify MCP Server Startup
-
-MCP server configuration is saved in `.vscode/mcp.json`.
-
-![MCP JSON Config](github-copilot-workshop/img/mcp-json-config.png)
-
-#### Step 3: Enable Tools
-
-1. Click the tools button in Copilot Chat
-
-![MCP Tools Button](github-copilot-workshop/img/mcp-tools-button.png)
-
-2. Confirm the GitHub MCP server appears in the list
-3. Check the checkbox to enable
-
-![MCP Enable Tools](github-copilot-workshop/img/mcp-enable-tools.png)
-
-Now you can reference GitHub information directly in Copilot Chat.
+4. Enregistrez le fichier avec `Ctrl + S` (Windows/Linux) ou `Cmd + S` (macOS)
 
 > aside positive
 >
-> **Tip**: Using MCP servers allows Copilot to directly access repository information, Issues, Pull Requests, etc., providing more detailed answers and suggestions.
+> **Astuce** : La fonctionnalité de réflexion profonde permet à Copilot Agent d'effectuer une analyse et une réflexion plus profondes pour résoudre des problèmes complexes.
 
-## Let's Create a Pomodoro Timer
+### Notes
+
+- Assurez-vous que l'extension GitHub Copilot est mise à jour à la dernière version
+- Le redémarrage de VS Code est recommandé après les changements de paramètres
+- Ces fonctionnalités peuvent nécessiter un accès bêta ou des autorisations spéciales selon votre licence
+
+## Créons un minuteur Pomodoro
 Duration: 30
 
-So far, we've learned the basic usage of GitHub Copilot available in VS Code. Next, let's actually develop an application.
+Jusqu'à présent, nous avons appris l'utilisation de base de GitHub Copilot disponible dans VS Code. Ensuite, développons réellement une application.
 
-In this hands-on, we'll develop a Pomodoro timer application. This application has functionality to set work time and break time and manage timers.
+Dans ce travail pratique, nous développerons une application de minuteur Pomodoro. Cette application a des fonctionnalités pour définir le temps de travail et le temps de pause et gérer les minuteurs.
 
-We aim to create an application with the following UI:
+Nous visons à créer une application avec l'interface utilisateur suivante :
 
-![Pomodoro Timer UI](github-copilot-workshop/img/pomodoro.png)
+![Interface utilisateur du minuteur Pomodoro](github-copilot-workshop/img/pomodoro.png)
 
-Let's first create a new Python file in VS Code. Since we want to create this as a web application, we'll use Flask. Let's name the main file "app.py".
+Créons d'abord un nouveau fichier Python dans VS Code. Puisque nous voulons créer cela en tant qu'application web, nous utiliserons Flask. Nommons le fichier principal "app.py".
 
-### Project Overview
+### Vue d'ensemble du projet
 
-Create a web timer application for the Pomodoro Technique.
+Créer une application web de minuteur pour la technique Pomodoro.
 
-### Required Features
-- 25-minute work timer
-- 5-minute break timer
-- Timer start/stop/reset
-- Progress display and statistics functionality
-- Browser notifications and sound notifications
-- Responsive web UI
+### Fonctionnalités requises
+- Minuteur de travail de 25 minutes
+- Minuteur de pause de 5 minutes
+- Démarrage/arrêt/réinitialisation du minuteur
+- Affichage de la progression et fonctionnalité de statistiques
+- Notifications du navigateur et notifications sonores
+- Interface utilisateur web réactive
 
-## Think About Pomodoro Timer Design
+## Réfléchir à la conception du minuteur Pomodoro
 Duration: 10
 
-First, rather than starting implementation immediately, let's consult with Copilot about what approach and design to proceed with. From here on, we'll proceed entirely in agent mode.
+Tout d'abord, plutôt que de commencer l'implémentation immédiatement, consultons Copilot sur l'approche et la conception à adopter. À partir de maintenant, nous procéderons entièrement en mode agent.
 
-What's helpful when creating a web application with UI like this is Copilot Chat's image upload functionality. Using this, you can make Copilot understand your application's UI image.
+Ce qui est utile lors de la création d'une application web avec une interface utilisateur comme celle-ci est la fonctionnalité de téléchargement d'image de Copilot Chat. En l'utilisant, vous pouvez faire comprendre à Copilot l'image de l'interface utilisateur de votre application.
 
-First, save the UI image from the previous page as `pomodoro.png` in the project root. Then, click `Add Context` in the chat field and select "Image from Clipboard" or "Files & Folders...". Then select the UI image.
+Tout d'abord, enregistrez l'image de l'interface utilisateur de la page précédente sous le nom `pomodoro.png` à la racine du projet. Ensuite, cliquez sur `Add Context` dans le champ de chat et sélectionnez "Image from Clipboard" ou "Files & Folders...". Puis sélectionnez l'image de l'interface utilisateur.
 
-![VS Code Copilot Chat Context Menu](github-copilot-workshop/img/add_context2.png)
+![Menu contextuel du chat Copilot de VS Code](github-copilot-workshop/img/add_context2.png)
 
-![VS Code Copilot Chat Context Menu](github-copilot-workshop/img/add_context3.png)
+![Menu contextuel du chat Copilot de VS Code](github-copilot-workshop/img/add_context3.png)
 
-Once the image is uploaded, it will be displayed in Copilot Chat.
+Une fois l'image téléchargée, elle sera affichée dans Copilot Chat.
 
-Then, enter the following prompt:
-
-```
-We plan to create a Pomodoro timer web app in this project. The attached image is a UI mock for that app. What design should we proceed with to create this app using Flask and HTML/CSS/JavaScript? Please suggest an architecture.
-```
-
-It will then suggest a recommended web application architecture.
-
-If there are points that should be improved or considerations that are lacking in this architecture, try pointing them out. For example, the following suggestion:
+Ensuite, entrez le prompt suivant :
 
 ```
-Considering the ease of unit testing, please also list any improvements or additions needed to the current architecture.
+Nous prévoyons de créer une application web de minuteur Pomodoro dans ce projet. L'image ci-jointe est une maquette d'interface utilisateur pour cette application. Quelle conception devrions-nous adopter pour créer cette application en utilisant Flask et HTML/CSS/JavaScript ? Veuillez suggérer une architecture.
 ```
 
-After this exchange, once the architectural design is settled, let's save that content to a file once. By doing so, you can reference the same architectural content even if you open a different chat session.
+Il suggérera alors une architecture d'application web recommandée.
+
+S'il y a des points qui devraient être améliorés ou des considérations qui manquent dans cette architecture, essayez de les signaler. Par exemple, la suggestion suivante :
 
 ```
-Since the architecture has been settled through our conversation so far, please compile a web application architecture proposal in a file called architecture.md in the project root, based on the content of our conversation.
+En considérant la facilité des tests unitaires, veuillez également énumérer toutes les améliorations ou ajouts nécessaires à l'architecture actuelle.
+```
+
+Après cet échange, une fois la conception architecturale établie, sauvegardons ce contenu dans un fichier. Ce faisant, vous pouvez référencer le même contenu architectural même si vous ouvrez une session de chat différente.
+
+```
+Puisque l'architecture a été établie à travers notre conversation jusqu'à présent, veuillez compiler une proposition d'architecture d'application web dans un fichier appelé architecture.md à la racine du projet, basée sur le contenu de notre conversation.
 ```
 
 > aside positive
 >
-> When a conversation with Copilot Chat reaches a conclusion, you can give clearer instructions to Copilot by starting a new conversation. To start a new conversation, click the "New conversation" button at the top of the chat window. At that time, content you want to reference in future chats, like the architectural content this time, is convenient to write out and save to files as we did here.
+> Lorsqu'une conversation avec Copilot Chat atteint une conclusion, vous pouvez donner des instructions plus claires à Copilot en commençant une nouvelle conversation. Pour démarrer une nouvelle conversation, cliquez sur le bouton "Nouvelle conversation" en haut de la fenêtre de chat. À ce moment-là, le contenu que vous souhaitez référencer dans les futurs chats, comme le contenu architectural cette fois, est pratique à écrire et à sauvegarder dans des fichiers comme nous l'avons fait ici.
 
 
 
-## Let's List What Needs to Be Done
+## Listons ce qui doit être fait
 Duration: 10
 
-Now that the UI mock and architectural design are established, let's consider what specific functionality needs to be implemented. Let's consult with Copilot Chat about this too. At that time, let's attach pomodoro.png and architecture.md.
+Maintenant que la maquette de l'interface utilisateur et la conception architecturale sont établies, considérons quelles fonctionnalités spécifiques doivent être implémentées. Consultons également Copilot Chat à ce sujet. À ce moment-là, attachons pomodoro.png et architecture.md.
 
 ```
-For creating this Pomodoro timer application, please list the necessary functions that need to be implemented.
+Pour créer cette application de minuteur Pomodoro, veuillez énumérer les fonctions nécessaires qui doivent être implémentées.
 ```
 
-<img src="github-copilot-workshop/img/pomodoro.png" alt="Feature List Consideration" width="400" />
+<img src="github-copilot-workshop/img/pomodoro.png" alt="Considération de la liste des fonctionnalités" width="400" />
 
-![Feature Identification Example](github-copilot-workshop/img/10-2.list_features.png)
+![Exemple d'identification des fonctionnalités](github-copilot-workshop/img/10-2.list_features.png)
 
-Let's improve this content through chat with Copilot. Once the content is finalized, let's save this content in a file called features.md, just like we did with the architecture.
-
-```
-Thank you. That content looks good, so please write the list of functions that need to be implemented in a file called features.md.
-```
-
-Now we're about to start implementation, but a tip for mastering Copilot is not to try to implement large functions all at once, but to start implementing small functions first. This improves the accuracy of the code Copilot suggests and allows for smoother development progress.
-
-Let's also consult with Copilot about what granularity to break down and implement this application development. Here, let's attach pomodoro.png, architecture.md, and features.md.
+Améliorons ce contenu par le chat avec Copilot. Une fois le contenu finalisé, sauvegardons ce contenu dans un fichier appelé features.md, tout comme nous l'avons fait avec l'architecture.
 
 ```
-I want to implement this Pomodoro timer application step by step. Based on the attached image, architecture, and feature list, please suggest what granularity should be used to implement functions and propose a step-by-step implementation plan.
+Merci. Ce contenu semble bon, alors veuillez écrire la liste des fonctions qui doivent être implémentées dans un fichier appelé features.md.
 ```
 
-When I tried it, it suggested a plan consisting of 6 steps. If there are points you'd like to see improved, try pointing them out to Copilot. And let's save this content in a file called plan.md so it can be referenced later. Please think for yourself what prompt should be used to give instructions.
+Nous sommes sur le point de commencer l'implémentation, mais une astuce pour maîtriser Copilot est de ne pas essayer d'implémenter de grandes fonctions d'un seul coup, mais de commencer par implémenter de petites fonctions en premier. Cela améliore la précision du code que Copilot suggère et permet une progression plus fluide du développement.
 
-## Let's Implement
+Consultons également Copilot sur la granularité à utiliser pour décomposer et implémenter ce développement d'application. Ici, attachons pomodoro.png, architecture.md et features.md.
+
+```
+Je veux implémenter cette application de minuteur Pomodoro étape par étape. Sur la base de l'image jointe, de l'architecture et de la liste des fonctionnalités, veuillez suggérer quelle granularité devrait être utilisée pour implémenter les fonctions et proposer un plan d'implémentation étape par étape.
+```
+
+Quand j'ai essayé, il a suggéré un plan composé de 6 étapes. S'il y a des points que vous aimeriez voir améliorés, essayez de les signaler à Copilot. Et sauvegardons ce contenu dans un fichier appelé plan.md pour qu'il puisse être référencé plus tard. Veuillez réfléchir vous-même au prompt qui devrait être utilisé pour donner des instructions.
+
+## Implémentons
 Duration: 30
 
-Now that all the preparation is complete, let's finally start implementation. Following the implementation plan suggested in the previous step, we'll implement functionality step by step.
+Maintenant que toute la préparation est complète, commençons enfin l'implémentation. En suivant le plan d'implémentation suggéré à l'étape précédente, nous implémenterons la fonctionnalité étape par étape.
 
-### Project Structure Preparation
+### Préparation de la structure du projet
 
-First, let's create a project directory structure according to our architecture.
+Tout d'abord, créons une structure de répertoire de projet selon notre architecture.
 
-First, please modify the current project folder structure to realize an architecture like `architecture.md`. Move files and change configuration files as necessary.
+Veuillez d'abord modifier la structure actuelle du dossier du projet pour réaliser une architecture comme `architecture.md`. Déplacez les fichiers et modifiez les fichiers de configuration si nécessaire.
 
-Then, after attaching `pomodoro.png`, `architecture.md`, and `plan.md`, give instructions to Copilot like this:
+Ensuite, après avoir attaché `pomodoro.png`, `architecture.md` et `plan.md`, donnez des instructions à Copilot comme ceci :
 
 ```
-Please implement step 1 of plan.md. If you need to move files that already exist in this project to different directories, please perform that work as well. If there are additional considerations needed, please ask me questions.
+Veuillez implémenter l'étape 1 de plan.md. Si vous devez déplacer des fichiers qui existent déjà dans ce projet vers différents répertoires, veuillez également effectuer ce travail. S'il y a des considérations supplémentaires nécessaires, veuillez me poser des questions.
 ```
 
-In my case, it asked questions that needed consideration as shown below. In such cases, provide the necessary information.
+Dans mon cas, il a posé des questions qui nécessitaient une considération comme indiqué ci-dessous. Dans de tels cas, fournissez les informations nécessaires.
 
-![Example Questions from Copilot](github-copilot-workshop/img/12-0.question_from_copilot.png)
+![Exemple de questions de Copilot](github-copilot-workshop/img/12-0.question_from_copilot.png)
 
-After that, Copilot implements step 1. Once implementation is complete, Copilot builds the project on its own initiative and checks for errors. If errors occur, it makes additional corrections to resolve those errors. This kind of autonomous behavior is characteristic of agent mode.
+Après cela, Copilot implémente l'étape 1. Une fois l'implémentation terminée, Copilot construit le projet de sa propre initiative et vérifie les erreurs. Si des erreurs se produisent, il fait des corrections supplémentaires pour résoudre ces erreurs. Ce genre de comportement autonome est caractéristique du mode agent.
 
-Once implementation is complete, check the following points:
+Une fois l'implémentation terminée, vérifiez les points suivants :
 
-1. **Directory Structure**: Is it structured according to the recommended architecture?
-2. **Basic Files**: Are the necessary basic files (app.py, HTML templates, CSS files, etc.) created?
-3. **Operation Check**: Perform simple operation tests to see if any errors occur?
+1. **Structure des répertoires** : Est-elle structurée selon l'architecture recommandée ?
+2. **Fichiers de base** : Les fichiers de base nécessaires (app.py, modèles HTML, fichiers CSS, etc.) sont-ils créés ?
+3. **Vérification du fonctionnement** : Effectuez des tests de fonctionnement simples pour voir si des erreurs se produisent ?
 
-Below is the result of step 1 implementation in my case. What kind of application this becomes at this stage will differ from person to person.
+Ci-dessous le résultat de l'implémentation de l'étape 1 dans mon cas. Quel type d'application cela devient à ce stade différera d'une personne à l'autre.
 
-![Step 1 Implementation Result Example](github-copilot-workshop/img/12-1.completed_timer.png)
-
-
+![Exemple de résultat d'implémentation de l'étape 1](github-copilot-workshop/img/12-1.completed_timer.png)
 
 
-## Let's Write Tests
+
+
+## Écrivons des tests
 Duration: 20
 
-Before continuing with implementation, let's write unit tests for the implemented functionality. By writing unit tests, we can confirm that changes in later steps don't affect existing functionality.
+Avant de continuer avec l'implémentation, écrivons des tests unitaires pour la fonctionnalité implémentée. En écrivant des tests unitaires, nous pouvons confirmer que les changements dans les étapes ultérieures n'affectent pas la fonctionnalité existante.
 
-If unit tests are already implemented at the stage of the previous page, please skip this page.
+Si des tests unitaires sont déjà implémentés à l'étape de la page précédente, veuillez sauter cette page.
 
-### Test Implementation
+### Implémentation des tests
 
-Try executing a prompt like this:
+Essayez d'exécuter un prompt comme celui-ci :
 
 ```
-There are no unit tests at all for the current implementation, so please implement unit tests.
+Il n'y a pas du tout de tests unitaires pour l'implémentation actuelle, alors veuillez implémenter des tests unitaires.
 ```
 
-Copilot agent will then ask whether it's okay to use commands to install dependencies for unit testing. Like this, agents always ask for user confirmation before executing any command. Here, click "Continue" to allow execution of necessary commands.
+L'agent Copilot demandera alors s'il est possible d'utiliser des commandes pour installer les dépendances pour les tests unitaires. Comme ceci, les agents demandent toujours la confirmation de l'utilisateur avant d'exécuter une commande. Ici, cliquez sur "Continuer" pour autoriser l'exécution des commandes nécessaires.
 
-![Test Implementation Confirmation by Copilot](github-copilot-workshop/img/13-0.test_for_step1.png)
+![Confirmation de l'implémentation des tests par Copilot](github-copilot-workshop/img/13-0.test_for_step1.png)
 
-Copilot then executes the previous command in the terminal within VS Code and installs necessary dependencies. Similarly afterwards, Copilot always asks for user confirmation before executing any command. If executing that command causes an error, the agent makes additional corrections to resolve that error.
+Copilot exécute ensuite la commande précédente dans le terminal dans VS Code et installe les dépendances nécessaires. De même par la suite, Copilot demande toujours la confirmation de l'utilisateur avant d'exécuter une commande. Si l'exécution de cette commande provoque une erreur, l'agent fait des corrections supplémentaires pour résoudre cette erreur.
 
 
-## Let's Implement Remaining Features (Optional)
+## Implémentons les fonctionnalités restantes (Optionnel)
 Duration: 20
 
-This section is **optional**. Please proceed if you have already learned basic Copilot functions and want to challenge more advanced implementation.
+Cette section est **optionnelle**. Veuillez continuer si vous avez déjà appris les fonctions de base de Copilot et souhaitez relever une implémentation plus avancée.
 
-From here, let's implement the remaining features step by step as a free exercise.
+À partir de maintenant, implémentons les fonctionnalités restantes étape par étape en tant qu'exercice libre.
 
-Here are some points that should be helpful.
+Voici quelques points qui devraient être utiles.
 
-### When You Want to Give Instructions for UI
+### Lorsque vous voulez donner des instructions pour l'interface utilisateur
 
-When you want to give instructions for specific elements on the UI, you can make Copilot recognize those elements by uploading a UI screenshot to Copilot. At that time, it's good to circle or draw arrows on the screenshot to clearly indicate which elements you want to give instructions for.
+Lorsque vous souhaitez donner des instructions pour des éléments spécifiques sur l'interface utilisateur, vous pouvez faire reconnaître ces éléments à Copilot en téléchargeant une capture d'écran de l'interface utilisateur vers Copilot. À ce moment-là, il est bon d'encercler ou de dessiner des flèches sur la capture d'écran pour indiquer clairement quels éléments vous souhaitez donner des instructions.
 
-Alternatively, you can upload two screenshots - the current one and the expected one - to have Copilot check the differences and give instructions to get as close as possible to the expected UI.
+Alternativement, vous pouvez télécharger deux captures d'écran - celle actuelle et celle attendue - pour que Copilot vérifie les différences et donne des instructions pour se rapprocher le plus possible de l'interface utilisateur attendue.
 
-### When Giving the Same Instructions Repeatedly
+### Lorsque vous donnez les mêmes instructions de manière répétée
 
-When writing prompts or specifying context, if you're frequently giving similar instructions, you can have Copilot remember those instructions. Specifically, create a file called `.github/copilot-instructions.md` in your project and write instructions in it. When this file exists, Copilot automatically loads those instructions and can reference them in subsequent chats.
+Lors de l'écriture de prompts ou de la spécification de contexte, si vous donnez fréquemment des instructions similaires, vous pouvez faire en sorte que Copilot se souvienne de ces instructions. Plus précisément, créez un fichier appelé `.github/copilot-instructions.md` dans votre projet et écrivez-y des instructions. Lorsque ce fichier existe, Copilot charge automatiquement ces instructions et peut les référencer dans les chats suivants.
 
-Below is a sample of custom instructions.
+Ci-dessous un exemple d'instructions personnalisées.
 
 ```markdown
-This project implements a Pomodoro timer with Flask.
+Ce projet implémente un minuteur Pomodoro avec Flask.
 
-The following are important files in the project. Please reference these files as needed for user instructions.
- - `pomodoro.png`: This is the UI mock of the application.
- - `architecture.md`: This is the application architecture document.
- - `features.md`: This is the list of functions to implement.
- - `plan.md`: This is the step-by-step implementation plan.
+Les suivants sont des fichiers importants dans le projet. Veuillez référencer ces fichiers selon les besoins pour les instructions de l'utilisateur.
+ - `pomodoro.png` : Ceci est la maquette de l'interface utilisateur de l'application.
+ - `architecture.md` : Ceci est le document d'architecture de l'application.
+ - `features.md` : Ceci est la liste des fonctions à implémenter.
+ - `plan.md` : Ceci est le plan d'implémentation étape par étape.
 ```
 
-Additionally, by recording project-specific commands such as commands to build the project or execute tests, Copilot will automatically use those commands.
+De plus, en enregistrant des commandes spécifiques au projet telles que des commandes pour construire le projet ou exécuter des tests, Copilot utilisera automatiquement ces commandes.
 
-### When Implementation Doesn't Progress or Bugs Can't Be Resolved
+### Lorsque l'implémentation ne progresse pas ou que les bugs ne peuvent pas être résolus
 
-In such cases, try the following approaches:
+Dans de tels cas, essayez les approches suivantes :
 
-- Give instructions to output debug information and have Copilot analyze that output.
-- Try other models.
+- Donnez des instructions pour afficher des informations de débogage et demandez à Copilot d'analyser cette sortie.
+- Essayez d'autres modèles.
 
-## Let's Commit to Git and Push
+## Committons dans Git et poussons
 Duration: 10
 
-Let's commit the created code to the Git repository and push it to a remote branch. Here we'll introduce three methods.
+Committons le code créé dans le dépôt Git et poussons-le vers une branche distante. Ici, nous présenterons trois méthodes.
 
-### Method A: Use Commands in Terminal
+### Méthode A : Utiliser les commandes dans le terminal
 
-The traditional method of directly executing Git commands in the terminal:
+La méthode traditionnelle d'exécution directe des commandes Git dans le terminal :
 
 ```bash
 git add .
-git commit -m "Add Pomodoro timer functionality"
+git commit -m "Ajouter la fonctionnalité de minuteur Pomodoro"
 git push origin feature/pomodoro-timer
 ```
 
-### Method B: Use VS Code Source Control
+### Méthode B : Utiliser le contrôle de source de VS Code
 
-Method using VS Code's integrated Git functionality:
+Méthode utilisant la fonctionnalité Git intégrée de VS Code :
 
-1. Open **VS Code's Source Control tab**
-2. Click the **+** button next to **changed files** to add to staging
-3. Click the ✨ button to have Copilot generate a commit message
+1. Ouvrez l'**onglet Contrôle de source de VS Code**
+2. Cliquez sur le bouton **+** à côté des **fichiers modifiés** pour ajouter à la zone de staging
+3. Cliquez sur le bouton ✨ pour que Copilot génère un message de commit
 
-![Source Control Commit](github-copilot-workshop/img/source-control-commit.png)
+![Commit du contrôle de source](github-copilot-workshop/img/source-control-commit.png)
 
-4. Click the **Commit** button (blue button) to push to the remote branch
+4. Cliquez sur le bouton **Commit** (bouton bleu) pour pousser vers la branche distante
 
-### Method C: Use MCP Server (For Those Who Have Set It Up)
+### Méthode C : Utiliser le serveur MCP (Pour ceux qui l'ont configuré)
 
-If you have already set up MCP server, you can give instructions directly to Copilot in agent mode:
-
-```
-Function creation is complete, so please add the code differences to git staging.
-
-Then, please commit with an appropriate commit message and push the changes to the remote branch.
-```
-
-![Git Workflow with MCP](github-copilot-workshop/img/mcp-git-workflow.png)
-
-
-Next, we'll manage the implementation plan as GitHub Issues:
+Si vous avez déjà configuré le serveur MCP, vous pouvez donner des instructions directement à Copilot en mode agent :
 
 ```
-Please create issues on GitHub for each step in plan.md
+La création de la fonction est terminée, alors veuillez ajouter les différences de code à la zone de staging git.
+
+Ensuite, veuillez committer avec un message de commit approprié et pousser les changements vers la branche distante.
 ```
 
-This instruction will have Copilot execute the following:
+![Flux de travail Git avec MCP](github-copilot-workshop/img/mcp-git-workflow.png)
 
-1. Read the contents of `plan.md`
-2. Create individual Issues for each step
-3. Each Issue will include:
-   - Step title and detailed description
-   - Requirements for functions to implement
-   - Acceptance criteria
-   - Appropriate labels and priority
 
-This enables planned project management and agile development.
+Ensuite, nous gérerons le plan d'implémentation en tant que problèmes GitHub :
 
-![MCP Issues](github-copilot-workshop/img/mcp-issues.png)
+```
+Veuillez créer des problèmes sur GitHub pour chaque étape dans plan.md
+```
+
+Cette instruction fera exécuter à Copilot ce qui suit :
+
+- Créer un problème individuel sur GitHub pour chaque étape dans `plan.md`
+- Définir un titre et une description appropriés pour chaque problème
+- Utiliser des étiquettes appropriées
 
 > aside positive
 >
-> **MCP Benefits**: By using GitHub MCP Server, Copilot can directly access repository information, Issues, Pull Requests, branch information and other GitHub metadata to provide more detailed analysis and suggestions.
+> **Remarque** : Cette fonctionnalité utilise GitHub MCP. Elle ne sera disponible que si GitHub MCP est activé. Pour utiliser GitHub MCP, vous devez configurer GitHub MCP dans Copilot Agent.
 
-
-## GitHub Copilot on GitHub.com
+## Révision de code et analyse de sécurité avec Copilot
 Duration: 15
 
-After pushing, let's create a Pull Request on GitHub.com and utilize Copilot's code review functionality.
+Lorsque vous envoyez votre code, GitHub Copilot et GitHub Advanced Security effectuent automatiquement une révision de code et une analyse de vulnérabilités de sécurité.
 
-### Creating Pull Request and Copilot Summary
+### Révision de code avec GitHub Copilot
 
-1. Access your forked repository on GitHub
-2. Click **Open a pull request**
-3. On the Pull Request creation screen, click **Copilot icon** >> **Summary**
+GitHub Copilot détecte automatiquement les problèmes de qualité du code dans votre Pull Request et suggère des améliorations.
 
-![Copilot Summary in Pull Request](github-copilot-workshop/img/pull-request-copilot-summary.png)
+![Révision de code Copilot dans PR](github-copilot-workshop/img/copilot-code-review.png)
 
-Copilot will automatically generate a summary of the Pull Request.
+Les révisions de code par Copilot incluent :
 
-### Assign Copilot as Reviewer
+- **Problèmes de qualité du code** : Violations de normes de codage, duplication de code
+- **Problèmes de performance** : Code inefficace, goulots d'étranglement potentiels
+- **Suggestions d'amélioration** : Suggestions spécifiques pour améliorer la qualité du code
 
-In the **Reviewers** section, you can assign **Copilot** as a reviewer to request code review from Copilot.
+![Vue d'ensemble de la révision de code Copilot](github-copilot-workshop/img/copilot-code-review-overview.png)
 
-> aside positive
->
-> **Auto-assign Setting**: By checking Settings >> Branches >> Rulesets >> Require a pull request before merging >> Automatically request Copilot code review, Copilot will be automatically assigned when opening Pull Requests.
+### Analyse statique de vulnérabilités par GitHub Advanced Security
 
-![Copilot Auto-assign Settings](github-copilot-workshop/img/copilot-auto-assign-settings.png)
+Les Pull Requests affichent également les résultats de l'analyse statique de vulnérabilités par GitHub Advanced Security (GHAS) :
 
-### Check Copilot Code Review Results
+#### Vérifier les alertes de sécurité
 
-After the Pull Request is opened, you can view Copilot Code Review results:
+![Alertes de sécurité GHAS](github-copilot-workshop/img/ghas-security-alerts.png)
 
-- **Pull Request Overview**: Summary of code changes
-- **Issues Identified**: Pointing out potential problems
-- **Improvement Suggestions**: Specific suggestions for improving code quality
+- **Vulnérabilités de sécurité élevées** : Problèmes de sécurité à haute priorité
+- **Autofix Copilot** : Suggestions de correction automatique par IA
+- **Explications détaillées** : Contenu et méthodes de correction des vulnérabilités
 
-![Copilot Code Review Overview](github-copilot-workshop/img/copilot-code-review-overview.png)
+#### Résultats de vérification détaillés
 
-### Static Vulnerability Scanning by GitHub Advanced Security
-
-Pull Requests also display results from static vulnerability scanning by GitHub Advanced Security (GHAS):
-
-#### Check Security Alerts
-
-![GHAS Security Alerts](github-copilot-workshop/img/ghas-security-alerts.png)
-
-- **High Security Vulnerabilities**: High-priority security issues
-- **Copilot Autofix**: Automatic fix suggestions by AI
-- **Detailed Explanations**: Content and fixing methods for vulnerabilities
-
-#### Detailed Check Results
-
-![GHAS Check Results](github-copilot-workshop/img/ghas-check-results.png)
+![Résultats de vérification GHAS](github-copilot-workshop/img/ghas-check-results.png)
 
 > aside positive
 >
-> **Utilizing Copilot Autofix**: GitHub provides automatic fix suggestions through Copilot Autofix for detected security vulnerabilities. This allows quick resolution of security issues.
+> **Utilisation de Copilot Autofix** : GitHub fournit des suggestions de correction automatique via Copilot Autofix pour les vulnérabilités de sécurité détectées. Cela permet une résolution rapide des problèmes de sécurité.
 
-## Automatic Issue Creation and Coding Agent
+## Création automatique de problèmes et agent de codage
 Duration: 20
 
-Let's use the website version of GitHub Copilot to automatically generate project improvement suggestions as Issues and utilize Coding Agent.
+Utilisons la version site web de GitHub Copilot pour générer automatiquement des suggestions d'amélioration de projet en tant que problèmes et utiliser l'agent de codage.
 
-### Automatic Issue Creation with GitHub Copilot
+### Création automatique de problèmes avec GitHub Copilot
 
-1. Access **GitHub.com** and click the **Copilot** icon in the top right
-2. Confirm your repository is added to the Chat context
-3. Enter the following prompt:
+1. Accédez à **GitHub.com** et cliquez sur l'icône **Copilot** en haut à droite
+2. Confirmez que votre dépôt est ajouté au contexte du chat
+3. Entrez le prompt suivant :
 
 ```
-Please create 3 issues to customize the Pomodoro timer.
+Veuillez créer 3 problèmes pour personnaliser le minuteur Pomodoro.
 
-Pattern A: Enhanced Visual Feedback
+Modèle A : Retour visuel amélioré
 
-Circular progress bar animation: Smooth decreasing animation based on remaining time
-Color changes: Gradient change from blue→yellow→red as time passes
-Background effects: Particle effects or ripple animations during focus time
-Test purpose: Measure the impact of visual immersion on user concentration
+Animation de la barre de progression circulaire : Animation de décroissance fluide basée sur le temps restant
+Changements de couleur : Changement de dégradé de bleu→jaune→rouge au fil du temps
+Effets d'arrière-plan : Effets de particules ou animations d'ondulation pendant le temps de concentration
+But du test : Mesurer l'impact de l'immersion visuelle sur la concentration de l'utilisateur
 
-Pattern B: Improved Customizability
+Modèle B : Personnalisation améliorée
 
-Flexible time settings: Selectable from 15/25/35/45 minutes instead of fixed 25 minutes
-Theme switching: Dark/Light/Focus mode (minimal)
-Sound settings: On/off toggle for start/end/tick sounds
-Custom break time: Selectable from 5/10/15 minutes
-Test purpose: Measure the impact of personalized settings on user retention rate
+Paramètres de temps flexibles : Sélectionnable parmi 15/25/35/45 minutes au lieu de 25 minutes fixes
+Changement de thème : Mode sombre/clair/concentration (minimal)
+Paramètres sonores : Bouton marche/arrêt pour les sons de début/fin/tic-tac
+Temps de pause personnalisé : Sélectionnable parmi 5/10/15 minutes
+But du test : Mesurer l'impact des paramètres personnalisés sur le taux de rétention des utilisateurs
 
-Pattern C: Adding Gamification Elements
+Modèle C : Ajout d'éléments de gamification
 
-Experience point system: XP and level up based on completed Pomodoros
-Achievement badges: Achievement system like "3 consecutive days", "10 completions this week"
-Weekly/monthly statistics: More detailed graph display (completion rate, average focus time, etc.)
-Streak display: Consecutive day count display
-Test purpose: Measure the impact of gamification elements on motivation maintenance and continued use
+Système de points d'expérience : XP et niveau basés sur les Pomodoros terminés
+Badges de réussite : Système de réussite comme "3 jours consécutifs", "10 complétions cette semaine"
+Statistiques hebdomadaires/mensuelles : Affichage graphique plus détaillé (taux de complétion, temps de concentration moyen, etc.)
+Affichage de série : Affichage du nombre de jours consécutifs
+But du test : Mesurer l'impact des éléments de gamification sur le maintien de la motivation et l'utilisation continue
 ```
 
-![Issue Creation with GitHub Copilot](github-copilot-workshop/img/github-copilot-issue-creation.png)
+![Création de problèmes avec GitHub Copilot](github-copilot-workshop/img/github-copilot-issue-creation.png)
 
-### Issue Creation and Coding Agent Assignment
+### Création de problèmes et affectation de l'agent de codage
 
-1. **Copilot automatically generates 3 Issues**
-2. Review the content of each Issue and edit as necessary
-3. Click the **Create** button to create each Issue
-4. After transitioning to the Issue screen, select **Copilot** in the **Assignees** section to assign the Coding Agent
+1. **Copilot génère automatiquement 3 problèmes**
+2. Examinez le contenu de chaque problème et modifiez si nécessaire
+3. Cliquez sur le bouton **Create** pour créer chaque problème
+4. Après la transition vers l'écran du problème, sélectionnez **Copilot** dans la section **Assignees** pour affecter l'agent de codage
 
-![Assign Coding Agent to Issue](github-copilot-workshop/img/coding-agent-assignment.png)
+![Affecter l'agent de codage au problème](github-copilot-workshop/img/coding-agent-assignment.png)
 
-### Expected Pull Request Results
+### Résultats attendus de Pull Request
 
-When Coding Agent is assigned, the following results can be expected:
+Lorsque l'agent de codage est affecté, les résultats suivants peuvent être attendus :
 
-- **Automatic Code Implementation**: Function implementation based on each Issue's requirements
-- **Pull Request Creation**: Automatic PR creation after implementation completion
-- **Comprehensive Testing**: Including both unit tests and UI tests
+- **Implémentation automatique du code** : Implémentation de fonction basée sur les exigences de chaque problème
+- **Création de Pull Request** : Création automatique de PR après l'achèvement de l'implémentation
+- **Tests complets** : Y compris les tests unitaires et les tests d'interface utilisateur
 
-#### Pattern A: Enhanced Visual Feedback
+#### Modèle A : Retour visuel amélioré
 
-![PR Result for Enhanced Visual Feedback](github-copilot-workshop/img/pr-result-visual-feedback.png)
+![Résultat PR pour retour visuel amélioré](github-copilot-workshop/img/pr-result-visual-feedback.png)
 
-#### Pattern B: Improved Customizability
+#### Modèle B : Personnalisation améliorée
 
-![PR Result for Improved Customizability](github-copilot-workshop/img/pr-result-customization.png)
+![Résultat PR pour personnalisation améliorée](github-copilot-workshop/img/pr-result-customization.png)
 
-#### Pattern C: Adding Gamification Elements
+#### Modèle C : Ajout d'éléments de gamification
 
-![PR Result for Gamification Elements](github-copilot-workshop/img/pr-result-gamification.png)
+![Résultat PR pour éléments de gamification](github-copilot-workshop/img/pr-result-gamification.png)
 
 > aside positive
 >
-> **Utilizing MCP Server**: GitHub MCP Server and Playwright MCP Server are included as initial settings in Coding Agent. This allows not only unit testing but also automatic UI checking through screenshots. Coding Agent visually verifies that implemented functions work as expected and provides higher quality code.
+> **Utilisation du serveur MCP** : Le serveur GitHub MCP et le serveur Playwright MCP sont inclus comme paramètres initiaux dans l'agent de codage. Cela permet non seulement les tests unitaires mais aussi la vérification automatique de l'interface utilisateur par captures d'écran. L'agent de codage vérifie visuellement que les fonctions implémentées fonctionnent comme prévu et fournit un code de meilleure qualité.
 
-## Congratulations 🎉
+## Félicitations 🎉
 Duration: 5
 
-### What We Learned Today
+### Ce que nous avons appris aujourd'hui
 
-In this workshop, we learned the following:
+Dans cet atelier, nous avons appris ce qui suit :
 
-- Basic usage of GitHub Copilot
-- Code explanation and improvement with Copilot Chat
-- Utilizing agent functionality
-- Copilot utilization in actual application development
+- Utilisation de base de GitHub Copilot
+- Explication et amélioration du code avec Copilot Chat
+- Utilisation de la fonctionnalité agent
+- Utilisation de Copilot dans le développement d'applications réelles
 
-### Next Steps
+### Prochaines étapes
 
-- Try using Copilot in actual projects
-- Challenge more complex application development
-- Keep up with new Copilot features
+- Essayez d'utiliser Copilot dans des projets réels
+- Relevez le défi de développement d'applications plus complexes
+- Restez informé des nouvelles fonctionnalités de Copilot
 
-### Resources
+### Ressources
 
-- [GitHub Copilot Documentation](https://docs.github.com/copilot)
-- [GitHub Copilot Best Practices](https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot)
+- [Documentation GitHub Copilot](https://docs.github.com/copilot)
+- [Meilleures pratiques de GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot)
 
-Great work!
+Excellent travail !
